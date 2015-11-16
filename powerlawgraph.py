@@ -2,8 +2,9 @@
 
 from networkx import *
 import sys
+import numpy as np
 
-n=20 # Number of nodes
+n=10 # Number of nodes
 m=5 # Number of edges to attach from a new node to existing nodes
 
 G = barabasi_albert_graph(n,m,.5)
@@ -36,3 +37,9 @@ try:
     write_adjlist(H, sys.stdout)
 except TypeError: # Python 3.x
     write_adjlist(H,sys.stdout.buffer)
+
+L = laplacian_matrix(G)
+
+#print(L)
+
+eigs_L = laplacian_spectrum(G)
