@@ -30,7 +30,7 @@ print("")
 k = 3
 l=3
 H = kl_connected_subgraph(G, k, l, low_memory=False, same_as_graph=False)
-
+print(H)
 A_H = adjacency_matrix(H)
 
 try:
