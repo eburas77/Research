@@ -6,24 +6,27 @@ import matplotlib.pyplot as plt
 
 
 #using Barabasi Albert Model or to create simple graph
-#G=Graph()
-#G.add_nodes_from([1,2,3,4,5,6,7,8,9])
-#G.add_edges_from([(1,2),(1,3),(1,5),(1,9),(2,3),(2,6),(2,8),(3,4),(4,5),(4,7),(4,9),(5,8),(6,7),(6,9)])
+G=Graph()
+G.add_nodes_from([1:24])
+G.add_edges_from([(1,2),(2,3),(3,4),(1,5),(2,6),(3,7),(4,8),(5,6),(6,7),(7,8),
+                    (5,9),(6,10),(7,11),(8,12),(9,10),(10,11),(11,12),
+                    (9,13),(10,14),(11,15),(12,16),(13,14),(14,15),(15,16)
+                    (1,21),(4,20),(4,24),(14,23),(15,22),(16,17),(3,19),(11,18)])
 #n=200# Number of nodes
 #m=5 # Number of edges to attach from a new node to existing nodes
 #G = barabasi_albert_graph(n,m,.5)
 
 #to create power law degree graph
-nodes = 1000
-beta = 2.5 #power law exponent
-z=[]
-while len(z)<nodes:
-    nextval = int(nx.utils.powerlaw_sequence(1, beta)[0])
-    if nextval!=0:
-        z.append(nextval)
-G = nx.configuration_model(z)
-G=nx.Graph(G) # remove parallel edges
-G.remove_edges_from(G.selfloop_edges())
+#nodes = 1000
+#beta = 2.5 #power law exponent
+#z=[]
+#while len(z)<nodes:
+#    nextval = int(nx.utils.powerlaw_sequence(1, beta)[0])
+#    if nextval!=0:
+#        z.append(nextval)
+#G = nx.configuration_model(z)
+#G=nx.Graph(G) # remove parallel edges
+#G.remove_edges_from(G.selfloop_edges())
 #this sometimes results in an error because the sum of node degrees is odd
 #run again until it is even
 

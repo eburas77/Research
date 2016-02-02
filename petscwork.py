@@ -5,12 +5,23 @@ import scipy
 import timeit
 
 #G = nx.read_gml('power.gml')
-G=nx.Graph()
-G.add_nodes_from([1,2,3,4,5,6,7,8,9])
-G.add_edges_from([(1,2),(1,3),(1,5),(1,9),
-                    (2,3),(2,6),(2,8),(3,4),(4,5),
-                    (4,7),(4,9),(5,8),(6,7),(6,9)])
-print "read in power grid graph"
+#to create power law degree graph
+nodes = 1000
+beta = 2.5 #power law exponent
+z=[]
+while len(z)<nodes:
+    nextval = int(nx.utils.powerlaw_sequence(1, beta)[0])
+    if nextval!=0:
+        z.append(nextval)
+G = nx.configuration_model(z)
+G=nx.Graph(G) # remove parallel edges
+G.remove_edges_from(G.selfloop_edges())
+#this sometimes results in an error because the sum of node degrees is odd
+#run again until it is even
+
+
+
+print "read in graph"
 L = nx.laplacian_matrix(G)
 L = L.todense()
 
@@ -30,6 +41,11 @@ P_L = P_L.todense()
 T = L-P_L
 P_L = P_L+np.eye(len(L))*np.diagonal(T)
 T = T-np.eye(len(L))*np.diagonal(T)
+print T.shape
+print "rank of teleportation matrix: %i" %np.linalg.matrix_rank(T)
+
+print "number of edges in entire graph: %i" %nx.number_of_edges(G)
+print "number of edges in k,l connected subgraph: %i" %nx.number_of_edges(P)
 
 #print P_L
 #print ""
