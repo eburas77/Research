@@ -4,12 +4,12 @@ import numpy as np
 import scipy
 import timeit
 
-G = nx.read_gml('power.gml')
-#G=nx.Graph()
-#G.add_nodes_from([1,2,3,4,5,6,7,8,9])
-#G.add_edges_from([(1,2),(1,3),(1,5),(1,9),
-                    #(2,3),(2,6),(2,8),(3,4),(4,5),
-                    #(4,7),(4,9),(5,8),(6,7),(6,9)])
+#G = nx.read_gml('power.gml')
+G=nx.Graph()
+G.add_nodes_from([1,2,3,4,5,6,7,8,9])
+G.add_edges_from([(1,2),(1,3),(1,5),(1,9),
+                    (2,3),(2,6),(2,8),(3,4),(4,5),
+                    (4,7),(4,9),(5,8),(6,7),(6,9)])
 print "read in power grid graph"
 L = nx.laplacian_matrix(G)
 L = L.todense()
@@ -31,9 +31,9 @@ T = L-P_L
 P_L = P_L+np.eye(len(L))*np.diagonal(T)
 T = T-np.eye(len(L))*np.diagonal(T)
 
-print P_L
-print ""
-print T
+#print P_L
+#print ""
+#print T
 P_L_csr = scipy.sparse.csr_matrix(P_L)
 T_csr = scipy.sparse.csr_matrix(T)
 
@@ -43,7 +43,22 @@ P_L_petsc = Pet.Mat().createAIJ(size=P_L_csr.shape,
                                 
 T_petsc = Pet.Mat().createAIJ(size=T_csr.shape,
                                 csr = (T_csr.indptr, T_csr.indices, T_csr.data))
-                                
-elapsed = timeit.default_timer() - start_time
-print "this program ran in %f seconds" %elapsed
+ 
+x,b = P_L_petsc.getVecs()
+b.set(1)
+x.set(0)
+ksp = Pet.KSP()
+ksp.create(Pet.COMM_WORLD)
+ksp.setType('cg')
+pc = ksp.getPC()
+pc.setType(pc.Type.GAMG)
 
+ksp.setOperators(P_L_petsc)
+ksp.solve(b,x)   
+
+y,f = T_petsc.getVecs()
+f.set(1)
+y.set(0)
+#set to solve LU instead of GAMG
+ksp.setOperators(T_petsc)
+ksp.solve(f,y)
