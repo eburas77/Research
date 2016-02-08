@@ -3,27 +3,30 @@ import networkx as nx
 import numpy as np
 import scipy
 import timeit
+import matplotlib.pylab as plt
 
-#G = nx.read_gml('power.gml')
+G = nx.read_gml('celegansneural.gml')
 #to create power law degree graph
-nodes = 1000
-beta = 2.5 #power law exponent
-z=[]
-while len(z)<nodes:
-    nextval = int(nx.utils.powerlaw_sequence(1, beta)[0])
-    if nextval!=0:
-        z.append(nextval)
-G = nx.configuration_model(z)
-G=nx.Graph(G) # remove parallel edges
-G.remove_edges_from(G.selfloop_edges())
+#nodes = 1000
+#beta = 2.5 #power law exponent
+#z=[]
+#while len(z)<nodes:
+#    nextval = int(nx.utils.powerlaw_sequence(1, beta)[0])
+#    if nextval!=0:
+#        z.append(nextval)
+#G = nx.configuration_model(z)
+#G=nx.Graph(G) # remove parallel edges
+#G.remove_edges_from(G.selfloop_edges())
 #this sometimes results in an error because the sum of node degrees is odd
 #run again until it is even
 
-
-
+print nx.number_of_edges(G)
+G = G.to_undirected()
+A = nx.adjacency_matrix(G)
 print "read in graph"
 L = nx.laplacian_matrix(G)
 L = L.todense()
+
 
 print "created laplacian matrix"
 k = 3 #A higher number means a looser connectivity requirement.
@@ -47,6 +50,9 @@ print "rank of teleportation matrix: %i" %np.linalg.matrix_rank(T)
 print "number of edges in entire graph: %i" %nx.number_of_edges(G)
 print "number of edges in k,l connected subgraph: %i" %nx.number_of_edges(P)
 
+
+plt.spy(A,precision=0.01, markersize=1)
+plt.savefig('celeganspy.png')
 #print P_L
 #print ""
 #print T
@@ -60,21 +66,20 @@ P_L_petsc = Pet.Mat().createAIJ(size=P_L_csr.shape,
 T_petsc = Pet.Mat().createAIJ(size=T_csr.shape,
                                 csr = (T_csr.indptr, T_csr.indices, T_csr.data))
  
-x,b = P_L_petsc.getVecs()
-b.set(1)
-x.set(0)
-ksp = Pet.KSP()
-ksp.create(Pet.COMM_WORLD)
-ksp.setType('cg')
-pc = ksp.getPC()
-pc.setType(pc.Type.GAMG)
+#x,b = P_L_petsc.getVecs()
+#b.set(1)
+#x.set(0)
+#ksp = Pet.KSP()
+#ksp.create(Pet.COMM_WORLD)
+#ksp.setFromOptions()
 
-ksp.setOperators(P_L_petsc)
-ksp.solve(b,x)   
 
-y,f = T_petsc.getVecs()
-f.set(1)
-y.set(0)
+#ksp.setOperators(P_L_petsc)
+#ksp.solve(b,x)   
+
+#y,f = T_petsc.getVecs()
+#f.set(1)
+#y.set(0)
 #set to solve LU instead of GAMG
-ksp.setOperators(T_petsc)
-ksp.solve(f,y)
+#ksp.setOperators(T_petsc)
+#ksp.solve(f,y)

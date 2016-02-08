@@ -50,8 +50,8 @@ pos[24] = [.8,.2]
 
 
 nx.draw_networkx(G, pos)
-plt.savefig('entiregraph.pdf')
+plt.savefig('entiregraph.png')
 plt.clf()
 
 nx.draw_networkx(P, pos)
-plt.savefig('planargraph.pdf')
+plt.savefig('planargraph.png')

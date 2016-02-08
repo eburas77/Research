@@ -88,7 +88,7 @@ a = np.dot(P_L_inv,U)
 b = np.dot(V,P_L_inv)
 c = np.dot(V,P_L_inv)
 d = np.dot(c,U)
-solve_L = P_L_inv + np.dot(np.dot(a,(np.linalg.inv(np.linalg.inv(s)-d))),b)
+solve_L = P_L_inv - np.dot(np.dot(a,(np.linalg.inv(np.linalg.inv(s)+d))),b)
 
 
 L_inv = np.linalg.inv(L)
