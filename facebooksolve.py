@@ -6,16 +6,6 @@ import timeit
 import matplotlib.pylab as plt
 import kl_connected_subgraph as kl
 
-#F = nx.read_gml('celegansneural.gml')
-
-#G = nx.Graph()
-#for i in range(0,nx.number_of_nodes(F)):
-#    print i
-#    for j in range(0,nx.number_of_nodes(F)):
-#        if F.has_edge(i,j):
-#            if not G.has_edge(i,j):
-#                G.add_edge(i,j)
-                
 fh=open('facebook_combined.txt', 'rb')
 G=nx.read_edgelist(fh,nodetype=int)
                 
@@ -28,23 +18,16 @@ print "read in graph"
 L = nx.laplacian_matrix(G)
 L = L.todense()
 
+P = nx.read_edgelist('facebooklocal.edgelist',nodetype=int)
 
-print "created laplacian matrix"
-k = 3 #A higher number means a looser connectivity requirement.
-l = 3 #A higher number means a stricter connectivity requirement.
+H = nx.Graph()
+for node in G.nodes():
+    H.add_node(node)
+for edge in P.edges():
+    H.add_edge(edge[0],edge[1])
 
-#this is fan chungs greedy algorithm
-start_time = timeit.default_timer()
-P = kl.kl_connected_subgraph(G, k, l, low_memory=True, same_as_graph=False)
-elapsed = timeit.default_timer() - start_time
-print "Fan Chung's algorithm ran in %f seconds" %elapsed
-print "split graph"
-#P_A = nx.adjacency_matrix(P)
-#P_A = P_A.todense()
-#T_A = A - P_A
-#nx.write_edgelist(P, "facebooklocal.edgelist")
-#T_graph = nx.from_numpy_matrix(T_A)
-#nx.write_edgelist(T_graph, "facebokglobal.edgelist")
+P = H
+
 P_L = nx.laplacian_matrix(P)
 P_L = P_L.todense()
 
@@ -73,22 +56,26 @@ P_L_petsc = Pet.Mat().createAIJ(size=P_L_csr.shape,
 T_petsc = Pet.Mat().createAIJ(size=T_csr.shape,
                             csr = (T_csr.indptr, T_csr.indices, T_csr.data))
  
-#x,b = P_L_petsc.getVecs()
-#b.set(1)
-#x.set(0)
-#ksp = Pet.KSP()
-#ksp.create(Pet.COMM_WORLD)
-#ksp.setType('cg')
-#pc = ksp.getPC()
-#pc.setType(pc.Type.AMG)
-#ksp.setOperators(P_L_petsc)
-#print "now solve"
-#ksp.solve(b,x)   
+x,b = P_L_petsc.getVecs()
+r = x.duplicate()
+b.set(1)
+x.set(0)
+ksp = Pet.KSP()
+ksp.create(Pet.COMM_WORLD)
+ksp.setFromOptions()
+pc = ksp.getPC()
+pc.setType(pc.Type.GAMG)
+ksp.setOperators(P_L_petsc)
+print "now solve"
 
+ksp.solve(b,x)   
+
+P_L_petsc.mult(x, r)
+r.axpy(-1.0, b)
+r.view()
 #y,f = T_petsc.getVecs()
 #f.set(1)
 #y.set(0)
 #set to solve LU instead of GAMG
 #ksp.setOperators(T_petsc)
 #ksp.solve(f,y)
-
