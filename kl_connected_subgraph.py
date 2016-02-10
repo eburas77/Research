@@ -78,6 +78,7 @@ def kl_connected_subgraph(G, k, l, low_memory=False, same_as_graph=False):
             counter +=1
             print counter
             (u,v)=edge
+            #print edge
             ### Get copy of graph needed for this search
             if low_memory:
                 verts=set([u,v])
