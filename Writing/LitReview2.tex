@@ -1,0 +1,80 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{verbatim}
+
+
+\begin{document}
+Eric Buras 2/19/16 Literature Review 2
+\\
+\begin{itemize}
+\setlength\itemsep{1em}
+\item{\textbf{Complete Citation:}}
+\\
+David F. Gleich. PageRank beyond the web. \textit{SIAM Review}, 57(3):321-363, August 2015.
+
+\item{\textbf{Key Words:}} 
+\\
+Google, PageRank, Teleportation Distribution Vector, Stochastic Matrix.
+
+\item{\textbf{General Subject}:}
+\\
+Google PageRank Math and Applications
+
+\item{\textbf{Specific Subject:}}
+\\
+Background and mathematics of Google's PageRank algorithm for returning web searches. Applications of the algorithm to other fields including biology, chemistry, text processing, and social network analysis.
+
+\item{\textbf{Authors' Hypothesis or Claim:}}
+\\
+The author's primary purpose in writing this paper is to review Google's PageRank algorithm for scientists who wish to apply it to other fields. The author shows how PageRank solves a simple linear system and how it can be engineered to solve similar reverse problems or problems with different conditions. By doing so, he allows less mathematically inclined readers to access the deep power of the algorithm. A large portion of the paper highlights many areas that the algorithm can be applied to. There is little math in these sections; each is more a general overview of how the algorithm connects in layman's terms.
+
+\item{\textbf{Methodology:}}
+\\
+Theorems and numerical proofs related to solving the PageRank linear system. Matrix algebra used to solve related systems. Research on how the algorithm has been used novelly in various applications.
+
+\item{\textbf{Result(s):}}
+\\
+\begin{itemize}
+\item
+Defining the PageRank linear system as $(I-\alpha P)x = (1-\alpha)v$.
+\item
+Bounds on the error vector for solving the linear system with different initial guesses.
+\item
+Similar results for the psuedo-PageRank problem.
+\item
+PageRank may be used on an undirected graph in addition to the standard directed graphs.
+\item
+Successful applications of PageRank to important problems related to protein interaction, gene expression, neural networks, etc.
+\end{itemize}
+\item{\textbf{Evidence:}}
+\\
+Google's unimaginable success, key papers published with successful applications.
+\item{\textbf{Summary of Key Points:}}
+\\
+The author reviews the math and applications of PageRank to show that it is widely accessible by other scientific fields. It does not provide any original research.
+\item{\textbf{Context and Relationships:}}
+\\
+Google create PageRank to rank web search results for internet users. This algorithm vastly improved search capabilities for every realm of the internet. Tangentially, it also created a new way to advertise to internet users. This paper is the context for all other work related to PageRank. 
+
+\item{\textbf{Significance:}}
+\\
+This paper is significant for my work in that it helps me understand PageRank and why it is important to solve the graph laplacian linear system faster. This paper sent me off in search for datasets that I did not know I could use including neural networks, protein interactions, and gene expressions. I have applied my work to each of these fields successfully.
+\item{\textbf{Important Figures and/or Tables:}}
+\\
+Figure 3 identifies differences between related PageRank stochastic matrices. Other figures illustrate simple matrices related to problems.
+\item{\textbf{Cited References to Follow Up On:}}
+\\
+\begin{itemize}
+\item
+W. N. J. Anderson and T. D. Morley (1985), \textit{Eigenvalues of the Laplacian of a graph}, Linear Multilinear Algebra, 18, pp. 141-145.
+\item
+J. J. Crofts and D. J. Hingham (2011), \textit{Googling the brain: Discovering hierarchical and assymetric network structures, with applications in neuroscience}, Internet Math., 7, pp. 233-254.
+\item
+V. Freschi (2007), \textit{Protein function prediction from interaction networks using a random walk ranking algorithm}, in Proceedings of the 7th IEEE International Conference on Bioinformatics and Bioengineering (BIBE 2007), IEEE, pp. 42-48.
+\end{itemize}
+\end{itemize}
+\end{document}

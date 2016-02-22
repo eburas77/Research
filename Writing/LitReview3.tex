@@ -1,0 +1,87 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{verbatim}
+
+
+\begin{document}
+Eric Buras 2/19/16 Literature Review 3
+\\
+\begin{itemize}
+\setlength\itemsep{1em}
+\item{\textbf{Complete Citation:}}
+\\
+Oren E. Livne and Achi Brandt. Lean algebraic multigrid (LAMG): Fast graph laplacian linear solver. \textit{SIAM Journal on Scientific Computing}, 34(4): B499-B522, 2012.
+
+\item{\textbf{Key Words:}} 
+\\
+Graph Laplacian Linear Solver, Algebraic Multigrid, High Performance Computing, Node Aggregation, Linear Scaling.
+
+\item{\textbf{General Subject}:}
+\\
+Graph Laplacian Linear Solvers.
+
+\item{\textbf{Specific Subject:}}
+\\
+A novel approach to solving graph laplacian linear systems using aggregation-based algebraic multigrid. 
+
+\item{\textbf{Authors' Hypothesis or Claim:}}
+\\
+The authors solve general graph laplacian linear systems. They combine piecewise-constant interpolation, node aggregation based on a proximity measure, and an energy correction for coarse-leveling to create the multigrid system. Their linear system scales over ~4000 real world graphs with up to 47 million edges
+
+\item{\textbf{Methodology:}}
+\\
+The authors review standard algebraic multigrid and direct graph laplacian solvers like in UMFPACK and CGC. They introduce four novel changes to these:
+\begin{itemize}
+\item Lean methodology: no parameter tuning and no bootstrapping.
+\item Low-degree elimination of nodes prior to aggregation; removes the 1D part of the graph (not sure if this is a good idea or not)
+\item Affinity: node aggregation is based on a normalized relaxation-based node proximity heuristic.
+\item Energy corrected aggregation to deal with the energy inflation associated with coarse systems. They introduce a flat correction to the Galerkin operator and an adaptive correction to the solution via multilevel iterate recombination. 
+\end{itemize}
+
+\item{\textbf{Result(s):}}
+\\
+\begin{itemize}
+\item
+The LAMG solver is their main result.
+\item
+LAMG is more robust than UMFPACK and CMG.
+\item
+CMG is faster than LAMG.
+\item
+LAMG is extensible beyond S-T and CMG for non-diagonally dominant, eigenvalue, and nonlinear problems.
+\end{itemize}
+\item{\textbf{Evidence:}}
+\\
+Running their solvers compared to standard solvers on real-world graphs. Numerical analysis of LAMG algorithm for robustness. Memory efficiency compared to standard solvers.
+
+\item{\textbf{Summary of Key Points:}}
+\\
+The authors propose LAMG to solve graph laplacian linear problems and to be applied to related problems. LAMG is more useful than standard solvers, but is slower than the fasters solver.
+\item{\textbf{Context and Relationships:}}
+\\
+Related work in solving these types of problems includes brute force direct solvers, iterative methods without preconditioning, and standard algebraic multigrid. Related work in applications of these solvers includes PageRank, GeneRank, ProteinRank, etc. identified in the PageRank review paper.
+
+\item{\textbf{Significance:}}
+\\
+This paper is similar to my work in that it solves graph laplacians linear systems using multigrid. It helps to identify my key work in decomposing the whole graph without deleting low degree nodes. LAMG might lose accuracy in deleting the 1D portion of the graph. My proposed algorithm might be slower than LAMG, but it retains all the information in the graph. 
+
+\item{\textbf{Important Figures and/or Tables:}}
+\\
+Figure 3.1 identifies node aggregation difficulties in LAMG. Figure 3.2 shows the Galerkin correction for piecewise-linear error.  Figure 3.3 shows coarsening patterns. Figure 4.2 shows a four-level cycle for LAMG.
+
+\item{\textbf{Cited References to Follow Up On:}}
+\\
+\begin{itemize}
+\item
+C. H. Q. Ding, X. He, H. Zha, M. Gu, and H. D. Simon, \textit{A min-max cut algorithm for graph partitioning and data clustering}, in Proceedings of ICDM 2001, 2001, pp. 107-114.
+\item
+D. Ron, I. Safro, and A. Brandt, \textit{Relaxation-based coarsening and multiscale graph organization}, Multiscal Model. Sim., 9 (2011), pp. 407-423.
+
+\end{itemize}
+\end{itemize}
+
+\end{document}

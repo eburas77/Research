@@ -1,0 +1,83 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{verbatim}
+
+
+\begin{document}
+Eric Buras 2/12/16 Literature Review 1
+\\
+\begin{itemize}
+\setlength\itemsep{1em}
+\item{\textbf{Complete Citation:}}
+\\
+Fan Chung and Linyuan Liu. \textit{Complex Networks}, chapter The Small World Phenomenon in Hybrid Power Law Graphs, pages 89-104. Spring Berlin Heidelberg, Berlin, Heidelberg, 2004.
+
+\item{\textbf{Key Words:}} 
+\\
+Small World Graph, Power Law Graph, Unique Maximum Locally Connected Subgraph, Degree Sequence, Small Graph Diameter.
+\item{\textbf{General Subject}:}
+\\
+Graph Theory and Decomposition
+
+\item{\textbf{Specific Subject:}}
+\\
+Recovering a maximum locally connected subgraph. Properties and proofs concerning hybrid power law graphs.
+
+\item{\textbf{Authors' Hypothesis or Claim:}}
+\\
+The author considers a hybrid power law graph which is the combination of a large diameter locally connected subgraph and a small diameter global edge graph. The author proposes a greedy algorithm to extract the maximum locally connected subgraph through edge deletion. The order of edges deleted does not matter. Additionally, the author shows that these hybrid graphs have average distance and diameter similar to random graphs with the same degree distribution. Finally the author shows how the hybrid power law graph models the \textit{Math Review} Collaboration graph.
+
+\item{\textbf{Methodology:}}
+\\
+Graph theory and direct analytic proofs.
+
+\item{\textbf{Result(s):}}
+\\
+\begin{itemize}
+\item
+For any graph, the author's algorithm finds the unique maximum locally connected subgraph regardless of edges chosen.
+\item
+Degree and diameter bounds on the maximum locally connected subgraph.
+\item
+Strongly sparse conditions on graph G with degree sequence \textbf{w} and n vertices.
+\item
+Distance and diameter bounds on graph with given degree sequence.
+\item
+Distance and diameter bounds on hybrid power law graph.
+\end{itemize}
+\item{\textbf{Evidence:}}
+\\
+Degree sequence of the Collaboration Graph.
+
+\item{\textbf{Summary of Key Points:}}
+\\
+The author has a greedy algorithm to find the maximum locally connected subgraph of any graph G. For different models of graphs, there are provable bounds on its distance and diameter.
+
+\item{\textbf{Context and Relationships:}}
+\\
+Fan Chung is one of the pre-eminent graph theorists in the world. Her work pushes the theory forward so that other researchers may apply models of graphs to real-world graphs.
+
+\item{\textbf{Significance:}}
+\\
+This paper is significant for my work in that it gives an algorithm to decompose graphs into max locally connected graph and global edge graph. This split allows me to run multigrid on the local graph and directly solve the sparse global graph.
+
+\item{\textbf{Important Figures and/or Tables:}}
+\\
+Figures 1 and 2 show how a hybrid graph can be decomposed into a graph with clear grid structure and a graph of global edges. Figures 3,4, and 5 show the degree sequence of the parts of the decomposed Collaboration Graph. This graph does not fit my work because there is a large global portion to the graph.
+
+\item{\textbf{Cited References to Follow Up On:}}
+\\
+\begin{itemize}
+\item
+J. Kleinberg, The small-world phenomenon: An algorithmic perspective, \textit{Proc. 32nd ACM Symposium on Theory of Computing}, 2000.
+\item
+S. R. Kumar, P. Raghavan, S. Rajagopalan, and A. Tomkins, Extracting large-scale knowledge bases from the web, \textit{Proceedings of the 25th VLDB Conference}, Edinburgh, Scotland, 1999.
+\item
+D. J. Watts and S. H. Strogatz, Collective dynamics of 'small-world' networks, \textit{Nature} \textbf{393}, 440-442.
+\end{itemize}
+\end{itemize}
+\end{document}

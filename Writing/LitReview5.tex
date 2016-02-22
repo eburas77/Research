@@ -1,0 +1,86 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{verbatim}
+
+
+\begin{document}
+Eric Buras 2/19/16 Literature Review 5
+\\
+\begin{itemize}
+\setlength\itemsep{1em}
+\item{\textbf{Complete Citation:}}
+\\
+Pietro Dell'Acqua, Antonio Frangioni, and Stefano Serra-Capizzano. Accelerated multigrid for graph laplacian operators. \textit{Appl. Math. Comput.}, 270(C):193-215, November 2015.
+
+\item{\textbf{Key Words:}} 
+\\
+Graph Laplacian Operator, Algebraic Multigrid, Minimum Cost Flow, Krylov Subgraph Preconditioner.
+
+\item{\textbf{General Subject}:}
+\\
+Graph theory and linear systems.
+
+\item{\textbf{Specific Subject:}}
+\\
+Solving the graph laplacian linear systems using algebraic multigrid iterative preconditioning. Applying this algorithm to solving the interior point problem in minimum cost flow optimization problems.
+
+\item{\textbf{Authors' Hypothesis or Claim:}}
+\\
+The authors characterize necessary and sufficient conditions for preserving graph structure in coarsening for multigrid. They then perform numerical experiments showing their approach is useful for a wide range of problems and acceptible for extremely large datasets.
+
+\item{\textbf{Methodology:}}
+\\
+Graph theory and numerical analysis of iterative methods. 
+
+\item{\textbf{Result(s):}}
+\\
+\begin{itemize}
+\item
+Accelerated multigrid approaches are competitive with preconditioned conjugate gradient methods.
+\item
+Accelerated multigrid preserves graph structure better than standard multigrid.
+\item
+Accelerated multigrid requires less iterations to converge to solution.
+\item
+The only combination of preconditioner and method that regularly solves all the test cases is accelerated multigrid with diagonal preconditioner, however this is not the most efficient one.
+
+\end{itemize}
+\item{\textbf{Evidence:}}
+\\
+Tables of numerical simulations for many methods and preconditioners. Prior work done on the iterative solutions.
+
+\item{\textbf{Summary of Key Points:}}
+\\
+The authors propose accelerated multigrid preconditioning with the conjugate gradient iterative method as a general algorithm to solve most graph laplacian linear systems.
+
+\item{\textbf{Context and Relationships:}}
+\\
+Graph laplacian linear systems arise in many problems determining information flow through a network. These networks are very large, and impossible to directly solve. Multigrid is an optimal solver thus it is useful for scalably large problems. Another multigrid approach to these types of problems is the LAMG algorithm proposed by Livne and Brandt.
+
+\item{\textbf{Significance:}}
+\\
+This paper is significant for my work in that it helps me to choose my multigrid preconditioning scheme and iterative method for different problems. I provides numerical proofs that are useful to define the complexity of my own algorithm. The paper provides a framework for numerical testing of my own algorithm. In a more general sense, this paper is significant in showing that multigrid approaches to graph laplacian linear systems are the right approaches, especially for extremely large problems. 
+
+\item{\textbf{Important Figures and/or Tables:}}
+\\
+Figure on page 197 shows psuedocode for using multigrid. Tables 1-7 show results of numerical testing.
+
+\item{\textbf{Cited References to Follow Up On:}}
+\\
+\begin{itemize}
+\item
+R. K. Ahuja, T. L. Magnanti, J. B. Orlin., Network flows: theory, in: Algorithms and Applications, Prentice Hall, Englewood Cliffs, NJ, 1993.
+
+\item
+R. Horn, S. Serra-Capizzano, A general setting for the parametric Google matrix, Internet Math. 3 (4) (2008) 385-411.
+\item
+I. Koutis, Combinatorial and algebraic algorithms for optimal multilevel algorithms (Ph.D. thesis), Carnegie Mellon University (2007). CMU CS Tech Report CMU-CS-07-131.
+\end{itemize}
+\end{itemize}
+
+
+\end{document}
