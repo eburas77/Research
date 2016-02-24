@@ -1,0 +1,62 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage{amsmath}
+
+
+
+\begin{document}
+\title{Eric Buras Thesis: Background}
+
+\maketitle
+
+\section{Graph Laplacian Problem}
+Information about a weighted, undirected graph $G$ with vertex list $V$ and edge list $E$ can be stored in a matrix for computation. This is called the Laplacian which contains edge connectivity and vertex degree information for the graph. For any vertex $u \in V$, the degree of $u$ is:\\
+\begin{center} $d(u) = \sum_{v \in V} w_{u,v}$ \cite{Spielman:2010} \\
+\end{center}
+Let $D$ be the diagonal matrix of degree information for $V$. The adjacency matrix, $A$ of the graph $G$ is defined as:\\
+\begin{center} $A(u,v) = w_{u,v}$ if $(u,v) \in E$ and $0$ otherwise. \cite{Spielman:2010} \\
+\end{center}
+The Laplacian of $G$ is:\\
+\begin{center} $L = D-A$ \cite{Spielman:2010} \\
+\end{center}
+
+A common problem is solving a linear system over the graph Laplacian. This is integral in solving problems related to graph regression, spectral graph theory, maximum and minimum cost flow, resistor networks, and partial differential equations. \cite{Spielman:2010} For simplicity, we will refer to the graph Laplacian problem as solving the linear system:\\
+\begin{center} $(L+I)x = b$\\
+\end{center}
+for $x$ given $L$ and $b$, a vector of information for the graph. We must shift by the identity because $L$ has row sum equal to 0, thus it is singular. Solutions to this linear system have been studied extensively.
+
+\section{Current Solution Approaches}
+Current Solutions for linear systems can be divided into direct methods and iterative methods. Standard direct methods such as $LU$ or Cholesky factorization are accurate and suitable for graphs with small numbers of edges/vertices, however become useless for graphs of a certain size and complexity. Fast matrix inversion can be applied with order $O(n^{2.376})$ \cite{Spielman:2010}, yet this can be improved upon still. In contrast to direct solvers, iterative methods compute better and better approximate solutions to the linear system. A standard iterative method is the Conjugate Gradient method. To speed up these iterative methods, it is possible to introduce a preconditioner that creates an approximation linear system that is much easier to solve than the original. \cite{Spielman:2010}. Yet none of these basic solvers take into account attributes of the graph Laplacian that can drastically improve method performance.
+
+\subsection{Spielman-Teng, Koutis et. al.}
+In many cases, we want to find an approximation to a graph $G$ for easier computing. Spielman and Teng introduce the idea of a spectral sparsifier. The Laplacian for this approximation is similar to the Laplacian for the original graph, thus resulting in a good preconditioner for the original linear system. Multiple cycles of sparsification and factorization combine to solve the original problem. Spielman and Teng (S-T) were thus able to solve symmetric diagonally dominant systems in nearly linear time \cite{Spielman:2008}.  This line of work combined with Vaidya's work on subgraph preconditioners resulted in Koutis and Miller's work solving linear systems based on planar Laplacians \cite{Koutis:2007,Vaidya:1991}. Koutis, et. al. were then able to further decrease the time complexity of S-T for general symmetric diagonally dominant systems \cite{Koutis:2010}.
+
+\subsection{Multigrid Approaches}
+Algebraic Multigrid utilizes a Galerkin operator in multiple graph coarsening cycles to solve a Laplacian system in linear time. It is mostly used to solve discretized partial differential equations, but has become more popular to solve graph Laplacian systems. AMG is an optimal solver and is parallelizable thus it is useful for solving incredibly large problems \cite{Livne:2012}. Three current multigrid approaches are combinatorial multigrid from Koutis et. al., Cascadic multigrid from Urschel et. al., and lean algebraic multigrid from Livne and Brandt. All three propose coarsening over the entire graph, but an important question to ask is: how do you coarsen a graph with edges of varying degrees? How do you know which edges or vertices can be aggregated to preserve information?
+
+
+\subsection{Combinatorial Multigrid (CMG)}
+Koutis, Miller, and Tolliver propose a combinatorial multigrid solver to solve computer vision problems. This method creates a two-level iterative approach combining the previously mentioned subgraph preconditioning work of Vaidya with algebraic multigrid. For a set of increasingly larger three-dimensional images, CMG required less iterations to converge than a standard multigrid solver in Matlab \cite{Koutis:2011}.
+
+\subsection{Lean Algebraic Multigrid (LAMG)}
+Livne and Brandt ran a "lean" multigrid algorithm on graph Laplacian systems for almost 4000 real world graphs of varying size and in vastly different fields from the natural sciences to social networks. Their method has three key parts: first, vertices with low degree are eliminated before the graph is coarsened. Second: they aggregate vertices for the coarsening by a proximity heuristic. And third: they apply an energy correction to the Galerkin operator and combine iterate solutions for more accuracy. They test their algorithm against CMG, and find that it requires slightly more work, however is more robust overall \cite{Livne:2012}.One potential downside of LAMG is the vertex aggregation step of multigrid. How can vertices be evenly aggregated over graphs with uneven degree distribution?
+
+
+\subsection{Cascadic Multigrid}
+A final alternative form of multigrid was proposed by Urshel et. al. to solve a related problem to the graph Laplacian linear system; they wanted to calculate the Fiedler vector (eigenvector corresponding to the second smallest eigenvalue) of a graph Laplacian. This cascadic multigrid utilizes heavy edge maching to quickly coarsen a graph \cite{Urschel:2014}. It remains to be seen whether this approach will be successful for solving an entire Laplacian linear system accurately.
+
+
+
+\section{Novel Graph Splitting}
+I will now mention a different graph decomposition technique that is crucial in my work. In studying 'small world' networks proposed by Watts and Strogatz \cite{Watts:1998} Chung and Lu propose an algorithm that separates a graph into a locally connected component and a global component. Finding a local subgraph is akin to finding a locally connected portion of a graph. Given integers $k \geq 2$ and $l \geq 2$, a $(k,l)$ locally connected graph will have at least $l$ paths connecting any given two nodes with distinct edges in each path. The length of each path can be at most $k$ edges for this pair. A grid network can be described locally with $k=3, l=3,$ and $k=5, l=9$ and is a good example of how connected these types of graphs are. Given graph $G$, its maximum locally connected subgraph is the union of all locally connected subgraphs within the entire graph. It is important that this maximum is unique, and can be found through edge deletion \cite{Chung:2004}. Thus we are able to split a Laplacian matrix into two matrices with information about a locally connected portion of the graph and information about global edges of the graph for further use in solving the Laplacian linear system.
+
+
+
+\bibliographystyle{plain}
+\bibliography{mastersbib}
+\end{document}
