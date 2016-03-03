@@ -1,0 +1,57 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{verbatim}
+
+
+\begin{document}
+Eric Buras 3/3/16 Master's Thesis Outline
+\\
+\section{Abstract}
+Briefly mention graph laplacian, the linear system, applications to problems, how I am doing it
+
+\section{Introduction}
+Why is this problem important. Talk about PageRank and other "ranks" ie proteinrank, generank
+
+\section{Background}
+Already written first draft\\
+probably needs a lot more depth in the literature review\\
+probably more papers out there on graph laplacian solvers besides LAMG, CMG, and the Penn state people
+
+\section{Methodology}
+Fan Chung's local and global portion\\
+multigrid on local portion and why it is optimal\\
+direct solve on sparse portion\\
+linear algebra to combine\\
+somewhere in here need to explain networkx and petsc i think?\\
+if we write in C talk about how it is first implementation
+
+
+\section{Results}
+Complexity analysis of all the individual parts\\
+how fast is splitting for n edges?\\
+multigrid O(n)\\
+direct sparse solve is ?\\
+how many mat-mat, mat-vec multiplies in the sherman morrison\\
+table of times for different size graphs\\
+maybe try to get it on a cluster to parallelize, or maybe do this after initial thesis defense\\
+maybe try to compare with LAMG in matlab\\
+
+\section{Applications}
+graph laplacian linear systems of different types\\
+C. elegans neural network\\
+proteins and genes\\
+facebook social networks\\
+others? electric grids?\\
+
+\section{conclusions}
+talk about what worked and didnt\\
+what will be improved upon\\
+
+\section{Bibiliography from bibtex file}
+\bibliographystyle{plain}
+\bibliography{mastersbib}
+\end{document}
