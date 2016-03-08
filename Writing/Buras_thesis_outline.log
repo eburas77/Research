@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 MAR 2016 11:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 MAR 2016 10:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -210,7 +210,7 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@line=\toks17
 \verbatim@in@stream=\read1
 )
-No file Buras_thesis_outline.aux.
+(./Buras_thesis_outline.aux)
 \openout1 = `Buras_thesis_outline.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -227,6 +227,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
+
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count106
@@ -269,6 +270,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 10.
 LaTeX Info: Redefining \pageref on input line 10.
 LaTeX Info: Redefining \nameref on input line 10.
+
+(./Buras_thesis_outline.out) (./Buras_thesis_outline.out)
 \@outlinefile=\write3
 \openout3 = `Buras_thesis_outline.out'.
 
@@ -278,55 +281,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
  []
 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 15.
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--42
+Underfull \hbox (badness 10000) in paragraph at lines 15--21
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--49
+Underfull \hbox (badness 10000) in paragraph at lines 42--50
 
  []
 
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
+Underfull \hbox (badness 10000) in paragraph at lines 52--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--64
 
  []
 
 No file Buras_thesis_outline.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 57.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
 [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 57.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
  (./Buras_thesis_outline.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 57.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 57.
-
-
-Package rerunfilecheck Warning: File `Buras_thesis_outline.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Buras_thesis_outline.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  41096AFAB0F5FF33EACF848658EB2FBA;381.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 57.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
+Package rerunfilecheck Info: File `Buras_thesis_outline.out' has not changed.
+(rerunfilecheck)             Checksum: 41096AFAB0F5FF33EACF848658EB2FBA;381.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
  ) 
 Here is how much of TeX's memory you used:
- 6274 strings out of 493089
- 93922 string characters out of 6134842
- 178815 words of memory out of 5000000
- 9730 multiletter control sequences out of 15000+600000
+ 6291 strings out of 493089
+ 94190 string characters out of 6134842
+ 179919 words of memory out of 5000000
+ 9741 multiletter control sequences out of 15000+600000
  4245 words of font info for 16 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,5n,32p,253b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,5n,32p,266b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on Buras_thesis_outline.pdf (2 pages, 36869 bytes).
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Buras_thesis_outline.pdf (2 pages, 69794 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 76 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  11 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 65 words of extra memory for PDF output out of 10000 (max. 10000000)
 

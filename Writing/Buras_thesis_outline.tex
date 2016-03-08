@@ -11,10 +11,18 @@
 Eric Buras 3/3/16 Master's Thesis Outline
 \\
 \section{Abstract}
-Briefly mention graph laplacian, the linear system, applications to problems, how I am doing it
+
+$Lx=b$\\
+$x = L^{-1}b$\\
+$x = (P+T)^{-1}b$\\
+$x = (P+USV)^{-1}b$\\
+$x = (P^{-1}-P^{-1}U(S^{-1}+VP^{-1}U)^{-1}VP^{-1})b$\\
+$x = P^{-1}b-P^{-1}U(S^{-1}+VP^{-1}U)^{-1}VP^{-1}b$\\
+
+This is the reason I wrote the paper. Novel Algorithm built on Fan Chung graph partitioning for power law graphs. For a class of graphs can give fast inversion for graph laplacian. dont have a great characterization of this class of graphs
 
 \section{Introduction}
-Why is this problem important. Talk about PageRank and other "ranks" ie proteinrank, generank
+Why is this graph laplacian problem important. Talk about PageRank and other "ranks" ie proteinrank, generank. read as much as i can about neural application. cite it here and mention it in talk.
 
 \section{Background}
 Already written first draft\\
@@ -23,9 +31,9 @@ probably more papers out there on graph laplacian solvers besides LAMG, CMG, and
 
 \section{Methodology}
 Fan Chung's local and global portion\\
-multigrid on local portion and why it is optimal\\
-direct solve on sparse portion\\
-linear algebra to combine\\
+multigrid on local portion and why it is optimal (cite gary miller multigrid on planar thing) (multigrid on meshes1984 achi brandt) (cite Ulrich Rude erlang and nuremberg 2015 sisc paper)\\
+direct solve on sparse portion. low rank because its small\\
+therefore use sherman morrisson woodberry linear algebra to combine\\
 somewhere in here need to explain networkx and petsc i think?\\
 if we write in C talk about how it is first implementation
 
@@ -41,6 +49,7 @@ maybe try to get it on a cluster to parallelize, or maybe do this after initial 
 maybe try to compare with LAMG in matlab\\
 
 \section{Applications}
+merge this into results
 graph laplacian linear systems of different types\\
 C. elegans neural network\\
 proteins and genes\\
@@ -48,6 +57,8 @@ facebook social networks\\
 others? electric grids?\\
 
 \section{conclusions}
+how did we compare to LAMG and CMG
+our algorithm is arguably much simpler and cleaner. no heuristics
 talk about what worked and didnt\\
 what will be improved upon\\
 
