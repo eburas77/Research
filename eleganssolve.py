@@ -6,8 +6,15 @@ import timeit
 #import matplotlib.pylab as plt
 import kl_connected_subgraph as kl
 
-fh=open('facebook_combined.txt', 'rb')
-G=nx.read_edgelist(fh,nodetype=int)
+F = nx.read_gml('celegansneural.gml')
+
+G = nx.Graph()
+for i in range(0,nx.number_of_nodes(F)):
+    print i
+    for j in range(0,nx.number_of_nodes(F)):
+        if F.has_edge(i,j):
+            if not G.has_edge(i,j):
+                G.add_edge(i,j)
                 
 A = nx.adjacency_matrix(G)
 A = A.todense()
@@ -18,7 +25,7 @@ print "read in graph"
 L = nx.laplacian_matrix(G)
 L = L.todense()
 
-P = nx.read_edgelist('facebooklocal.edgelist',nodetype=int)
+P = nx.read_edgelist('neurallocal.edgelist',nodetype=int)
 
 H = nx.Graph()
 for node in G.nodes():

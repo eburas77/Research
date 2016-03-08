@@ -16,8 +16,10 @@ import kl_connected_subgraph as kl
 #            if not G.has_edge(i,j):
 #                G.add_edge(i,j)
                 
-fh=open('facebook_combined.txt', 'rb')
-G=nx.read_edgelist(fh,nodetype=int)
+G = nx.read_weighted_edgelist('celegans_metabolic.net')
+                
+#fh=open('facebook_combined.txt', 'rb')
+#G=nx.read_edgelist(fh,nodetype=int)
                 
 A = nx.adjacency_matrix(G)
 A = A.todense()
@@ -39,12 +41,12 @@ P = kl.kl_connected_subgraph(G, k, l, low_memory=True, same_as_graph=False)
 elapsed = timeit.default_timer() - start_time
 print "Fan Chung's algorithm ran in %f seconds" %elapsed
 print "split graph"
-#P_A = nx.adjacency_matrix(P)
-#P_A = P_A.todense()
-#T_A = A - P_A
-#nx.write_edgelist(P, "facebooklocal.edgelist")
-#T_graph = nx.from_numpy_matrix(T_A)
-#nx.write_edgelist(T_graph, "facebokglobal.edgelist")
+P_A = nx.adjacency_matrix(P)
+P_A = P_A.todense()
+T_A = A - P_A
+nx.write_edgelist(P, "metaboliclocal.edgelist")
+T_graph = nx.from_numpy_matrix(T_A)
+nx.write_edgelist(T_graph, "metabolicglobal.edgelist")
 P_L = nx.laplacian_matrix(P)
 P_L = P_L.todense()
 
