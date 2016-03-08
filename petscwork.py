@@ -44,9 +44,9 @@ print "split graph"
 P_A = nx.adjacency_matrix(P)
 P_A = P_A.todense()
 T_A = A - P_A
-nx.write_edgelist(P, "metaboliclocal.edgelist")
+nx.write_weighted_edgelist(P, "metaboliclocal.edgelist")
 T_graph = nx.from_numpy_matrix(T_A)
-nx.write_edgelist(T_graph, "metabolicglobal.edgelist")
+nx.write_weighted_edgelist(T_graph, "metabolicglobal.edgelist")
 P_L = nx.laplacian_matrix(P)
 P_L = P_L.todense()
 

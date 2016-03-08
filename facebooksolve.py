@@ -60,26 +60,16 @@ s_inv = np.linalg.inv(s)
 #V = np.array(V[0:size-1,:])     need to reshape V to keep low rank
 
 P_L_csr = scipy.sparse.csr_matrix(P_L)
-U_csr = scipy.sparse.csr_matrix(U)
-s_inv_csr = scipy.sparse.csr_matrix(s_inv)
-V_csr = scipy.sparse.csr_matrix(V)
-#T_csr = scipy.sparse.csr_matrix(T)
+
 
 
 P_L_petsc = Pet.Mat().createAIJ(size=P_L_csr.shape,
                             csr = (P_L_csr.indptr, P_L_csr.indices, P_L_csr.data))
-                                
-#T_petsc = Pet.Mat().createAIJ(size=T_csr.shape,
-#                            csr = (T_csr.indptr, T_csr.indices, T_csr.data))
+                                                       
 
-U_petsc = Pet.Mat().createAIJ(size=U_csr.shape,
-                            csr = (U_csr.indptr, U_csr.indices, U_csr.data))
-
-s_inv_petsc = Pet.Mat().createAIJ(size=s_inv_csr.shape,
-                            csr = (s_inv_csr.indptr, s_inv_csr.indices, s_inv_csr.data))
-
-V_petsc = Pet.Mat().createAIJ(size=V_csr.shape,
-                            csr = (V_csr.indptr, V_csr.indices, V_csr.data))                       
+U_petsc = Pet.Mat().createDense(size=U.shape,array =U)
+s_inv_petsc = Pet.Mat().createDense(size = s_inv.shape,array = s_inv)
+V_petsc = Pet.Mat().createDense(size = V.shape, array =V)
 
  
 y,b = P_L_petsc.getVecs() #initialize vectors
@@ -112,12 +102,12 @@ Q_2 = Pet.Mat().createDense(size = P_L_csr.shape)  #initialize Q dense matrices
 #Q_1 = Q.duplicate()
 #Q_2 = Q.duplicate()
 Q.setUp()
-for i in range(0,n):
+for i in range(0,n):            #Q = P^{-1}*U
     print i
     ksp.solve(U_petsc.getColumnVector(i),Qvec)
     Q.getColumnVector(i,Qvec)
 
-#ksp.solve(U_petsc,Q)            #Q = P^{-1}*U
+
 Q_1 = V_petsc.matMult(Q)             #Q_1 = V*Q
 Q_2 = s_inv_petsc+Q_1    
 
