@@ -6,6 +6,7 @@ import timeit
 #import matplotlib.pylab as plt
 import kl_connected_subgraph as kl
 
+start_time = timeit.default_timer()
 fh=open('facebook_combined.txt', 'rb')
 G=nx.read_edgelist(fh,nodetype=int)
                 
@@ -102,6 +103,8 @@ Q_2 = Pet.Mat().createDense(size = P_L_csr.shape)  #initialize Q dense matrices
 #Q_1 = Q.duplicate()
 #Q_2 = Q.duplicate()
 Q.setUp()
+Q_1.setUp()
+Q_2.setUp()
 for i in range(0,n):            #Q = P^{-1}*U
     print i
     ksp.solve(U_petsc.getColumnVector(i),Qvec)
@@ -121,7 +124,8 @@ ksp.solve(y_3,y_4)              #y_4 = P^{-1}*y_3
 x = y-y_4
 
 x.view()
-
+elapsed = timeit.default_timer() - start_time
+print "Facebook Solved in %f seconds" %elapsed
 
 #P_L_petsc.mult(y, r)
 #r.axpy(-1.0, b)

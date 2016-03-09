@@ -100,6 +100,8 @@ Q_2 = Pet.Mat().createDense(size = P_L_csr.shape)  #initialize Q dense matrices
 #Q_1 = Q.duplicate()
 #Q_2 = Q.duplicate()
 Q.setUp()
+Q_1.setUp()
+Q_2.setUp()
 for i in range(0,n):            #Q = P^{-1}*U
     ksp.solve(U_petsc.getColumnVector(i),Qvec)
     Q.getColumnVector(i,Qvec)
