@@ -102,18 +102,18 @@ pc.setType(pc.Type.GAMG) #multigrid preconditioner
 ksp.setOperators(P_L_petsc)
 print "now solve"
 
-ksp.solve(b,y)  
-               #y = P^{-1}b
-m,n = P_L_petsc.getSize()
-print "P is: ", (m,n)
-sizeb = b.getSize()
-print "b is: ", sizeb
-sizey = y.getSize()
-print "y is: ", size
-sizeV = V_petsc.getSize()
-print "V is: ",sizeV
-sizey_1 = y_1.getSize()
-print "y_1 is: ",sizey_1
+ksp.solve(b,y)         #y = P^{-1}b
+               
+#m,n = P_L_petsc.getSize()
+#print "P is: ", (m,n)
+#sizeb = b.getSize()
+#print "b is: ", sizeb
+#sizey = y.getSize()
+#print "y is: ", size
+#sizeV = V_petsc.getSize()
+#print "V is: ",sizeV
+#sizey_1 = y_1.getSize()
+#print "y_1 is: ",sizey_1
 
 V_petsc.mult(y,y_1)            #y_1 = V*y
 
@@ -121,8 +121,7 @@ V_petsc.mult(y,y_1)            #y_1 = V*y
 Q = Pet.Mat().createDense(size = U.shape) 
 Q_1 = Pet.Mat().createDense(size = s_inv.shape)
 Q_2 = Pet.Mat().createDense(size = s_inv.shape)  #initialize Q matrices
-#Q_1 = Q.duplicate()
-#Q_2 = Q.duplicate()
+
 Q.setUp()
 Q_1.setUp()
 Q_2.setUp()

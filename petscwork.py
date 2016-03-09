@@ -20,7 +20,10 @@ G = nx.read_weighted_edgelist('celegans_metabolic.net')
                 
 #fh=open('facebook_combined.txt', 'rb')
 #G=nx.read_edgelist(fh,nodetype=int)
-                
+ 
+#phenotype (protein interaction) is in proteinnet.py
+
+             
 A = nx.adjacency_matrix(G)
 A = A.todense()
 
