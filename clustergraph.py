@@ -80,7 +80,7 @@ size = sum(s>.00000001)
 U = np.array(U[:,0:size-1])
 s = s[0:size-1]
 s = np.diag(s)
-#s = np.reshape(len(s),1)
+s = np.reshape(len(s),1)
 V = np.array(V[0:size-1,:])
 
 #SHERMAN WOODBERRY MORRISON

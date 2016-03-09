@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Mar  9 14:46:51 2016
+
+@author: ericburas
+"""
+
 from petsc4py import PETSc as Pet
 import networkx as nx
 import numpy as np
@@ -6,16 +13,9 @@ import timeit
 #import matplotlib.pylab as plt
 import kl_connected_subgraph as kl
 start_time = timeit.default_timer()
-F = nx.read_gml('celegansneural.gml')
+fh=open('phenotype.txt', 'rb')
+G=nx.read_edgelist(fh,data=(('phenotype',str),))
 
-G = nx.Graph()
-for i in range(0,nx.number_of_nodes(F)):
-    #print i
-    for j in range(0,nx.number_of_nodes(F)):
-        if F.has_edge(i,j):
-            if not G.has_edge(i,j):
-                G.add_edge(i,j)
-                
 A = nx.adjacency_matrix(G)
 A = A.todense()
 
@@ -23,11 +23,11 @@ A = A.todense()
 
 print "read in graph"
 L = nx.laplacian_matrix(G)
+rows,cols =L.shape
 L = L.todense()
-L = L +np.eye(len(L))
+#L = L+np.eye(rows)
 
-
-P = nx.read_edgelist('neurallocal.edgelist',nodetype=int)
+P = nx.read_edgelist('proteinlocal.edgelist')
 
 H = nx.Graph()
 for node in G.nodes():
@@ -43,14 +43,13 @@ P_L = P_L.todense()
 T = L-P_L
 P_L = P_L+np.eye(len(L))*np.diagonal(T)
 T = T-np.eye(len(L))*np.diagonal(T)
+
 print T.shape
 print "rank of teleportation matrix: %i" %np.linalg.matrix_rank(T)
 
 print "number of edges in entire graph: %i" %nx.number_of_edges(G)
 print "number of edges in k,l connected subgraph: %i" %nx.number_of_edges(P)
-#L = np.array([[11,13,15],[17,19,21],[23,25,27]])
-#T = np.array([[1,2,3],[4,5,6],[7,8,9]])
-#P_L = np.array([[10,11,12],[13,14,15],[16,17,18]])
+
 
 #plt.spy(A,precision=0.01, markersize=1)
 #plt.savefig('celeganspy.png')
@@ -63,12 +62,12 @@ size = sum(s>.00000001)
 
 
 #remove rows and columns for low rank matrix
-U = np.array(U[:,0:size])
-s = s[0:size]
+U = np.array(U[:,0:size-1])
+s = s[0:size-1]
 s = np.diag(s)
 s_inv = np.linalg.inv(s)
 #s = np.reshape(len(s),1)
-V = np.array(V[0:size,:])     #need to reshape V to keep low rank
+V = np.array(V[0:size-1,:])     #need to reshape V to keep low rank
 sizeU1,sizeU2 = U.shape
 P_L_csr = scipy.sparse.csr_matrix(P_L)
 
@@ -83,13 +82,13 @@ s_inv_petsc = Pet.Mat().createDense(size = s_inv.shape,array = s_inv)
 V_petsc = Pet.Mat().createDense(size = V.shape, array =V) 
                 
 m,n = P_L_petsc.getSize()
-#print "P is: ", (m,n)
+print "P is: ", (m,n)
 
 b = Pet.Vec().createSeq(m)
 b.set(1)     #set b
 #b.view()
 y = b.duplicate()
-y_1 = Pet.Vec().createSeq(size)
+y_1 = Pet.Vec().createSeq(size-1)
 y_2 = y_1.duplicate()
 y_3 = y.duplicate()
 y_4 = y.duplicate()
@@ -108,16 +107,16 @@ print "now solve"
 
 ksp.solve(b,y)         #y = P^{-1}b
                
-m,n = P_L_petsc.getSize()
-print "P is: ", (m,n)
-sizeb = b.getSize()
-print "b is: ", sizeb
-sizey = y.getSize()
-print "y is: ", size
-sizeV = V_petsc.getSize()
-print "V is: ",sizeV
-sizey_1 = y_1.getSize()
-print "y_1 is: ",sizey_1
+#m,n = P_L_petsc.getSize()
+#print "P is: ", (m,n)
+#sizeb = b.getSize()
+#print "b is: ", sizeb
+#sizey = y.getSize()
+#print "y is: ", size
+#sizeV = V_petsc.getSize()
+#print "V is: ",sizeV
+#sizey_1 = y_1.getSize()
+#print "y_1 is: ",sizey_1
 
 V_petsc.mult(y,y_1)            #y_1 = V*y
 
@@ -129,15 +128,16 @@ Q_2 = Pet.Mat().createDense(size = s_inv.shape)  #initialize Q matrices
 Q.setUp()
 Q_1.setUp()
 Q_2.setUp()
-rows=range(sizeU2)
-for i in range(sizeU2):
-    col = i
+for i in range(0,sizeU2):
+    #print i
+    #for j in range(0,m):
+    #    z.setValues(i,U_petsc.getValues(j,i))
+    #ksp.solve(z,Qvec)
+    #for k in range(0,m):
+    #    Q.setValues(i,k,Qvec.getValues(k))
     ksp.solve(U_petsc.getColumnVector(i),Qvec)
-    for row in rows: 
-        Q.setValues(row, col, Qvec.getValue(row))
-
-Q.assemblyBegin()
-Q.assemblyEnd() 
+    Q.getColumnVector(i,Qvec)
+    
 
 
 V_petsc.matMult(Q,Q_1)              #Q_1 = V*Q
@@ -158,27 +158,7 @@ print "Neural Solve ran in %f seconds" %elapsed
 print "now test vs numpy solve"
 
 b1 = np.transpose(np.ones(m))
-
 x2 = np.linalg.solve(L,b1)
-
-
-print "norm of difference between nplinalg and my way: ", np.linalg.norm(x1-x2)
-L_csr = scipy.sparse.csr_matrix(L)
-
-
-
-L_petsc = Pet.Mat().createAIJ(size=L_csr.shape,
-                            csr = (L_csr.indptr, L_csr.indices, L_csr.data))
-
-ksp3 = Pet.KSP()
-ksp3.create(Pet.COMM_WORLD)
-ksp3.setOperators(L_petsc)
-b2 = b.duplicate()
-ksp3.solve(b,b2)
-barray = b2.getArray()
-
-print "norm of difference between petsc straight solve and my way: ", np.linalg.norm(x1-barray)
-
 #P_L_petsc.mult(y, r)
 #r.axpy(-1.0, b)
 #r.view()

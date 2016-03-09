@@ -18,6 +18,7 @@ A = A.todense()
 print "read in graph"
 L = nx.laplacian_matrix(G)
 L = L.todense()
+L = L+np.eye(len(L))
 
 P = nx.read_edgelist('facebooklocal.edgelist',nodetype=int)
 
@@ -53,12 +54,12 @@ size = sum(s>.00000001)
 
 
 #remove rows and columns for low rank matrix
-U = np.array(U[:,0:size-1])
-s = s[0:size-1]
+U = np.array(U[:,0:size])
+s = s[0:size]
 s = np.diag(s)
 s_inv = np.linalg.inv(s)
-s = np.reshape(len(s),1)
-V = np.array(V[0:size-1,:])     #need to reshape V to keep low rank
+#s = np.reshape(len(s),1)
+V = np.array(V[0:size,:])     #need to reshape V to keep low rank
 sizeU1,sizeU2 = U.shape
 P_L_csr = scipy.sparse.csr_matrix(P_L)
 
@@ -73,13 +74,13 @@ s_inv_petsc = Pet.Mat().createDense(size = s_inv.shape,array = s_inv)
 V_petsc = Pet.Mat().createDense(size = V.shape, array =V) 
                 
 m,n = P_L_petsc.getSize()
-print "P is: ", (m,n)
+#print "P is: ", (m,n)
 
 b = Pet.Vec().createSeq(m)
 b.set(1)     #set b
 #b.view()
 y = b.duplicate()
-y_1 = Pet.Vec().createSeq(size-1)
+y_1 = Pet.Vec().createSeq(size)
 y_2 = y_1.duplicate()
 y_3 = y.duplicate()
 y_4 = y.duplicate()
@@ -96,18 +97,18 @@ pc.setType(pc.Type.GAMG) #multigrid preconditioner
 ksp.setOperators(P_L_petsc)
 print "now solve"
 
-ksp.solve(b,y)          #y = P^{-1}b
+ksp.solve(b,y)         #y = P^{-1}b
                
-#m,n = P_L_petsc.getSize()
-#print "P is: ", (m,n)
-#sizeb = b.getSize()
-#print "b is: ", sizeb
-#sizey = y.getSize()
-#print "y is: ", size
-#sizeV = V_petsc.getSize()
-#print "V is: ",sizeV
-#sizey_1 = y_1.getSize()
-#print "y_1 is: ",sizey_1
+m,n = P_L_petsc.getSize()
+print "P is: ", (m,n)
+sizeb = b.getSize()
+print "b is: ", sizeb
+sizey = y.getSize()
+print "y is: ", size
+sizeV = V_petsc.getSize()
+print "V is: ",sizeV
+sizey_1 = y_1.getSize()
+print "y_1 is: ",sizey_1
 
 V_petsc.mult(y,y_1)            #y_1 = V*y
 
@@ -119,16 +120,15 @@ Q_2 = Pet.Mat().createDense(size = s_inv.shape)  #initialize Q matrices
 Q.setUp()
 Q_1.setUp()
 Q_2.setUp()
-for i in range(0,sizeU2):
-    #print i
-    #for j in range(0,m):
-    #    z.setValues(i,U_petsc.getValues(j,i))
-    #ksp.solve(z,Qvec)
-    #for k in range(0,m):
-    #    Q.setValues(i,k,Qvec.getValues(k))
+rows=range(sizeU2)
+for i in range(sizeU2):
+    col = i
     ksp.solve(U_petsc.getColumnVector(i),Qvec)
-    Q.getColumnVector(i,Qvec)
-    
+    for row in rows: 
+        Q.setValues(row, col, Qvec.getValue(row))
+
+Q.assemblyBegin()
+Q.assemblyEnd() 
 
 
 V_petsc.matMult(Q,Q_1)              #Q_1 = V*Q
@@ -142,9 +142,35 @@ ksp2.solve(y_1,y_2)             #y_2 = Q_2^{-1}*y_1
 U_petsc.mult(y_2,y_3)           #y_3 = U*y_2
 ksp.solve(y_3,y_4)              #y_4 = P^{-1}*y_3
 x = y-y_4
-
+x1 = x.getArray()
 elapsed = timeit.default_timer() - start_time
 print "Facebook Solve ran in %f seconds" %elapsed
+
+print "now test vs numpy solve"
+
+b1 = np.transpose(np.ones(m))
+
+x2 = np.linalg.solve(L,b1)
+
+
+print "norm of difference between nplinalg and my way: ", np.linalg.norm(x1-x2)
+
+L_csr = scipy.sparse.csr_matrix(L)
+
+
+
+L_petsc = Pet.Mat().createAIJ(size=L_csr.shape,
+                            csr = (L_csr.indptr, L_csr.indices, L_csr.data))
+
+ksp3 = Pet.KSP()
+ksp3.create(Pet.COMM_WORLD)
+ksp3.setOperators(L_petsc)
+b2 = b.duplicate()
+ksp3.solve(b,b2)
+barray = b2.getArray()
+
+print "norm of difference between petsc straight solve and my way: ", np.linalg.norm(x1-barray)
+
 
 
 #P_L_petsc.mult(y, r)
