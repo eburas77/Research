@@ -5,7 +5,7 @@ import scipy
 import timeit
 #import matplotlib.pylab as plt
 import kl_connected_subgraph as kl
-
+start_time = timeit.default_timer()
 G = nx.read_edgelist('celegans_metabolic.net')
                 
 A = nx.adjacency_matrix(G)
@@ -48,37 +48,42 @@ print "number of edges in k,l connected subgraph: %i" %nx.number_of_edges(P)
 
 U,s,V = np.linalg.svd(T)
 size = sum(s>.00000001)
-m,n = U.shape
+
 
 #remove rows and columns for low rank matrix
-#U = np.array(U[:,0:size-1])
-#s = s[0:size-1]
+U = np.array(U[:,0:size-1])
+s = s[0:size-1]
 s = np.diag(s)
 s_inv = np.linalg.inv(s)
-#s = np.reshape(len(s),1)
-#V = np.array(V[0:size-1,:])     need to reshape V to keep low rank
-
+s = np.reshape(len(s),1)
+V = np.array(V[0:size-1,:])     #need to reshape V to keep low rank
+sizeU1,sizeU2 = U.shape
 P_L_csr = scipy.sparse.csr_matrix(P_L)
 
 
 
 P_L_petsc = Pet.Mat().createAIJ(size=P_L_csr.shape,
                             csr = (P_L_csr.indptr, P_L_csr.indices, P_L_csr.data))
-
+                                
+                      
 U_petsc = Pet.Mat().createDense(size=U.shape,array =U)
 s_inv_petsc = Pet.Mat().createDense(size = s_inv.shape,array = s_inv)
-V_petsc = Pet.Mat().createDense(size = V.shape, array =V)                        
+V_petsc = Pet.Mat().createDense(size = V.shape, array =V) 
+                
+m,n = P_L_petsc.getSize()
+print "P is: ", (m,n)
 
- 
-y,b = P_L_petsc.getVecs() #initialize vectors
-x = y.duplicate
-b.set(1)
-y.set(0)
-y_1 = y.duplicate()
-y_2 = y.duplicate()
+b = Pet.Vec().createSeq(m)
+b.set(1)     #set b
+#b.view()
+y = b.duplicate()
+y_1 = Pet.Vec().createSeq(size-1)
+y_2 = y_1.duplicate()
 y_3 = y.duplicate()
 y_4 = y.duplicate()
-Qvec = y.duplicate()
+x = y.duplicate()
+Qvec = b.duplicate()
+
 
 
 ksp = Pet.KSP() #linear solver
@@ -89,25 +94,43 @@ pc.setType(pc.Type.GAMG) #multigrid preconditioner
 ksp.setOperators(P_L_petsc)
 print "now solve"
 
-ksp.solve(b,y)                 #y = P^{-1}b
+ksp.solve(b,y)  
+               #y = P^{-1}b
+m,n = P_L_petsc.getSize()
+print "P is: ", (m,n)
+sizeb = b.getSize()
+print "b is: ", sizeb
+sizey = y.getSize()
+print "y is: ", size
+sizeV = V_petsc.getSize()
+print "V is: ",sizeV
+sizey_1 = y_1.getSize()
+print "y_1 is: ",sizey_1
 
 V_petsc.mult(y,y_1)            #y_1 = V*y
 
 
-Q = Pet.Mat().createDense(size = P_L_csr.shape) 
-Q_1 = Pet.Mat().createDense(size = P_L_csr.shape)
-Q_2 = Pet.Mat().createDense(size = P_L_csr.shape)  #initialize Q dense matrices
+Q = Pet.Mat().createDense(size = U.shape) 
+Q_1 = Pet.Mat().createDense(size = s_inv.shape)
+Q_2 = Pet.Mat().createDense(size = s_inv.shape)  #initialize Q matrices
 #Q_1 = Q.duplicate()
 #Q_2 = Q.duplicate()
 Q.setUp()
 Q_1.setUp()
 Q_2.setUp()
-for i in range(0,n):            #Q = P^{-1}*U
+for i in range(0,sizeU2):
+    #print i
+    #for j in range(0,m):
+    #    z.setValues(i,U_petsc.getValues(j,i))
+    #ksp.solve(z,Qvec)
+    #for k in range(0,m):
+    #    Q.setValues(i,k,Qvec.getValues(k))
     ksp.solve(U_petsc.getColumnVector(i),Qvec)
     Q.getColumnVector(i,Qvec)
+    
 
 
-Q_1 = V_petsc.matMult(Q)             #Q_1 = V*Q
+V_petsc.matMult(Q,Q_1)              #Q_1 = V*Q
 Q_2 = s_inv_petsc+Q_1    
 
 ksp2 = Pet.KSP()                #second linear solver
@@ -119,7 +142,9 @@ U_petsc.mult(y_2,y_3)           #y_3 = U*y_2
 ksp.solve(y_3,y_4)              #y_4 = P^{-1}*y_3
 x = y-y_4
 
-x.view()
+
+elapsed = timeit.default_timer() - start_time
+print "Facebook Solve ran in %f seconds" %elapsed
 
 
 #P_L_petsc.mult(y, r)

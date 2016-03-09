@@ -6,8 +6,15 @@ import timeit
 #import matplotlib.pylab as plt
 import kl_connected_subgraph as kl
 start_time = timeit.default_timer()
-fh=open('phenotype.txt', 'rb')
-G=nx.read_edgelist(fh,data=(('phenotype',str),))
+F = nx.read_gml('celegansneural.gml')
+
+G = nx.Graph()
+for i in range(0,nx.number_of_nodes(F)):
+    #print i
+    for j in range(0,nx.number_of_nodes(F)):
+        if F.has_edge(i,j):
+            if not G.has_edge(i,j):
+                G.add_edge(i,j)
                 
 A = nx.adjacency_matrix(G)
 A = A.todense()
@@ -18,7 +25,7 @@ print "read in graph"
 L = nx.laplacian_matrix(G)
 L = L.todense()
 
-P = nx.read_edgelist('proteinlocal.edgelist')
+P = nx.read_edgelist('neurallocal.edgelist',nodetype=int)
 
 H = nx.Graph()
 for node in G.nodes():
@@ -144,7 +151,7 @@ ksp.solve(y_3,y_4)              #y_4 = P^{-1}*y_3
 x = y-y_4
 
 elapsed = timeit.default_timer() - start_time
-print "Facebook Solve ran in %f seconds" %elapsed
+print "Neural Solve ran in %f seconds" %elapsed
 
 
 #P_L_petsc.mult(y, r)
