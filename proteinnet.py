@@ -23,8 +23,8 @@ import kl_connected_subgraph as kl
 #            if not G.has_edge(i,j):
 #                G.add_edge(i,j)
                 
-fh=open('phenotype.txt', 'rb')
-G=nx.read_edgelist(fh,data=(('phenotype',str),))
+fh=open('newpheno.txt', 'rb')
+G=nx.read_edgelist(fh)
 
 A = nx.adjacency_matrix(G)
 A = A.todense()

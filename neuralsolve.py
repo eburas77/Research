@@ -67,7 +67,6 @@ U = np.array(U[:,0:size])
 s = s[0:size]
 s = np.diag(s)
 s_inv = np.linalg.inv(s)
-#s = np.reshape(len(s),1)
 V = np.array(V[0:size,:])     #need to reshape V to keep low rank
 sizeU1,sizeU2 = U.shape
 P_L_csr = scipy.sparse.csr_matrix(P_L)
@@ -86,7 +85,7 @@ m,n = P_L_petsc.getSize()
 #print "P is: ", (m,n)
 
 b = Pet.Vec().createSeq(m)
-b.set(1)     #set b
+b.setRandom()     #set b
 #b.view()
 y = b.duplicate()
 y_1 = Pet.Vec().createSeq(size)
@@ -102,22 +101,13 @@ ksp = Pet.KSP() #linear solver
 ksp.create(Pet.COMM_WORLD)
 ksp.setFromOptions()
 pc = ksp.getPC()
-pc.setType(pc.Type.GAMG) #multigrid preconditioner
+#pc.setType(pc.Type.GAMG) #multigrid preconditioner
+pc.setType(pc.Type.LU)
 ksp.setOperators(P_L_petsc)
 print "now solve"
 
 ksp.solve(b,y)         #y = P^{-1}b
-               
-m,n = P_L_petsc.getSize()
-print "P is: ", (m,n)
-sizeb = b.getSize()
-print "b is: ", sizeb
-sizey = y.getSize()
-print "y is: ", size
-sizeV = V_petsc.getSize()
-print "V is: ",sizeV
-sizey_1 = y_1.getSize()
-print "y_1 is: ",sizey_1
+              
 
 V_petsc.mult(y,y_1)            #y_1 = V*y
 
@@ -129,27 +119,36 @@ Q_2 = Pet.Mat().createDense(size = s_inv.shape)  #initialize Q matrices
 Q.setUp()
 Q_1.setUp()
 Q_2.setUp()
-rows=range(sizeU2)
+rows=range(sizeU1)
 for i in range(sizeU2):
     col = i
     ksp.solve(U_petsc.getColumnVector(i),Qvec)
-    for row in rows: 
-        Q.setValues(row, col, Qvec.getValue(row))
+    Q.setValues(rows, col, Qvec.getArray())
 
 Q.assemblyBegin()
 Q.assemblyEnd() 
 
-
+U_petsc_2 = Pet.Mat().createDense(size=U.shape,array =U)
 V_petsc.matMult(Q,Q_1)              #Q_1 = V*Q
 Q_2 = s_inv_petsc+Q_1    
 
 ksp2 = Pet.KSP()                #second linear solver
 ksp2.create(Pet.COMM_WORLD)
+pc2 = ksp2.getPC()
+pc2.setType(pc2.Type.LU)
 ksp2.setOperators(Q_2)          #do i need a preconditioner? 
 ksp2.solve(y_1,y_2)             #y_2 = Q_2^{-1}*y_1
 
-U_petsc.mult(y_2,y_3)           #y_3 = U*y_2
-ksp.solve(y_3,y_4)              #y_4 = P^{-1}*y_3
+U_petsc_2.mult(y_2,y_3)           #y_3 = U*y_2
+
+P_L_petsc_2 = Pet.Mat().createAIJ(size=P_L_csr.shape,
+                            csr = (P_L_csr.indptr, P_L_csr.indices, P_L_csr.data))
+ksp3 = Pet.KSP()                #second linear solver
+ksp3.create(Pet.COMM_WORLD)
+pc3 = ksp3.getPC()
+pc3.setType(pc3.Type.LU)                           
+ksp3.setOperators(P_L_petsc_2)
+ksp3.solve(y_3,y_4)              #y_4 = P^{-1}*y_3
 x = y-y_4
 x1 = x.getArray()
 elapsed = timeit.default_timer() - start_time
@@ -157,7 +156,7 @@ print "Neural Solve ran in %f seconds" %elapsed
 
 print "now test vs numpy solve"
 
-b1 = np.transpose(np.ones(m))
+b1 = b.getArray()
 
 x2 = np.linalg.solve(L,b1)
 
@@ -170,13 +169,16 @@ L_csr = scipy.sparse.csr_matrix(L)
 L_petsc = Pet.Mat().createAIJ(size=L_csr.shape,
                             csr = (L_csr.indptr, L_csr.indices, L_csr.data))
 
-ksp3 = Pet.KSP()
-ksp3.create(Pet.COMM_WORLD)
-ksp3.setOperators(L_petsc)
+ksp4 = Pet.KSP()
+ksp4.create(Pet.COMM_WORLD)
+pc4 = ksp.getPC()
+pc4.setType(pc4.Type.LU)
+ksp4.setOperators(L_petsc)
 b2 = b.duplicate()
-ksp3.solve(b,b2)
+ksp4.solve(b,b2)
 barray = b2.getArray()
 
+#print barray
 print "norm of difference between petsc straight solve and my way: ", np.linalg.norm(x1-barray)
 
 #P_L_petsc.mult(y, r)

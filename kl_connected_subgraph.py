@@ -74,6 +74,8 @@ def kl_connected_subgraph(G, k, l, low_memory=False, same_as_graph=False):
     deleted_some=True # hack to start off the while loop
     while deleted_some:
         deleted_some=False
+        print "loop back to beginning to delete more"
+        counter =0
         for edge in H.edges():
             counter +=1
             print counter

@@ -16,7 +16,7 @@ import kl_connected_subgraph as kl
 #            if not G.has_edge(i,j):
 #                G.add_edge(i,j)
                 
-G = nx.read_weighted_edgelist('celegans_metabolic.net')
+G = nx.read_edgelist('newmetabolic.txt',nodetype=int)
                 
 #fh=open('facebook_combined.txt', 'rb')
 #G=nx.read_edgelist(fh,nodetype=int)
@@ -47,9 +47,9 @@ print "split graph"
 P_A = nx.adjacency_matrix(P)
 P_A = P_A.todense()
 T_A = A - P_A
-nx.write_weighted_edgelist(P, "metaboliclocal.edgelist")
+nx.write_edgelist(P, "metaboliclocal.edgelist")
 T_graph = nx.from_numpy_matrix(T_A)
-nx.write_weighted_edgelist(T_graph, "metabolicglobal.edgelist")
+nx.write_edgelist(T_graph, "metabolicglobal.edgelist")
 P_L = nx.laplacian_matrix(P)
 P_L = P_L.todense()
 
