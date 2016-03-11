@@ -137,7 +137,7 @@ P_L_petsc_2 = Pet.Mat().createAIJ(size=P_L_csr.shape,
 ksp3 = Pet.KSP()                #second linear solver
 ksp3.create(Pet.COMM_WORLD)
 pc3 = ksp3.getPC()
-pc3.setType(pc3.Type.LU)                           
+pc3.setType(pc3.Type.GAMG)                           
 ksp3.setOperators(P_L_petsc_2)
 ksp3.solve(y_3,y_4)              #y_4 = P^{-1}*y_3
 x = y-y_4
@@ -169,15 +169,7 @@ b2 = b.duplicate()
 ksp4.solve(b,b2)
 barray = b2.getArray()
 
-#print barray
+
 print "norm of difference between petsc straight solve and my way: ", np.linalg.norm(x1-barray)
 
-#P_L_petsc.mult(y, r)
-#r.axpy(-1.0, b)
-#r.view()
-#y,f = T_petsc.getVecs()
-#f.set(1)
-#y.set(0)
-#set to solve LU instead of GAMG
-#ksp.setOperators(T_petsc)
-#ksp.solve(f,y)
+print "norm of difference between petsc straight solve and np.linalg: ", np.linalg.norm(x2-barray)
