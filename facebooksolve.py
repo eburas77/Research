@@ -162,7 +162,7 @@ L_petsc = Pet.Mat().createAIJ(size=L_csr.shape,
 
 ksp4 = Pet.KSP()
 ksp4.create(Pet.COMM_WORLD)
-pc4 = ksp.getPC()
+pc4 = ksp4.getPC()
 pc4.setType(pc4.Type.LU)
 ksp4.setOperators(L_petsc)
 b2 = b.duplicate()
