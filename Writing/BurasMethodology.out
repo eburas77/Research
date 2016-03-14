@@ -1,0 +1,8 @@
+\BOOKMARK [1][-]{section.1}{Graph Partitioning}{}% 1
+\BOOKMARK [1][-]{section.2}{Laplacian Solver}{}% 2
+\BOOKMARK [1][-]{section.3}{Algebraic Multigrid of Locally Connected Subgraph}{}% 3
+\BOOKMARK [1][-]{section.4}{Low Rank SVD of Teleportation Subgraph}{}% 4
+\BOOKMARK [1][-]{section.5}{Linear Algebra: Woodbury Matrix Identity}{}% 5
+\BOOKMARK [1][-]{section.6}{Summary of Solving the Laplacian Linear System}{}% 6
+\BOOKMARK [1][-]{section.7}{Complexity of Graph partitioning and Linear System Solve}{}% 7
+\BOOKMARK [1][-]{section.8}{NetworkX and PETSc}{}% 8

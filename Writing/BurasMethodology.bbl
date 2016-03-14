@@ -1,0 +1,45 @@
+\begin{thebibliography}{1}
+
+\bibitem{petsc-user-ref}
+Satish Balay, Shrirang Abhyankar, Mark~F. Adams, Jed Brown, Peter Brune, Kris
+  Buschelman, Lisandro Dalcin, Victor Eijkhout, William~D. Gropp, Dinesh
+  Kaushik, Matthew~G. Knepley, Lois~Curfman McInnes, Karl Rupp, Barry~F. Smith,
+  Stefano Zampini, and Hong Zhang.
+\newblock {PETS}c users manual.
+\newblock Technical Report ANL-95/11 - Revision 3.6, Argonne National
+  Laboratory, 2015.
+
+\bibitem{Brandt:1984}
+Achi Brandt and Oren~E Livne.
+\newblock {\em Multigrid techniques: 1984 guide with applications to fluid
+  dynamics}, volume~67.
+\newblock SIAM, 2011.
+
+\bibitem{Chung:2004}
+Fan Chung and Linyuan Lu.
+\newblock {\em Complex Networks}, chapter The Small World Phenomenon in Hybrid
+  Power Law Graphs, pages 89--104.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2004.
+
+\bibitem{Dalcin:2011}
+Lisandro~D Dalcin, Rodrigo~R Paz, Pablo~A Kler, and Alejandro Cosimo.
+\newblock Parallel distributed computing using python.
+\newblock {\em Advances in Water Resources}, 34(9):1124--1139, 2011.
+
+\bibitem{Hagberg:2008}
+Aric~A. Hagberg, Daniel~A. Schult, and Pieter~J. Swart.
+\newblock Exploring network structure, dynamics, and function using {NetworkX}.
+\newblock In {\em Proceedings of the 7th Python in Science Conference
+  (SciPy2008)}, pages 11--15, Pasadena, CA USA, August 2008.
+
+\bibitem{Miller:1995}
+Gary~L Miller and Joseph Naor.
+\newblock Flow in planar graphs with multiple sources and sinks.
+\newblock {\em SIAM Journal on Computing}, 24(5):1002--1017, 1995.
+
+\bibitem{Watts:1998}
+Duncan~J Watts and Steven~H Strogatz.
+\newblock Collective dynamics of 'small-world' networks.
+\newblock {\em nature}, 393(6684):440--442, 1998.
+
+\end{thebibliography}
