@@ -16,7 +16,7 @@ G.add_edges_from([(1,2),(2,3),(3,4),(1,5),(2,6),(3,7),(4,8),(5,6),(6,7),(7,8),
                     
 k = 3
 l = 3				
-P = kl_connected_subgraph(G, k, l, low_memory=False, same_as_graph=False)
+P1 = kl_connected_subgraph(G, k, l, low_memory=False, same_as_graph=False)
 
 #pos is a dictionary of node point locations in the x,y plane
 #can change this to show that the graph is planar

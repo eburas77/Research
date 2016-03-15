@@ -7,7 +7,7 @@ import timeit
 import kl_connected_subgraph as kl
 
 
-start_time = timeit.default_timer()
+
 fh=open('newpheno.txt', 'rb')
 G=nx.read_edgelist(fh)
                 
@@ -15,14 +15,51 @@ A = nx.adjacency_matrix(G)
 A = A.todense()
 
 
-print "read in graph"
+
 L = nx.laplacian_matrix(G,)
 
 rows,cols =L.shape
 L = L.todense()
 L = L+np.eye(rows)
 
-P = nx.read_edgelist('proteinlocal.edgelist')
+time = timeit.default_timer()
+P = G.copy()               
+counter = 0
+for edge in P.edges():
+    #counter+=1
+    #print counter
+    (u,v) = edge    #get edge
+    cnt = 1         #accounts for direct path
+    uneighbors = list(nx.all_neighbors(P,u))     #get list of neighbors of u    
+    uneighbors.remove(v)              # remove v because we already accounted for it
+
+    for neighbor1 in uneighbors:           # loop through neighbors of u
+        u1neighbors = list(nx.all_neighbors(P,neighbor1))     #find list of neighbors of each neighbor of u
+        #print u1neighbors
+        #print ""
+        if v in u1neighbors:
+            cnt += 1     #if v in this list then there is a path of length 2 from u to v
+            #print "path length 2 with ", neighbor1
+            
+        if cnt >=3:
+            break
+        u1neighbors = [x for x in u1neighbors if x not in uneighbors]     #remove all items from this second neighbor list that were in the first neighbor list
+        if u in u1neighbors:        
+            u1neighbors.remove(u)        
+        for neighbor2 in u1neighbors:
+            u2neighbors = list(nx.all_neighbors(P,neighbor2))      #these are third neighbors
+            if v in u2neighbors:
+                cnt += 1    #add 1 to count if v is in this set
+                #print "path length 3 with ", (neighbor1,neighbor2)
+            if cnt >=3:
+                break
+    
+    if cnt <=2:     #cnt must be 3 or greater to remain in the graph
+        P.remove_edge(u,v)
+        #print "removed edge: ", (u,v)
+elapsed = timeit.default_timer()-time
+print "Partition ran in %f seconds" %elapsed
+
 
 H = nx.Graph()
 for node in G.nodes():
@@ -43,7 +80,9 @@ print "rank of teleportation matrix: %i" %np.linalg.matrix_rank(T)
 
 print "number of edges in entire graph: %i" %nx.number_of_edges(G)
 print "number of edges in k,l connected subgraph: %i" %nx.number_of_edges(P)
+print "now solve"
 
+time2 = timeit.default_timer()
 
 
 #plt.spy(A,precision=0.01, markersize=1)
@@ -97,7 +136,7 @@ pc = ksp.getPC()
 pc.setType(pc.Type.GAMG) #multigrid preconditioner
 #pc.setType(pc.Type.LU)
 ksp.setOperators(P_L_petsc)
-print "now solve"
+
 
 ksp.solve(b,y)         #y = P^{-1}b
               
@@ -148,7 +187,7 @@ ksp3.setOperators(P_L_petsc_2)
 ksp3.solve(y_3,y_4)              #y_4 = P^{-1}*y_3
 x = y-y_4
 x1 = x.getArray()
-elapsed = timeit.default_timer() - start_time
+elapsed = timeit.default_timer() - time2
 print "Protein Solve ran in %f seconds" %elapsed
 
 print "now test vs numpy solve"
