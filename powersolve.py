@@ -5,22 +5,18 @@ import scipy
 import timeit
 #import matplotlib.pylab as plt
 import kl_connected_subgraph as kl
-
-
-
-fh=open('newpheno.txt', 'rb')
-G=nx.read_edgelist(fh)
+time = timeit.default_timer()
+G = nx.read_gml('power.gml')
                 
 A = nx.adjacency_matrix(G)
 A = A.todense()
 
 
 
-L = nx.laplacian_matrix(G,)
-
-rows,cols =L.shape
+print "read in graph"
+L = nx.laplacian_matrix(G)
 L = L.todense()
-L = L+np.eye(rows)
+L = L +np.eye(len(L))
 
 time = timeit.default_timer()
 P = G.copy()
@@ -91,16 +87,9 @@ while deleted_some == True:
             deleted_some = True
             
 elapsed = timeit.default_timer() - time
-print "Partition ran in %f seconds" %elapsed
-H = nx.Graph()
-for node in G.nodes():
-    H.add_node(node)
-for edge in P.edges():
-    H.add_edge(edge[0],edge[1])
+print "Partition ran in %f seconds" %elapsed      
+P1 = kl.kl_connected_subgraph(G,3,3,low_memory=True,same_as_graph=False)
 
-P = H
-
-P1 = nx.read_edgelist('proteinlocal.edgelist')
 H1 = nx.Graph()
 for node in G.nodes():
     H1.add_node(node)
@@ -108,14 +97,27 @@ for edge in P1.edges():
     H1.add_edge(edge[0],edge[1])
 
 P1 = H1
+
+
+
+H = nx.Graph()
+for node in G.nodes():
+    H.add_node(node)
+for edge in P.edges():
+    H.add_edge(edge[0],edge[1])
+
+
+P = H
+
 A_1 = nx.adjacency_matrix(P1)
-A_1 = A_1.todense()
 A_2 = nx.adjacency_matrix(P)
+A_1 = A_1.todense()
 A_2 = A_2.todense()
 
-print np.nonzero(A_1-A_2)
+print "different indices: ", np.nonzero(A_1-A_2)
+print np.count_nonzero(A_1-A_2)
 
-P_L = nx.laplacian_matrix(P,nodelist=G.nodes())
+P_L = nx.laplacian_matrix(P)
 P_L = P_L.todense()
 
 T = L-P_L
@@ -127,15 +129,17 @@ print "rank of teleportation matrix: %i" %np.linalg.matrix_rank(T)
 print "number of edges in entire graph: %i" %nx.number_of_edges(G)
 print "number of edges in k,l connected subgraph: %i" %nx.number_of_edges(P)
 print "now solve"
-
 time2 = timeit.default_timer()
-
+#L = np.array([[11,13,15],[17,19,21],[23,25,27]])
+#T = np.array([[1,2,3],[4,5,6],[7,8,9]])
+#P_L = np.array([[10,11,12],[13,14,15],[16,17,18]])
 
 #plt.spy(A,precision=0.01, markersize=1)
 #plt.savefig('celeganspy.png')
 #print P_L
 #print ""
 #print T
+
 U,s,V = np.linalg.svd(T)
 size = sum(s>.00000001)
 
@@ -183,7 +187,6 @@ pc.setType(pc.Type.GAMG) #multigrid preconditioner
 #pc.setType(pc.Type.LU)
 ksp.setOperators(P_L_petsc)
 
-
 ksp.solve(b,y)         #y = P^{-1}b
               
 
@@ -198,10 +201,6 @@ Q.setUp()
 Q_1.setUp()
 Q_2.setUp()
 rows=range(sizeU1)
-
-
-
-
 for i in range(sizeU2):
     col = i
     ksp.solve(U_petsc.getColumnVector(i),Qvec)
@@ -234,7 +233,7 @@ ksp3.solve(y_3,y_4)              #y_4 = P^{-1}*y_3
 x = y-y_4
 x1 = x.getArray()
 elapsed = timeit.default_timer() - time2
-print "Protein Solve ran in %f seconds" %elapsed
+print "Power Solve ran in %f seconds" %elapsed
 
 print "now test vs numpy solve"
 
@@ -263,3 +262,4 @@ barray = b2.getArray()
 
 print "norm of difference between petsc straight solve and my way: ", np.linalg.norm(x1-barray)
 print "norm of difference between petsc straight solve and np.linalg: ", np.linalg.norm(x2-barray)
+

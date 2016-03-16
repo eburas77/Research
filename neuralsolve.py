@@ -27,49 +27,101 @@ L = L.todense()
 L = L +np.eye(len(L))
 
 time = timeit.default_timer()
-P = G.copy()               
-counter = 0
-for edge in P.edges():
-    #counter+=1
-    #print counter
-    (u,v) = edge    #get edge
-    cnt = 1         #accounts for direct path
-    uneighbors = list(nx.all_neighbors(P,u))     #get list of neighbors of u    
-    uneighbors.remove(v)              # remove v because we already accounted for it
-
-    for neighbor1 in uneighbors:           # loop through neighbors of u
-        u1neighbors = list(nx.all_neighbors(P,neighbor1))     #find list of neighbors of each neighbor of u
-        #print u1neighbors
-        #print ""
-        if v in u1neighbors:
-            cnt += 1     #if v in this list then there is a path of length 2 from u to v
-            #print "path length 2 with ", neighbor1
+P = G.copy()
+               
+deleted_some = True
+while deleted_some == True:
+    print "loop for deletions"
+    deleted_some = False
+    for edge in P.edges():
+        
+        (u,v) = edge    #get edge
+        paths = [[u,v]]    
+        cnt = 1         #accounts for direct path
+        uneighbors = list(nx.all_neighbors(P,u))     #get list of neighbors of u    
+        uneighbors.remove(v)              # remove v because we already accounted for it
+    
+        for neighbor1 in uneighbors:           # loop through neighbors of u
+            u1neighbors = list(nx.all_neighbors(P,neighbor1))     #find list of neighbors of each neighbor of u
             
-        if cnt >=3:
-            break
-        u1neighbors = [x for x in u1neighbors if x not in uneighbors]     #remove all items from this second neighbor list that were in the first neighbor list
-        if u in u1neighbors:        
-            u1neighbors.remove(u)        
-        for neighbor2 in u1neighbors:
-            u2neighbors = list(nx.all_neighbors(P,neighbor2))      #these are third neighbors
-            if v in u2neighbors:
-                cnt += 1    #add 1 to count if v is in this set
-                #print "path length 3 with ", (neighbor1,neighbor2)
+            
+            
+            
+            if u in u1neighbors:        
+                u1neighbors.remove(u)        
+            for neighbor2 in u1neighbors:
+                u2neighbors = list(nx.all_neighbors(P,neighbor2))      #these are third neighbors
+            
+                if v in u2neighbors:
+                    
+                    temppath = [u,neighbor1,neighbor2,v]
+                    found = False    
+                    for j in range(1,len(temppath)):
+                        for path in paths:
+                            for i in range(1,len(path)):
+                                if path[i-1] == temppath[j-1] and path[i] == temppath[j]:
+                                    found = True    #found edge in previous path
+                                
+                                
+                    if found == False:
+                        cnt +=1
+                        paths.append([u,neighbor1,neighbor2,v])
+                        # add 1 to count only if an edge in this path is not in a previous path       
+                                
+                
+                if cnt >=3:
+                    break
+            
+            if v in u1neighbors:
+                
+                temppath = [u,neighbor1,v]
+                found = False
+                for j in range(1,len(temppath)):
+                        for path in paths:
+                            for i in range(1,len(path)):
+                                if path[i-1] == temppath[j-1] and path[i] == temppath[j]:
+                                    found = True
+                            
+                if found == False:
+                    cnt +=1
+                    paths.append([u,neighbor1,v])
+                #print "path length 2 with ", neighbor1
+                
             if cnt >=3:
                 break
-    
-    if cnt <=2:     #cnt must be 3 or greater to remain in the graph
-        P.remove_edge(u,v)
-        #print "removed edge: ", (u,v)
+        
+        if cnt <=2:     #cnt must be 3 or greater to remain in the graph
+            P.remove_edge(u,v)
+            deleted_some = True
+            
 elapsed = timeit.default_timer() - time
-print "Partition ran in %f seconds" %elapsed
+print "Partition ran in %f seconds" %elapsed      
+P1 = kl.kl_connected_subgraph(G,3,3,low_memory=True,same_as_graph=False)
+
+H1 = nx.Graph()
+for node in G.nodes():
+    H1.add_node(node)
+for edge in P1.edges():
+    H1.add_edge(edge[0],edge[1])
+
+P1 = H1
 H = nx.Graph()
 for node in G.nodes():
     H.add_node(node)
 for edge in P.edges():
     H.add_edge(edge[0],edge[1])
 
+
 P = H
+
+A_1 = nx.adjacency_matrix(P1)
+A_2 = nx.adjacency_matrix(P)
+A_1 = A_1.todense()
+A_2 = A_2.todense()
+
+
+print "different indices: ", np.nonzero(A_1-A_2)
+print np.count_nonzero(A_1-A_2)
 
 P_L = nx.laplacian_matrix(P)
 P_L = P_L.todense()
