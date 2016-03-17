@@ -1,0 +1,40 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage{amsmath}
+
+
+
+\begin{document}
+\title{Eric Buras Thesis: Results}
+
+\maketitle
+
+\section{Graphs}
+NEED BIBTEX CITATIONS FOR THESE\\
+We have a set of graphs that are similar to the power-law graphs from Watts-Strogatz and Chung-Lu. These encompass a wide range of subjects such as social networks, biological processes, and an electric grid. The key part of my algorithm is partitioning a graph into a large locally-connected subgraph and a small teleportation subgraph. four of these examples fully fit into this class of graphs, whereas the power grid most certainly does not as evidenced below. The important attribute to look for is low rank of the teleportation Laplacian matrix relative to the number of the nodes (which is the size of the entire square Laplacian matrix).
+
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{ | l | l | l | l | l | l |}
+    \hline
+    Graph (nodes, edges) & Rank $T_L$ & Nx Part. (s) & My Part. (s) & Solve (s) \\ \hline
+    Neural (297, 2148) & 22 & 11 & 1.6 & .36 \\ \hline
+    Metabolic (453, 2025) & 49 & 12 & 2.3 & .78 \\  \hline
+    Gene (912, 22738) & 26 & 1915 & 53 & 1.1 \\ \hline
+    Facebook (4039, 88234) & 180 & 11593 & 480 & 59 \\ \hline
+    Power (4941, 6594) & 4284 & 2.1 & .33 & 508 \\ 
+    \hline
+    \end{tabular}
+\end{center}
+
+\end{document}
+
+\bibliographystyle{plain}
+\bibliography{mastersbib}
+\end{document}

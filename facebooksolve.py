@@ -96,20 +96,20 @@ for edge in P.edges():
 
 P = H
 
-P1 = nx.read_edgelist('facebooklocal.edgelist',nodetype=int)
-H1 = nx.Graph()
-for node in G.nodes():
-    H1.add_node(node)
-for edge in P1.edges():
-    H1.add_edge(edge[0],edge[1])
+#P1 = nx.read_edgelist('facebooklocal.edgelist',nodetype=int)
+#H1 = nx.Graph()
+#for node in G.nodes():
+#    H1.add_node(node)
+#for edge in P1.edges():
+#    H1.add_edge(edge[0],edge[1])
 
-P1 = H1
-A_1 = nx.adjacency_matrix(P1)
-A_1 = A_1.todense()
-A_2 = nx.adjacency_matrix(P)
-A_2 = A_2.todense()
+#P1 = H1
+#A_1 = nx.adjacency_matrix(P1)
+#A_1 = A_1.todense()
+#A_2 = nx.adjacency_matrix(P)
+#A_2 = A_2.todense()
 
-print np.nonzero(A_1-A_2)
+#print np.nonzero(A_1-A_2)
 
 P_L = nx.laplacian_matrix(P)
 P_L = P_L.todense()

@@ -49,7 +49,7 @@ for node in P.nodes():
         
                     
 for path in paths:
-    if path[0]==63 and path[-1]==81:
+    if path[0]==94 and path[-1]==190:
         print path
         
 #only 2 edge-disjoint paths: 11-54   11-3-14-54    neural

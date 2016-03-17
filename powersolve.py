@@ -88,7 +88,10 @@ while deleted_some == True:
             
 elapsed = timeit.default_timer() - time
 print "Partition ran in %f seconds" %elapsed      
+tim2 = timeit.default_timer()
 P1 = kl.kl_connected_subgraph(G,3,3,low_memory=True,same_as_graph=False)
+elapsed = timeit.default_timer()-tim2
+print "fans took :", elapsed
 
 H1 = nx.Graph()
 for node in G.nodes():
