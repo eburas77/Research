@@ -15,11 +15,17 @@
 \maketitle
 
 \section{Graph Splitting}
-The small-world networks that Watts-Strogatz and Chung-Lu worked with roughly follow a power law degree distribution where the proportion of nodes with k degree scales proportionally with $k^{-\gamma}$ usually with $2 < \gamma < 3$ \cite{Chung:2004,Watts:1998}. In lay terms, there are less and less nodes with increasing degree. This is similar to an exponential distribution, however there is a much longer and fatter tail (cite something). The expected degree in a sequence following a power law is:\\
+The small-world networks that Watts-Strogatz and Chung-Lu worked with roughly follow a power law degree distribution where the proportion of nodes with k degree scales with $k^{-\gamma}$ usually with $2 < \gamma < 3$ \cite{Chung:2004,Watts:1998}. In lay terms, there are less and less nodes with increasing degree. This is similar to an exponential distribution, however there is a much longer and fatter tail (cite something). We can compute the expected degree in a sequence following a power law:\\
 \begin{center}
-$E[d] = \frac{\gamma}{\gamma - 1} $ 
+
+
+P(d) = $\frac{d^{\gamma}}{\zeta(\gamma)}$ where $\zeta(x)$ is the Riemann-Zeta function\\
+E[d] = $\sum_{d=1}^{\infty} d* \frac{d^{\gamma}}{\zeta(\gamma)}$ \\
+E[d] = $\frac{\zeta(\gamma-1)}{\zeta(\gamma)}$\\ 
+
+
 \end{center}
-so expected degree is between 1.5 and 2 for our range of $\gamma$. However this vastly understates the tail in most of these real data degree distributions.\\
+The expected degree ranges from ~1.37  however this unde and 2 for our range of $\gamma$. However this vastly understates the tail in most of these real data degree distributions.\\
 For now, let's assume our degree sequence follows this distribution. To partition the graph using Chung-Lu for $k = 3$ and $l = 3$, for each node we must search through all paths of lengths 1, 2, and 3 away from the node. We only continue if path of length 1 exists. If so, we take the expected value of the degree sequence and raise it to the second power to give number of paths of length 2. We do it similarly for the third power. This gives us expected number of paths: $(E[d])^{2}+(E[d])^{3}$. Then it is simple to count the number of edge-disjoint paths. If there are two or less edge-disjoint paths, the edge (path length 1) is removed. For a graph with m edges, this requires $m*((E[d])^{2}+E[d]^{3})$ searches for one iteration of the cycle. We continue iterating this cycle until no edges can be removed. For a random graph or a graph without a large locally-connected subgraph, this process would require many cycles. This is shown in the power grid graph from Watts-Strogatz \cite{Watts:1998} Fortunately I have found real-world graphs with a large local subgraph, thus the number of iterations is small. I cannot give a bound on this number, but my datasets require less than four cycles to partition all teleportation edges. However it is important to remember that my datasets do not follow the above power law distribution. The expected degree of node in each of my datasets is much higher, requiring more work for this algorithm than at first glance.
 
 \section{Linear Algebra and Solves}

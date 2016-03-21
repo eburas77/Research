@@ -1,3 +1,5 @@
+import sys, petsc4py
+petsc4py.init(sys.argv)
 from petsc4py import PETSc as Pet
 import networkx as nx
 import numpy as np
@@ -96,32 +98,32 @@ while deleted_some == True:
             
 elapsed = timeit.default_timer() - time
 print "Partition ran in %f seconds" %elapsed      
-P1 = kl.kl_connected_subgraph(G,3,3,low_memory=True,same_as_graph=False)
+#P1 = kl.kl_connected_subgraph(G,3,3,low_memory=True,same_as_graph=False)
 
-H1 = nx.Graph()
-for node in G.nodes():
-    H1.add_node(node)
-for edge in P1.edges():
-    H1.add_edge(edge[0],edge[1])
+#H1 = nx.Graph()
+#for node in G.nodes():
+#    H1.add_node(node)
+#for edge in P1.edges():
+#    H1.add_edge(edge[0],edge[1])
 
-P1 = H1
-H = nx.Graph()
-for node in G.nodes():
-    H.add_node(node)
-for edge in P.edges():
-    H.add_edge(edge[0],edge[1])
-
-
-P = H
-
-A_1 = nx.adjacency_matrix(P1)
-A_2 = nx.adjacency_matrix(P)
-A_1 = A_1.todense()
-A_2 = A_2.todense()
+#P1 = H1
+#H = nx.Graph()
+#for node in G.nodes():
+#    H.add_node(node)
+#for edge in P.edges():
+#    H.add_edge(edge[0],edge[1])
 
 
-print "different indices: ", np.nonzero(A_1-A_2)
-print np.count_nonzero(A_1-A_2)
+#P = H
+
+#A_1 = nx.adjacency_matrix(P1)
+#A_2 = nx.adjacency_matrix(P)
+#A_1 = A_1.todense()
+#A_2 = A_2.todense()
+
+
+#print "different indices: ", np.nonzero(A_1-A_2)
+#print np.count_nonzero(A_1-A_2)
 
 P_L = nx.laplacian_matrix(P)
 P_L = P_L.todense()
@@ -187,10 +189,10 @@ Qvec = b.duplicate()
 
 ksp = Pet.KSP() #linear solver
 ksp.create(Pet.COMM_WORLD)
-ksp.setFromOptions()
 pc = ksp.getPC()
-pc.setType(pc.Type.GAMG) #multigrid preconditioner
-#pc.setType(pc.Type.LU)
+
+pc.setType(pc.Type.GAMG)
+ksp.setFromOptions()
 ksp.setOperators(P_L_petsc)
 
 ksp.solve(b,y)         #y = P^{-1}b
@@ -233,7 +235,8 @@ P_L_petsc_2 = Pet.Mat().createAIJ(size=P_L_csr.shape,
 ksp3 = Pet.KSP()                #second linear solver
 ksp3.create(Pet.COMM_WORLD)
 pc3 = ksp3.getPC()
-pc3.setType(pc3.Type.GAMG)                           
+pc3.setType(pc3.Type.LU)     
+ksp3.setFromOptions()                      
 ksp3.setOperators(P_L_petsc_2)
 ksp3.solve(y_3,y_4)              #y_4 = P^{-1}*y_3
 x = y-y_4

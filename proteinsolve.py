@@ -1,3 +1,5 @@
+import sys, petsc4py
+petsc4py.init(sys.argv)
 from petsc4py import PETSc as Pet
 import networkx as nx
 import numpy as np
@@ -177,10 +179,11 @@ Qvec = b.duplicate()
 
 ksp = Pet.KSP() #linear solver
 ksp.create(Pet.COMM_WORLD)
-ksp.setFromOptions()
+
 pc = ksp.getPC()
 pc.setType(pc.Type.GAMG) #multigrid preconditioner
-#pc.setType(pc.Type.LU)
+
+ksp.setFromOptions()
 ksp.setOperators(P_L_petsc)
 
 
@@ -228,7 +231,8 @@ P_L_petsc_2 = Pet.Mat().createAIJ(size=P_L_csr.shape,
 ksp3 = Pet.KSP()                #second linear solver
 ksp3.create(Pet.COMM_WORLD)
 pc3 = ksp3.getPC()
-pc3.setType(pc3.Type.GAMG)                           
+pc3.setType(pc3.Type.GAMG)  
+ksp3.setFromOptions()                         
 ksp3.setOperators(P_L_petsc_2)
 ksp3.solve(y_3,y_4)              #y_4 = P^{-1}*y_3
 x = y-y_4
