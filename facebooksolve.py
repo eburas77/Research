@@ -134,6 +134,8 @@ time2 = timeit.default_timer()
 #print T
 
 U,s,V = np.linalg.svd(T)
+timesvd = timeit.default_timer()-time2
+print "timesvd: ", timesvd
 size = sum(s>.00000001)
 
 
@@ -141,7 +143,10 @@ size = sum(s>.00000001)
 U = np.array(U[:,0:size])
 s = s[0:size]
 s = np.diag(s)
+timesinv = timeit.default_timer()
 s_inv = np.linalg.inv(s)
+timesinv = timeit.default_timer() - timesinv
+print "timesinv: ", timesinv
 V = np.array(V[0:size,:])     #need to reshape V to keep low rank
 sizeU1,sizeU2 = U.shape
 P_L_csr = scipy.sparse.csr_matrix(P_L)
@@ -174,18 +179,21 @@ Qvec = b.duplicate()
 
 ksp = Pet.KSP() #linear solver
 ksp.create(Pet.COMM_WORLD)
-
 pc = ksp.getPC()
-pc.setType(pc.Type.GAMG) #multigrid preconditioner
+
+pc.setType(pc.Type.GAMG)
 ksp.setFromOptions()
 ksp.setOperators(P_L_petsc)
 
-
+timefirstsolve = timeit.default_timer()
 ksp.solve(b,y)         #y = P^{-1}b
+timefirstsolve = timeit.default_timer() - timefirstsolve
+print "timefirstsolve: ", timefirstsolve
               
-
+timevmult = timeit.default_timer()
 V_petsc.mult(y,y_1)            #y_1 = V*y
-
+timevmult = timeit.default_timer() - timevmult
+print "timevmult = ", timevmult
 
 Q = Pet.Mat().createDense(size = U.shape) 
 Q_1 = Pet.Mat().createDense(size = s_inv.shape)
@@ -195,37 +203,59 @@ Q.setUp()
 Q_1.setUp()
 Q_2.setUp()
 rows=range(sizeU1)
+timemrhs = timeit.default_timer()
 for i in range(sizeU2):
     col = i
     ksp.solve(U_petsc.getColumnVector(i),Qvec)
     Q.setValues(rows, col, Qvec.getArray())
-
+timemrhs = timeit.default_timer() - timemrhs
+print "timemrhs: ", timemrhs
 Q.assemblyBegin()
 Q.assemblyEnd() 
 
 U_petsc_2 = Pet.Mat().createDense(size=U.shape,array =U)
+timevq = timeit.default_timer()
 V_petsc.matMult(Q,Q_1)              #Q_1 = V*Q
+timevq = timeit.default_timer() - timevq
+print "timevq =", timevq
+timeadd = timeit.default_timer()
 Q_2 = s_inv_petsc+Q_1    
+timeadd = timeit.default_timer() - timeadd
+print "timeadd ", timeadd
+
 
 ksp2 = Pet.KSP()                #second linear solver
 ksp2.create(Pet.COMM_WORLD)
 pc2 = ksp2.getPC()
 pc2.setType(pc2.Type.LU)
 ksp2.setOperators(Q_2)          #do i need a preconditioner? 
-ksp2.solve(y_1,y_2)             #y_2 = Q_2^{-1}*y_1
 
+time2solve = timeit.default_timer()
+ksp2.solve(y_1,y_2)             #y_2 = Q_2^{-1}*y_1
+time2solve = timeit.default_timer() - time2solve
+print "time2solve ", time2solve
+
+umult = timeit.default_timer()
 U_petsc_2.mult(y_2,y_3)           #y_3 = U*y_2
+umult = timeit.default_timer() - umult
+print "umult ", umult
 
 P_L_petsc_2 = Pet.Mat().createAIJ(size=P_L_csr.shape,
                             csr = (P_L_csr.indptr, P_L_csr.indices, P_L_csr.data))
 ksp3 = Pet.KSP()                #second linear solver
 ksp3.create(Pet.COMM_WORLD)
 pc3 = ksp3.getPC()
-pc3.setType(pc3.Type.GAMG)  
-ksp3.setFromOptions()                         
+pc3.setType(pc3.Type.LU)     
+ksp3.setFromOptions()                      
 ksp3.setOperators(P_L_petsc_2)
+solve3 = timeit.default_timer()
 ksp3.solve(y_3,y_4)              #y_4 = P^{-1}*y_3
+solve3 = timeit.default_timer() - solve3
+print "solve3 ", solve3
+finalsub = timeit.default_timer()
 x = y-y_4
+finalsub = timeit.default_timer() - finalsub
+print "finalsub ", finalsub
 x1 = x.getArray()
 elapsed = timeit.default_timer() - time2
 print "Facebook Solve ran in %f seconds" %elapsed
