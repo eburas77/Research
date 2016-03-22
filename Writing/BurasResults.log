@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 MAR 2016 16:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 MAR 2016 21:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -268,36 +268,59 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen122
+\captionmargin@=\dimen123
+\captionwidth=\dimen124
+\caption@tempdima=\dimen125
+\caption@indent=\dimen126
+\caption@parindent=\dimen127
+\caption@hangindent=\dimen128
+)
+\c@ContinuedFloat=\count118
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count119
+\c@subtable=\count120
+)
 (./BurasResults.aux)
 \openout1 = `BurasResults.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count118
-\scratchdimen=\dimen122
+\scratchcounter=\count121
+\scratchdimen=\dimen129
 \scratchbox=\box30
-\nofMPsegments=\count119
-\nofMParguments=\count120
+\nofMPsegments=\count122
+\nofMParguments=\count123
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count121
-\MPscratchDim=\dimen123
-\MPnumerator=\count122
-\makeMPintoPDFobject=\count123
+\MPscratchCnt=\count124
+\MPscratchDim=\dimen130
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
 \everyMPtoPDFconversion=\toks24
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -315,7 +338,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 12.
+Package hyperref Info: Link coloring OFF on input line 15.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -323,17 +346,19 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count124
+\c@section@level=\count127
 )
-LaTeX Info: Redefining \ref on input line 12.
-LaTeX Info: Redefining \pageref on input line 12.
-LaTeX Info: Redefining \nameref on input line 12.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
 
 (./BurasResults.out) (./BurasResults.out)
 \@outlinefile=\write3
 \openout3 = `BurasResults.out'.
 
-\c@lstlisting=\count125
+\c@lstlisting=\count128
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 
 
 LaTeX Warning: No \author given.
@@ -343,43 +368,154 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
+<neural_degree_histogram.png, id=4, 433.62pt x 289.08pt>
+File: neural_degree_histogram.png Graphic file (type png)
 
-Overfull \hbox (4.83058pt too wide) in paragraph at lines 24--34
+<use neural_degree_histogram.png>
+Package pdftex.def Info: neural_degree_histogram.png used on input line 27.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+
+
+LaTeX Warning: Citation `White:1986' on page 1 undefined on input line 28.
+
+
+LaTeX Warning: Citation `Watts:1998' on page 1 undefined on input line 28.
+
+
+LaTeX Warning: Citation `White:1986' on page 1 undefined on input line 28.
+
+
+LaTeX Warning: Citation `Watts:1998' on page 1 undefined on input line 28.
+
+<neuralspy.png, id=6, 433.62pt x 289.08pt>
+File: neuralspy.png Graphic file (type png)
+ <use neuralspy.png>
+Package pdftex.def Info: neuralspy.png used on input line 34.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+
+<meta_degree_histogram.png, id=7, 433.62pt x 289.08pt>
+File: meta_degree_histogram.png Graphic file (type png)
+
+<use meta_degree_histogram.png>
+Package pdftex.def Info: meta_degree_histogram.png used on input line 41.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+
+
+LaTeX Warning: Citation `Duch:2005' on page 1 undefined on input line 42.
+
+
+LaTeX Warning: Citation `Duch:2005' on page 1 undefined on input line 42.
+
+<metaspy.png, id=8, 433.62pt x 289.08pt>
+File: metaspy.png Graphic file (type png)
+ <use metaspy.png>
+Package pdftex.def Info: metaspy.png used on input line 47.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+
+<gene_degree_histogram.png, id=9, 433.62pt x 289.08pt>
+File: gene_degree_histogram.png Graphic file (type png)
+
+<use gene_degree_histogram.png>
+Package pdftex.def Info: gene_degree_histogram.png used on input line 54.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+
+
+LaTeX Warning: Citation `Simonis:2009' on page 1 undefined on input line 55.
+
+
+LaTeX Warning: Citation `Simonis:2009' on page 1 undefined on input line 55.
+
+<genespy.png, id=10, 433.62pt x 289.08pt>
+File: genespy.png Graphic file (type png)
+ <use genespy.png>
+Package pdftex.def Info: genespy.png used on input line 61.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+
+<fb_degree_histogram.png, id=11, 433.62pt x 289.08pt>
+File: fb_degree_histogram.png Graphic file (type png)
+
+<use fb_degree_histogram.png>
+Package pdftex.def Info: fb_degree_histogram.png used on input line 68.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+
+
+LaTeX Warning: Citation `Mcauley:2012' on page 1 undefined on input line 69.
+
+
+LaTeX Warning: Citation `Mcauley:2012' on page 1 undefined on input line 69.
+
+<fbspy.png, id=12, 433.62pt x 289.08pt>
+File: fbspy.png Graphic file (type png)
+ <use fbspy.png>
+Package pdftex.def Info: fbspy.png used on input line 75.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+
+<power_degree_histogram.png, id=13, 433.62pt x 289.08pt>
+File: power_degree_histogram.png Graphic file (type png)
+
+<use power_degree_histogram.png>
+Package pdftex.def Info: power_degree_histogram.png used on input line 82.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+
+
+LaTeX Warning: Citation `Watts:1998' on page 1 undefined on input line 83.
+
+
+LaTeX Warning: Citation `Watts:1998' on page 1 undefined on input line 83.
+
+<powerspy.png, id=14, 433.62pt x 289.08pt>
+File: powerspy.png Graphic file (type png)
+ <use powerspy.png>
+Package pdftex.def Info: powerspy.png used on input line 89.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+
+Overfull \hbox (23.74728pt too wide) in paragraph at lines 96--106
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
- []
-
-
-Overfull \hbox (46.33324pt too wide) in paragraph at lines 39--55
- [] 
  []
 
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 58.
-
-[2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 58.
+[2 <./neural_degree_histogram.png> <./neuralspy.png>] [3 <./meta_degree_histogr
+am.png> <./metaspy.png>] [4 <./gene_degree_histogram.png> <./genespy.png>]
+[5 <./fb_degree_histogram.png> <./fbspy.png>] [6 <./power_degree_histogram.png>
+ <./powerspy.png>] (./BurasResults.bbl [7])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
+ [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
  (./BurasResults.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 58.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 58.
-Package rerunfilecheck Info: File `BurasResults.out' has not changed.
-(rerunfilecheck)             Checksum: 4C1FE955A09885FCDFCFB59DC58E5BA1;41.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 58.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
+
+
+Package rerunfilecheck Warning: File `BurasResults.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `BurasResults.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  4C1FE955A09885FCDFCFB59DC58E5BA1;41.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 133.
  ) 
 Here is how much of TeX's memory you used:
- 6879 strings out of 493089
- 100811 string characters out of 6134842
- 197199 words of memory out of 5000000
- 10310 multiletter control sequences out of 15000+600000
- 8716 words of font info for 32 fonts, out of 8000000 for 9000
+ 8012 strings out of 493089
+ 121496 string characters out of 6134842
+ 222290 words of memory out of 5000000
+ 11398 multiletter control sequences out of 15000+600000
+ 9062 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,8n,32p,727b,388s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,8n,40p,727b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -389,11 +525,12 @@ sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
 ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on BurasResults.pdf (2 pages, 105462 bytes).
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on BurasResults.pdf (8 pages, 275958 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
- 9 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 130 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
+ 26 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

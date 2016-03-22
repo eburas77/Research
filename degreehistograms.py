@@ -29,10 +29,10 @@ for edge in selflist:
     G.remove_edge(u,v)
     
 #F = nx.read_gml('celegansneural.gml')
-
+#
 #G = nx.Graph()
 #for i in range(0,nx.number_of_nodes(F)):
-#    #print i
+#    print i
 #    for j in range(0,nx.number_of_nodes(F)):
 #        if F.has_edge(i,j):
 #            if not G.has_edge(i,j):
@@ -56,13 +56,13 @@ powerlaw = np.power(powerlaw, -gamma/(2.8))
 powerlaw = G.number_of_nodes()*powerlaw
 powerlaw = powerlaw/(mzeta(gamma,0))
 
-
-plt.semilogy(np.arange(1,G.number_of_nodes()+1),degree_sequence,'r--',label = 'gene degrees')
-plt.semilogy(np.arange(1,G.number_of_nodes()+1),powerlaw,'b--',label = r"$\frac{d^{\frac{-\gamma}{2.8}}}{\zeta(\gamma)}$")
+plt.semilogy(degree_sequence,'bo')
+#plt.semilogy(np.arange(1,G.number_of_nodes()+1),degree_sequence,'r--',label = 'gene degrees')
+#plt.semilogy(np.arange(1,G.number_of_nodes()+1),powerlaw,'b--',label = r"$\frac{d^{\frac{-\gamma}{2.8}}}{\zeta(\gamma)}$")
 plt.ylabel("Degree")
 plt.xlabel("Nodes (Ranked by Degree)")
-plt.legend(prop={'size':24})
-plt.savefig('degreesequenceplot.png')
+#plt.legend(prop={'size':24})
+#plt.savefig('degreesequenceplot.png')
 # draw graph in inset
 plt.axes([0.45,0.45,0.45,0.45])
 Gcc=sorted(nx.connected_component_subgraphs(G), key = len, reverse=True)[0]
@@ -71,5 +71,5 @@ plt.axis('off')
 nx.draw_networkx_nodes(Gcc,pos,node_size=20)
 nx.draw_networkx_edges(Gcc,pos,alpha=0.4)
 
-plt.savefig("degree_histogram.png")
+plt.savefig("power_degree_histogram.png")
 plt.show()

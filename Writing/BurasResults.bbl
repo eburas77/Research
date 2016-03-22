@@ -1,0 +1,32 @@
+\begin{thebibliography}{1}
+
+\bibitem{Duch:2005}
+Jordi Duch and Alex Arenas.
+\newblock Community detection in complex networks using extremal optimization.
+\newblock {\em Physical review E}, 72(2):027104, 2005.
+
+\bibitem{Mcauley:2012}
+Julian~J McAuley and Jure Leskovec.
+\newblock Learning to discover social circles in ego networks.
+\newblock In {\em NIPS}, volume 2012, pages 548--56, 2012.
+
+\bibitem{Simonis:2009}
+Nicolas Simonis, Jean-Fran{\c{c}}ois Rual, Anne-Ruxandra Carvunis, Murat Tasan,
+  Irma Lemmens, Tomoko Hirozane-Kishikawa, Tong Hao, Julie~M Sahalie, Kavitha
+  Venkatesan, Fana Gebreab, et~al.
+\newblock Empirically controlled mapping of the caenorhabditis elegans
+  protein-protein interactome network.
+\newblock {\em Nature methods}, 6(1):47--54, 2009.
+
+\bibitem{Watts:1998}
+Duncan~J Watts and Steven~H Strogatz.
+\newblock Collective dynamics of 'small-world' networks.
+\newblock {\em nature}, 393(6684):440--442, 1998.
+
+\bibitem{White:1986}
+JG~White, E~Southgate, JN~Thomson, and S~Brenner.
+\newblock The structure of the nervous system of the nematode caenorhabditis
+  elegans: the mind of a worm.
+\newblock {\em Phil. Trans. R. Soc. Lond}, 314:1--340, 1986.
+
+\end{thebibliography}
