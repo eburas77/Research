@@ -1,45 +1,38 @@
 \begin{thebibliography}{1}
 
 \bibitem{petsc-user-ref}
-Satish Balay, Shrirang Abhyankar, Mark~F. Adams, Jed Brown, Peter Brune, Kris
-  Buschelman, Lisandro Dalcin, Victor Eijkhout, William~D. Gropp, Dinesh
-  Kaushik, Matthew~G. Knepley, Lois~Curfman McInnes, Karl Rupp, Barry~F. Smith,
-  Stefano Zampini, and Hong Zhang.
-\newblock {PETS}c users manual.
-\newblock Technical Report ANL-95/11 - Revision 3.6, Argonne National
-  Laboratory, 2015.
+{\sc S.~Balay, S.~Abhyankar, M.~F. Adams, J.~Brown, P.~Brune, K.~Buschelman,
+  L.~Dalcin, V.~Eijkhout, W.~D. Gropp, D.~Kaushik, M.~G. Knepley, L.~C.
+  McInnes, K.~Rupp, B.~F. Smith, S.~Zampini, and H.~Zhang}, {\em {PETS}c users
+  manual}, Tech. Rep. ANL-95/11 - Revision 3.6, Argonne National Laboratory,
+  2015.
 
 \bibitem{Brandt:1984}
-Achi Brandt and Oren~E Livne.
-\newblock {\em Multigrid techniques: 1984 guide with applications to fluid
-  dynamics}, volume~67.
-\newblock SIAM, 2011.
+{\sc A.~Brandt and O.~E. Livne}, {\em Multigrid techniques: 1984 guide with
+  applications to fluid dynamics}, vol.~67, SIAM, 2011.
 
 \bibitem{Chung:2004}
-Fan Chung and Linyuan Lu.
-\newblock {\em Complex Networks}, chapter The Small World Phenomenon in Hybrid
-  Power Law Graphs, pages 89--104.
-\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2004.
+{\sc F.~Chung and L.~Lu}, {\em Complex Networks}, Springer Berlin Heidelberg,
+  Berlin, Heidelberg, 2004, ch.~The Small World Phenomenon in Hybrid Power Law
+  Graphs, pp.~89--104.
 
 \bibitem{Dalcin:2011}
-Lisandro~D Dalcin, Rodrigo~R Paz, Pablo~A Kler, and Alejandro Cosimo.
-\newblock Parallel distributed computing using python.
-\newblock {\em Advances in Water Resources}, 34(9):1124--1139, 2011.
+{\sc L.~D. Dalcin, R.~R. Paz, P.~A. Kler, and A.~Cosimo}, {\em Parallel
+  distributed computing using python}, Advances in Water Resources, 34 (2011),
+  pp.~1124--1139.
 
 \bibitem{Hagberg:2008}
-Aric~A. Hagberg, Daniel~A. Schult, and Pieter~J. Swart.
-\newblock Exploring network structure, dynamics, and function using {NetworkX}.
-\newblock In {\em Proceedings of the 7th Python in Science Conference
-  (SciPy2008)}, pages 11--15, Pasadena, CA USA, August 2008.
+{\sc A.~A. Hagberg, D.~A. Schult, and P.~J. Swart}, {\em Exploring network
+  structure, dynamics, and function using {NetworkX}}, in Proceedings of the
+  7th Python in Science Conference (SciPy2008), Pasadena, CA USA, Aug. 2008,
+  pp.~11--15.
 
 \bibitem{Miller:1995}
-Gary~L Miller and Joseph Naor.
-\newblock Flow in planar graphs with multiple sources and sinks.
-\newblock {\em SIAM Journal on Computing}, 24(5):1002--1017, 1995.
+{\sc G.~L. Miller and J.~Naor}, {\em Flow in planar graphs with multiple
+  sources and sinks}, SIAM Journal on Computing, 24 (1995), pp.~1002--1017.
 
 \bibitem{Watts:1998}
-Duncan~J Watts and Steven~H Strogatz.
-\newblock Collective dynamics of 'small-world' networks.
-\newblock {\em nature}, 393(6684):440--442, 1998.
+{\sc D.~J. Watts and S.~H. Strogatz}, {\em Collective dynamics of 'small-world'
+  networks}, nature, 393 (1998), pp.~440--442.
 
 \end{thebibliography}

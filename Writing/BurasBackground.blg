@@ -1,46 +1,46 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: BurasBackground.aux
-The style file: plain.bst
+The style file: siam.bst
 Database file #1: mastersbib.bib
 You've used 10 entries,
-            2118 wiz_defined-function locations,
-            573 strings with 5873 characters,
-and the built_in function-call counts, 3471 in all, are:
-= -- 354
+            2030 wiz_defined-function locations,
+            573 strings with 5602 characters,
+and the built_in function-call counts, 3586 in all, are:
+= -- 351
 > -- 138
-< -- 5
+< -- 0
 + -- 56
 - -- 44
-* -- 225
-:= -- 563
-add.period$ -- 31
+* -- 265
+:= -- 545
+add.period$ -- 11
 call.type$ -- 10
 change.case$ -- 51
 chr.to.int$ -- 0
 cite$ -- 10
-duplicate$ -- 140
-empty$ -- 274
+duplicate$ -- 171
+empty$ -- 280
 format.name$ -- 44
-if$ -- 743
+if$ -- 778
 int.to.chr$ -- 0
 int.to.str$ -- 10
 missing$ -- 10
-newline$ -- 53
+newline$ -- 34
 num.names$ -- 20
-pop$ -- 48
+pop$ -- 49
 preamble$ -- 1
 purify$ -- 42
 quote$ -- 0
-skip$ -- 113
+skip$ -- 146
 stack$ -- 0
-substring$ -- 242
-swap$ -- 42
-text.length$ -- 5
+substring$ -- 267
+swap$ -- 74
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 38
 warning$ -- 0
-while$ -- 34
+while$ -- 37
 width$ -- 12
-write$ -- 113
+write$ -- 92

@@ -1,8 +1,9 @@
-\BOOKMARK [1][-]{section.1}{Graph Laplacian Problem}{}% 1
-\BOOKMARK [1][-]{section.2}{Current Solution Approaches}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Spielman-Teng, Koutis et. al.}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Multigrid Approaches}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Combinatorial Multigrid \(CMG\)}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Lean Algebraic Multigrid \(LAMG\)}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.5}{Cascadic Multigrid}{section.2}% 7
-\BOOKMARK [1][-]{section.3}{Novel Graph Splitting}{}% 8
+\BOOKMARK [1][-]{section.1}{Background}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Graph Laplacian Problem}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Current Solution Approaches}{section.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Spielman-Teng, Koutis et. al.}{subsection.1.2}% 4
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Multigrid Approaches}{subsection.1.2}% 5
+\BOOKMARK [3][-]{subsubsection.1.2.3}{Combinatorial Multigrid \(CMG\)}{subsection.1.2}% 6
+\BOOKMARK [3][-]{subsubsection.1.2.4}{Lean Algebraic Multigrid \(LAMG\)}{subsection.1.2}% 7
+\BOOKMARK [3][-]{subsubsection.1.2.5}{Cascadic Multigrid}{subsection.1.2}% 8
+\BOOKMARK [2][-]{subsection.1.3}{Novel Graph Splitting}{section.1}% 9

@@ -1,32 +1,26 @@
 \begin{thebibliography}{1}
 
 \bibitem{Duch:2005}
-Jordi Duch and Alex Arenas.
-\newblock Community detection in complex networks using extremal optimization.
-\newblock {\em Physical review E}, 72(2):027104, 2005.
+{\sc J.~Duch and A.~Arenas}, {\em Community detection in complex networks using
+  extremal optimization}, Physical review E, 72 (2005), p.~027104.
 
 \bibitem{Mcauley:2012}
-Julian~J McAuley and Jure Leskovec.
-\newblock Learning to discover social circles in ego networks.
-\newblock In {\em NIPS}, volume 2012, pages 548--56, 2012.
+{\sc J.~J. McAuley and J.~Leskovec}, {\em Learning to discover social circles
+  in ego networks.}, in NIPS, vol.~2012, 2012, pp.~548--56.
 
 \bibitem{Simonis:2009}
-Nicolas Simonis, Jean-Fran{\c{c}}ois Rual, Anne-Ruxandra Carvunis, Murat Tasan,
-  Irma Lemmens, Tomoko Hirozane-Kishikawa, Tong Hao, Julie~M Sahalie, Kavitha
-  Venkatesan, Fana Gebreab, et~al.
-\newblock Empirically controlled mapping of the caenorhabditis elegans
-  protein-protein interactome network.
-\newblock {\em Nature methods}, 6(1):47--54, 2009.
+{\sc N.~Simonis, J.-F. Rual, A.-R. Carvunis, M.~Tasan, I.~Lemmens,
+  T.~Hirozane-Kishikawa, T.~Hao, J.~M. Sahalie, K.~Venkatesan, F.~Gebreab,
+  et~al.}, {\em Empirically controlled mapping of the caenorhabditis elegans
+  protein-protein interactome network}, Nature methods, 6 (2009), pp.~47--54.
 
 \bibitem{Watts:1998}
-Duncan~J Watts and Steven~H Strogatz.
-\newblock Collective dynamics of 'small-world' networks.
-\newblock {\em nature}, 393(6684):440--442, 1998.
+{\sc D.~J. Watts and S.~H. Strogatz}, {\em Collective dynamics of 'small-world'
+  networks}, nature, 393 (1998), pp.~440--442.
 
 \bibitem{White:1986}
-JG~White, E~Southgate, JN~Thomson, and S~Brenner.
-\newblock The structure of the nervous system of the nematode caenorhabditis
-  elegans: the mind of a worm.
-\newblock {\em Phil. Trans. R. Soc. Lond}, 314:1--340, 1986.
+{\sc J.~White, E.~Southgate, J.~Thomson, and S.~Brenner}, {\em The structure of
+  the nervous system of the nematode caenorhabditis elegans: the mind of a
+  worm}, Phil. Trans. R. Soc. Lond, 314 (1986), pp.~1--340.
 
 \end{thebibliography}

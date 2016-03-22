@@ -1,62 +1,52 @@
 \begin{thebibliography}{10}
 
 \bibitem{Chung:2004}
-Fan Chung and Linyuan Lu.
-\newblock {\em Complex Networks}, chapter The Small World Phenomenon in Hybrid
-  Power Law Graphs, pages 89--104.
-\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2004.
+{\sc F.~Chung and L.~Lu}, {\em Complex Networks}, Springer Berlin Heidelberg,
+  Berlin, Heidelberg, 2004, ch.~The Small World Phenomenon in Hybrid Power Law
+  Graphs, pp.~89--104.
 
 \bibitem{Koutis:2007}
-Ioannis Koutis and Gary~L Miller.
-\newblock A linear work, o (n 1/6) time, parallel algorithm for solving planar
-  laplacians.
-\newblock In {\em Proceedings of the eighteenth annual ACM-SIAM symposium on
-  Discrete algorithms}, pages 1002--1011. Society for Industrial and Applied
-  Mathematics, 2007.
+{\sc I.~Koutis and G.~L. Miller}, {\em A linear work, o (n 1/6) time, parallel
+  algorithm for solving planar laplacians}, in Proceedings of the eighteenth
+  annual ACM-SIAM symposium on Discrete algorithms, Society for Industrial and
+  Applied Mathematics, 2007, pp.~1002--1011.
 
 \bibitem{Koutis:2010}
-Ioannis Koutis, Gary~L. Miller, and Richard Peng.
-\newblock Approaching optimality for solving {SDD} systems.
-\newblock {\em CoRR}, abs/1003.2958, 2010.
+{\sc I.~Koutis, G.~L. Miller, and R.~Peng}, {\em Approaching optimality for
+  solving {SDD} systems}, CoRR, abs/1003.2958 (2010).
 
 \bibitem{Koutis:2011}
-Ioannis Koutis, Gary~L Miller, and David Tolliver.
-\newblock Combinatorial preconditioners and multilevel solvers for problems in
-  computer vision and image processing.
-\newblock {\em Computer Vision and Image Understanding}, 115(12):1638--1646,
-  2011.
+{\sc I.~Koutis, G.~L. Miller, and D.~Tolliver}, {\em Combinatorial
+  preconditioners and multilevel solvers for problems in computer vision and
+  image processing}, Computer Vision and Image Understanding, 115 (2011),
+  pp.~1638--1646.
 
 \bibitem{Livne:2012}
-Oren~E. Livne and Achi Brandt.
-\newblock Lean algebraic multigrid (lamg): Fast graph laplacian linear solver.
-\newblock {\em SIAM Journal on Scientific Computing}, 34(4):B499--B522, 2012.
+{\sc O.~E. Livne and A.~Brandt}, {\em Lean algebraic multigrid (lamg): Fast
+  graph laplacian linear solver}, SIAM Journal on Scientific Computing, 34
+  (2012), pp.~B499--B522.
 
 \bibitem{Spielman:2010}
-Daniel~A Spielman.
-\newblock Algorithms, graph theory, and linear equations in laplacian matrices.
-\newblock In {\em Proceedings of the International Congress of Mathematicians},
-  volume~4, pages 2698--2722, 2010.
+{\sc D.~A. Spielman}, {\em Algorithms, graph theory, and linear equations in
+  laplacian matrices}, in Proceedings of the International Congress of
+  Mathematicians, vol.~4, 2010, pp.~2698--2722.
 
 \bibitem{Spielman:2008}
-Daniel~A. Spielman and Shang{-}Hua Teng.
-\newblock Spectral sparsification of graphs.
-\newblock {\em CoRR}, abs/0808.4134, 2008.
+{\sc D.~A. Spielman and S.~Teng}, {\em Spectral sparsification of graphs},
+  CoRR, abs/0808.4134 (2008).
 
 \bibitem{Urschel:2014}
-John~C Urschel, Xiaozhe Hu, Jinchao Xu, and Ludmil~T Zikatanov.
-\newblock A cascadic multigrid algorithm for computing the fiedler vector of
-  graph laplacians.
-\newblock {\em arXiv preprint arXiv:1412.0565}, 2014.
+{\sc J.~C. Urschel, X.~Hu, J.~Xu, and L.~T. Zikatanov}, {\em A cascadic
+  multigrid algorithm for computing the fiedler vector of graph laplacians},
+  arXiv preprint arXiv:1412.0565,  (2014).
 
 \bibitem{Vaidya:1991}
-Pravin Vaidya.
-\newblock Solving linear equations with symmetric diagonally dominant matrices
-  by constructing good preconditioners.
+{\sc P.~Vaidya}, {\em Solving linear equations with symmetric diagonally
+  dominant matrices by constructing good preconditioners}.
 \newblock IMA Workshop on Graph Theory and Sparse Matrix Computation, 1991.
 
 \bibitem{Watts:1998}
-Duncan~J Watts and Steven~H Strogatz.
-\newblock Collective dynamics of 'small-world' networks.
-\newblock {\em nature}, 393(6684):440--442, 1998.
+{\sc D.~J. Watts and S.~H. Strogatz}, {\em Collective dynamics of 'small-world'
+  networks}, nature, 393 (1998), pp.~440--442.
 
 \end{thebibliography}

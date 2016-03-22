@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: BurasCompleteMasters.aux
+A level-1 auxiliary file: BurasAbstract.aux
+A level-1 auxiliary file: BurasIntro.aux
+A level-1 auxiliary file: BurasBackground.aux
+A level-1 auxiliary file: BurasMethodology.aux
+A level-1 auxiliary file: BurasResults.aux
+A level-1 auxiliary file: BurasConclusions.aux
+The style file: siam.bst
+Database file #1: mastersbib.bib
+Warning--empty journal in Page:1999
+You've used 24 entries,
+            2030 wiz_defined-function locations,
+            681 strings with 8473 characters,
+and the built_in function-call counts, 9707 in all, are:
+= -- 935
+> -- 489
+< -- 1
++ -- 196
+- -- 168
+* -- 776
+:= -- 1493
+add.period$ -- 25
+call.type$ -- 24
+change.case$ -- 153
+chr.to.int$ -- 0
+cite$ -- 25
+duplicate$ -- 421
+empty$ -- 666
+format.name$ -- 168
+if$ -- 2063
+int.to.chr$ -- 0
+int.to.str$ -- 24
+missing$ -- 24
+newline$ -- 76
+num.names$ -- 48
+pop$ -- 143
+preamble$ -- 1
+purify$ -- 131
+quote$ -- 0
+skip$ -- 374
+stack$ -- 0
+substring$ -- 658
+swap$ -- 191
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 92
+warning$ -- 1
+while$ -- 96
+width$ -- 26
+write$ -- 218
+(There was 1 warning)

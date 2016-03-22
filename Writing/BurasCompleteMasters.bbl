@@ -1,0 +1,120 @@
+\begin{thebibliography}{10}
+
+\bibitem{petsc-user-ref}
+{\sc S.~Balay, S.~Abhyankar, M.~F. Adams, J.~Brown, P.~Brune, K.~Buschelman,
+  L.~Dalcin, V.~Eijkhout, W.~D. Gropp, D.~Kaushik, M.~G. Knepley, L.~C.
+  McInnes, K.~Rupp, B.~F. Smith, S.~Zampini, and H.~Zhang}, {\em {PETS}c users
+  manual}, Tech. Rep. ANL-95/11 - Revision 3.6, Argonne National Laboratory,
+  2015.
+
+\bibitem{Brandt:1984}
+{\sc A.~Brandt and O.~E. Livne}, {\em Multigrid techniques: 1984 guide with
+  applications to fluid dynamics}, vol.~67, SIAM, 2011.
+
+\bibitem{Chung:2004}
+{\sc F.~Chung and L.~Lu}, {\em Complex Networks}, Springer Berlin Heidelberg,
+  Berlin, Heidelberg, 2004, ch.~The Small World Phenomenon in Hybrid Power Law
+  Graphs, pp.~89--104.
+
+\bibitem{Dalcin:2011}
+{\sc L.~D. Dalcin, R.~R. Paz, P.~A. Kler, and A.~Cosimo}, {\em Parallel
+  distributed computing using python}, Advances in Water Resources, 34 (2011),
+  pp.~1124--1139.
+
+\bibitem{Duch:2005}
+{\sc J.~Duch and A.~Arenas}, {\em Community detection in complex networks using
+  extremal optimization}, Physical review E, 72 (2005), p.~027104.
+
+\bibitem{Gleich:2015}
+{\sc D.~F. Gleich}, {\em {PageRank} beyond the web}, SIAM Review, 57 (2015),
+  pp.~321--363.
+
+\bibitem{Hagberg:2008}
+{\sc A.~A. Hagberg, D.~A. Schult, and P.~J. Swart}, {\em Exploring network
+  structure, dynamics, and function using {NetworkX}}, in Proceedings of the
+  7th Python in Science Conference (SciPy2008), Pasadena, CA USA, Aug. 2008,
+  pp.~11--15.
+
+\bibitem{Jiang:2009}
+{\sc B.-B. Jiang, J.-G. Wang, Y.~Wang, and J.~Xiao}, {\em Gene prioritization
+  for type 2 diabetes in tissue-specific protein interaction networks}, Syst
+  Biol, 10801131 (2009), pp.~319--28.
+
+\bibitem{Kim:2013}
+{\sc M.~Kim, R.~Sumbaly, and S.~Shah}, {\em Root cause detection in a
+  service-oriented architecture}, ACM SIGMETRICS Performance Evaluation Review,
+  41 (2013), pp.~93--104.
+
+\bibitem{Koutis:2007}
+{\sc I.~Koutis and G.~L. Miller}, {\em A linear work, o (n 1/6) time, parallel
+  algorithm for solving planar laplacians}, in Proceedings of the eighteenth
+  annual ACM-SIAM symposium on Discrete algorithms, Society for Industrial and
+  Applied Mathematics, 2007, pp.~1002--1011.
+
+\bibitem{Koutis:2010}
+{\sc I.~Koutis, G.~L. Miller, and R.~Peng}, {\em Approaching optimality for
+  solving {SDD} systems}, CoRR, abs/1003.2958 (2010).
+
+\bibitem{Koutis:2011}
+{\sc I.~Koutis, G.~L. Miller, and D.~Tolliver}, {\em Combinatorial
+  preconditioners and multilevel solvers for problems in computer vision and
+  image processing}, Computer Vision and Image Understanding, 115 (2011),
+  pp.~1638--1646.
+
+\bibitem{Liu:2005}
+{\sc X.~Liu, J.~Bollen, M.~L. Nelson, and H.~Van~de Sompel}, {\em Co-authorship
+  networks in the digital library research community}, Information processing
+  \& management, 41 (2005), pp.~1462--1480.
+
+\bibitem{Livne:2012}
+{\sc O.~E. Livne and A.~Brandt}, {\em Lean algebraic multigrid (lamg): Fast
+  graph laplacian linear solver}, SIAM Journal on Scientific Computing, 34
+  (2012), pp.~B499--B522.
+
+\bibitem{Mcauley:2012}
+{\sc J.~J. McAuley and J.~Leskovec}, {\em Learning to discover social circles
+  in ego networks.}, in NIPS, vol.~2012, 2012, pp.~548--56.
+
+\bibitem{Miller:1995}
+{\sc G.~L. Miller and J.~Naor}, {\em Flow in planar graphs with multiple
+  sources and sinks}, SIAM Journal on Computing, 24 (1995), pp.~1002--1017.
+
+\bibitem{Page:1999}
+{\sc L.~Page, S.~Brin, R.~Motwani, and T.~Winograd}, {\em The pagerank citation
+  ranking: bringing order to the web.},  (1999).
+
+\bibitem{Simonis:2009}
+{\sc N.~Simonis, J.-F. Rual, A.-R. Carvunis, M.~Tasan, I.~Lemmens,
+  T.~Hirozane-Kishikawa, T.~Hao, J.~M. Sahalie, K.~Venkatesan, F.~Gebreab,
+  et~al.}, {\em Empirically controlled mapping of the caenorhabditis elegans
+  protein-protein interactome network}, Nature methods, 6 (2009), pp.~47--54.
+
+\bibitem{Spielman:2010}
+{\sc D.~A. Spielman}, {\em Algorithms, graph theory, and linear equations in
+  laplacian matrices}, in Proceedings of the International Congress of
+  Mathematicians, vol.~4, 2010, pp.~2698--2722.
+
+\bibitem{Spielman:2008}
+{\sc D.~A. Spielman and S.~Teng}, {\em Spectral sparsification of graphs},
+  CoRR, abs/0808.4134 (2008).
+
+\bibitem{Urschel:2014}
+{\sc J.~C. Urschel, X.~Hu, J.~Xu, and L.~T. Zikatanov}, {\em A cascadic
+  multigrid algorithm for computing the fiedler vector of graph laplacians},
+  arXiv preprint arXiv:1412.0565,  (2014).
+
+\bibitem{Vaidya:1991}
+{\sc P.~Vaidya}, {\em Solving linear equations with symmetric diagonally
+  dominant matrices by constructing good preconditioners}.
+\newblock IMA Workshop on Graph Theory and Sparse Matrix Computation, 1991.
+
+\bibitem{Watts:1998}
+{\sc D.~J. Watts and S.~H. Strogatz}, {\em Collective dynamics of 'small-world'
+  networks}, nature, 393 (1998), pp.~440--442.
+
+\bibitem{White:1986}
+{\sc J.~White, E.~Southgate, J.~Thomson, and S.~Brenner}, {\em The structure of
+  the nervous system of the nematode caenorhabditis elegans: the mind of a
+  worm}, Phil. Trans. R. Soc. Lond, 314 (1986), pp.~1--340.
+
+\end{thebibliography}

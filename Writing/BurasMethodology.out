@@ -1,10 +1,11 @@
-\BOOKMARK [1][-]{section.1}{Graph Partitioning}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Partitioning Algorithm}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{NetworkX Library and My Additions}{section.1}% 3
-\BOOKMARK [1][-]{section.2}{Laplacian Solver}{}% 4
-\BOOKMARK [2][-]{subsection.2.1}{Linear Algebra: Woodbury Matrix Identity}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.2}{Algebraic Multigrid of Locally Connected Subgraph}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.3}{Low Rank SVD of Teleportation Subgraph}{section.2}% 7
-\BOOKMARK [1][-]{section.3}{Model Complexity}{}% 8
-\BOOKMARK [2][-]{subsection.3.1}{Graph Splitting}{section.3}% 9
-\BOOKMARK [1][-]{section.4}{Linear Algebra and Solves}{}% 10
+\BOOKMARK [1][-]{section.1}{Methodology}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Graph Partitioning}{section.1}% 2
+\BOOKMARK [3][-]{subsubsection.1.1.1}{Partitioning Algorithm}{subsection.1.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.1.2}{NetworkX Library and My Additions}{subsection.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.2}{Laplacian Solver}{section.1}% 5
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Linear Algebra: Woodbury Matrix Identity}{subsection.1.2}% 6
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Algebraic Multigrid of Locally Connected Subgraph}{subsection.1.2}% 7
+\BOOKMARK [3][-]{subsubsection.1.2.3}{Low Rank SVD of Teleportation Subgraph}{subsection.1.2}% 8
+\BOOKMARK [2][-]{subsection.1.3}{Model Complexity}{section.1}% 9
+\BOOKMARK [3][-]{subsubsection.1.3.1}{Graph Splitting}{subsection.1.3}% 10
+\BOOKMARK [3][-]{subsubsection.1.3.2}{Linear Algebra and Solves}{subsection.1.3}% 11

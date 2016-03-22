@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 MAR 2016 21:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 MAR 2016 15:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -360,177 +360,160 @@ LaTeX Info: Redefining \nameref on input line 15.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-
-LaTeX Warning: No \author given.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-<neural_degree_histogram.png, id=4, 433.62pt x 289.08pt>
+<neural_degree_histogram.png, id=12, 433.62pt x 289.08pt>
 File: neural_degree_histogram.png Graphic file (type png)
 
 <use neural_degree_histogram.png>
-Package pdftex.def Info: neural_degree_histogram.png used on input line 27.
+Package pdftex.def Info: neural_degree_histogram.png used on input line 25.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
 
 
-LaTeX Warning: Citation `White:1986' on page 1 undefined on input line 28.
+LaTeX Warning: Citation `White:1986' on page 1 undefined on input line 26.
 
 
-LaTeX Warning: Citation `Watts:1998' on page 1 undefined on input line 28.
+LaTeX Warning: Citation `Watts:1998' on page 1 undefined on input line 26.
 
 
-LaTeX Warning: Citation `White:1986' on page 1 undefined on input line 28.
+LaTeX Warning: Citation `White:1986' on page 1 undefined on input line 26.
 
 
-LaTeX Warning: Citation `Watts:1998' on page 1 undefined on input line 28.
+LaTeX Warning: Citation `Watts:1998' on page 1 undefined on input line 26.
 
-<neuralspy.png, id=6, 433.62pt x 289.08pt>
+<neuralspy.png, id=14, 433.62pt x 289.08pt>
 File: neuralspy.png Graphic file (type png)
  <use neuralspy.png>
-Package pdftex.def Info: neuralspy.png used on input line 34.
+Package pdftex.def Info: neuralspy.png used on input line 32.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
 
-<meta_degree_histogram.png, id=7, 433.62pt x 289.08pt>
+<meta_degree_histogram.png, id=15, 433.62pt x 289.08pt>
 File: meta_degree_histogram.png Graphic file (type png)
 
 <use meta_degree_histogram.png>
-Package pdftex.def Info: meta_degree_histogram.png used on input line 41.
+Package pdftex.def Info: meta_degree_histogram.png used on input line 39.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
 
 
-LaTeX Warning: Citation `Duch:2005' on page 1 undefined on input line 42.
+LaTeX Warning: Citation `Duch:2005' on page 1 undefined on input line 40.
 
 
-LaTeX Warning: Citation `Duch:2005' on page 1 undefined on input line 42.
+LaTeX Warning: Citation `Duch:2005' on page 1 undefined on input line 40.
 
-<metaspy.png, id=8, 433.62pt x 289.08pt>
+<metaspy.png, id=16, 433.62pt x 289.08pt>
 File: metaspy.png Graphic file (type png)
  <use metaspy.png>
-Package pdftex.def Info: metaspy.png used on input line 47.
+Package pdftex.def Info: metaspy.png used on input line 45.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
 
-<gene_degree_histogram.png, id=9, 433.62pt x 289.08pt>
+<gene_degree_histogram.png, id=17, 433.62pt x 289.08pt>
 File: gene_degree_histogram.png Graphic file (type png)
 
 <use gene_degree_histogram.png>
-Package pdftex.def Info: gene_degree_histogram.png used on input line 54.
+Package pdftex.def Info: gene_degree_histogram.png used on input line 52.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
 
 
-LaTeX Warning: Citation `Simonis:2009' on page 1 undefined on input line 55.
+LaTeX Warning: Citation `Simonis:2009' on page 1 undefined on input line 53.
 
 
-LaTeX Warning: Citation `Simonis:2009' on page 1 undefined on input line 55.
+LaTeX Warning: Citation `Simonis:2009' on page 1 undefined on input line 53.
 
-<genespy.png, id=10, 433.62pt x 289.08pt>
+<genespy.png, id=18, 433.62pt x 289.08pt>
 File: genespy.png Graphic file (type png)
  <use genespy.png>
-Package pdftex.def Info: genespy.png used on input line 61.
+Package pdftex.def Info: genespy.png used on input line 59.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
 
-<fb_degree_histogram.png, id=11, 433.62pt x 289.08pt>
+<fb_degree_histogram.png, id=19, 433.62pt x 289.08pt>
 File: fb_degree_histogram.png Graphic file (type png)
 
 <use fb_degree_histogram.png>
-Package pdftex.def Info: fb_degree_histogram.png used on input line 68.
+Package pdftex.def Info: fb_degree_histogram.png used on input line 66.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
 
 
-LaTeX Warning: Citation `Mcauley:2012' on page 1 undefined on input line 69.
+LaTeX Warning: Citation `Mcauley:2012' on page 1 undefined on input line 67.
 
 
-LaTeX Warning: Citation `Mcauley:2012' on page 1 undefined on input line 69.
+LaTeX Warning: Citation `Mcauley:2012' on page 1 undefined on input line 67.
 
-<fbspy.png, id=12, 433.62pt x 289.08pt>
+<fbspy.png, id=20, 433.62pt x 289.08pt>
 File: fbspy.png Graphic file (type png)
  <use fbspy.png>
-Package pdftex.def Info: fbspy.png used on input line 75.
+Package pdftex.def Info: fbspy.png used on input line 73.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
 
-<power_degree_histogram.png, id=13, 433.62pt x 289.08pt>
+<power_degree_histogram.png, id=21, 433.62pt x 289.08pt>
 File: power_degree_histogram.png Graphic file (type png)
 
 <use power_degree_histogram.png>
-Package pdftex.def Info: power_degree_histogram.png used on input line 82.
+Package pdftex.def Info: power_degree_histogram.png used on input line 80.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
 
 
-LaTeX Warning: Citation `Watts:1998' on page 1 undefined on input line 83.
+LaTeX Warning: Citation `Watts:1998' on page 1 undefined on input line 81.
 
 
-LaTeX Warning: Citation `Watts:1998' on page 1 undefined on input line 83.
+LaTeX Warning: Citation `Watts:1998' on page 1 undefined on input line 81.
 
-<powerspy.png, id=14, 433.62pt x 289.08pt>
+<powerspy.png, id=22, 433.62pt x 289.08pt>
 File: powerspy.png Graphic file (type png)
  <use powerspy.png>
-Package pdftex.def Info: powerspy.png used on input line 89.
+Package pdftex.def Info: powerspy.png used on input line 87.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
 
-Overfull \hbox (23.74728pt too wide) in paragraph at lines 96--106
+Overfull \hbox (23.74728pt too wide) in paragraph at lines 94--104
  [] 
  []
 
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
+ <./neural_degree_histogram.png>] [2 <./neuralspy.png> <./meta_degree_histogram
+.png>]
+[3 <./metaspy.png> <./gene_degree_histogram.png>] [4 <./genespy.png> <./fb_degr
+ee_histogram.png>] [5 <./fbspy.png> <./power_degree_histogram.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-[1
-
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2 <./neural_degree_histogram.png> <./neuralspy.png>] [3 <./meta_degree_histogr
-am.png> <./metaspy.png>] [4 <./gene_degree_histogram.png> <./genespy.png>]
-[5 <./fb_degree_histogram.png> <./fbspy.png>] [6 <./power_degree_histogram.png>
- <./powerspy.png>] (./BurasResults.bbl [7])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
- [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
+[6 <./powerspy.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
  (./BurasResults.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
+Package rerunfilecheck Info: File `BurasResults.out' has not changed.
+(rerunfilecheck)             Checksum: C430341BCE9231FFC578B69590B88C64;97.
 
-
-Package rerunfilecheck Warning: File `BurasResults.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `BurasResults.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  4C1FE955A09885FCDFCFB59DC58E5BA1;41.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 133.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
- 8012 strings out of 493089
- 121496 string characters out of 6134842
- 222290 words of memory out of 5000000
- 11398 multiletter control sequences out of 15000+600000
- 9062 words of font info for 33 fonts, out of 8000000 for 9000
+ 7984 strings out of 493089
+ 121184 string characters out of 6134842
+ 217394 words of memory out of 5000000
+ 11389 multiletter control sequences out of 15000+600000
+ 5612 words of font info for 21 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,8n,40p,727b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,8n,40p,727b,396s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on BurasResults.pdf (8 pages, 275958 bytes).
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on BurasResults.pdf (7 pages, 241178 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
- 26 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 115 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
+ 67 words of extra memory for PDF output out of 10000 (max. 10000000)
 
