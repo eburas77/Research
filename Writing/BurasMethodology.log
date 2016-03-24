@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 MAR 2016 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  23 MAR 2016 21:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -387,6 +387,10 @@ LaTeX Warning: Citation `Hagberg:2008' on page 1 undefined on input line 55.
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `Woodbury:1950' on page 2 undefined on input line 61.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
@@ -445,13 +449,16 @@ Package rerunfilecheck Info: File `BurasMethodology.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 133.
  ) 
 Here is how much of TeX's memory you used:
- 7974 strings out of 493089
- 120867 string characters out of 6134842
- 213732 words of memory out of 5000000
- 11385 multiletter control sequences out of 15000+600000
+ 7976 strings out of 493089
+ 120901 string characters out of 6134842
+ 214064 words of memory out of 5000000
+ 11387 multiletter control sequences out of 15000+600000
  5911 words of font info for 22 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,9n,38p,1639b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -465,7 +472,7 @@ local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on BurasMethodology.pdf (6 pages, 156272 bytes).
+Output written on BurasMethodology.pdf (6 pages, 156333 bytes).
 PDF statistics:
  132 PDF objects out of 1000 (max. 8388607)
  106 compressed objects within 2 object streams

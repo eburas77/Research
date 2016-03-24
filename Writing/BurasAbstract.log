@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 MAR 2016 15:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  23 MAR 2016 21:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -334,34 +334,36 @@ LaTeX Info: Redefining \nameref on input line 12.
 \openout3 = `BurasAbstract.out'.
 
 \c@lstlisting=\count125
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 21.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 30.
  [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 21.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 30.
  (./BurasAbstract.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 21.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 21.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 30.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 30.
 Package rerunfilecheck Info: File `BurasAbstract.out' has not changed.
 (rerunfilecheck)             Checksum: 063A9B9853E85AB54BA4FCB47780BD6B;43.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 21.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 30.
  ) 
 Here is how much of TeX's memory you used:
- 6857 strings out of 493089
- 100604 string characters out of 6134842
- 187529 words of memory out of 5000000
- 10298 multiletter control sequences out of 15000+600000
- 5045 words of font info for 19 fonts, out of 8000000 for 9000
+ 6879 strings out of 493089
+ 100834 string characters out of 6134842
+ 188529 words of memory out of 5000000
+ 10311 multiletter control sequences out of 15000+600000
+ 8754 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,5n,32p,847b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,6n,32p,847b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on BurasAbstract.pdf (1 page, 45749 bytes).
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on BurasAbstract.pdf (1 page, 69918 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
+ 42 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  3 named destinations out of 1000 (max. 500000)
  9 words of extra memory for PDF output out of 10000 (max. 10000000)
 

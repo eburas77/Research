@@ -9,6 +9,7 @@
 \usepackage{amsmath}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{placeins}
 
 
 
@@ -16,14 +17,15 @@
 
 \section{Results}
 \subsection{Graphs}
-We have a set of graphs that are similar to the power-law graphs from Watts-Strogatz and Chung-Lu. These encompass a wide range of subjects such as social networks, biological processes, and an electric grid. The key part of my algorithm is partitioning a graph into a large locally-connected subgraph and a small teleportation subgraph. four of these examples fully fit into this class of graphs, whereas the power grid most certainly does not as evidenced below. The important attribute to look for is low rank of the teleportation Laplacian matrix relative to the number of the nodes (which is the size of the entire square Laplacian matrix).\\
-
+We have a set of graphs that are similar to the power-law graphs from Watts-Strogatz and Chung-Lu \cite{Watts:1998,Chung:2004}. These encompass a wide range of subjects from biological processes, social networks, and urban infrastructure. To standardize the datasets, I coerced them into undirected, unweighted networks, however with a minor amount of work, I can solve their Laplacian linear systems in their original form. In addition to a short description of the datasets and what it means to solve their Laplacian linear system, I created a spy plot of the Laplacian matrix, a degree histogram, and a simple network graphic to illustrate connections in the data.
+\subsubsection{\textit{C. Elegans} Worm Data}
+The \textit{C. Elegans} worm has been studied extensively due to the low complexity of it's biological systems. The smallest graph in this results section is the completely mapped nervous system of 297 neurons in the worm with 2148 connections from initial experimental data given by White et. al. in 1986 \cite{White:1986,Watts:1998}. Solving the Laplacian linear system of a neural network is analogous to finding the PageRank vector of  influences for each neuron. The neural edge information can be combined with anatomical information about brain regions to study which parts of the brain are more important for different functions. Another possible study identifies how an organism's brain of an organism develops as it ages \cite{Gleich:2015}.
 
 \begin{figure}
 \centering
 
 \includegraphics[width=\linewidth]{neural_degree_histogram.png}
-\caption{Neural Network of C. Elegans \cite{White:1986,Watts:1998}}
+\caption{Neural Network of \textit{C. Elegans}}
   
 \end{figure}
 
@@ -33,11 +35,13 @@ We have a set of graphs that are similar to the power-law graphs from Watts-Stro
 \caption{Spy Plot of Neural Network Laplacian Matrix}
 \end{figure}
 
+The second \textit{C. Elegans} dataset describes the 453 metabolic processes and their 2025 connections that comprise the metabolism of the worm \cite{Duch:2005}. Again, this is a simple network of a simple organism. Solving the Laplacian linear system can offer insights into the key metabolic processes.
+
 \begin{figure}
 \centering
 
 \includegraphics[width=\linewidth]{meta_degree_histogram.png}
-\caption{Metabolic Network of C. Elegans \cite{Duch:2005}}
+\caption{Metabolic Network of \textit{C. Elegans}}
   
 \end{figure}
 \begin{figure}
@@ -46,11 +50,14 @@ We have a set of graphs that are similar to the power-law graphs from Watts-Stro
 \caption{Spy Plot of Metabolic Network Laplacian Matrix}
 \end{figure}
 
+
+The final \textit{C. Elegans} dataset is an order of magnitude larger than the previous two. The worm's genetics encode proteins that ultimately display phenotypes. Networks of this type are described as interactomes. The graph I study has 912 proteins with 22,738 edges for protein-protein interactions with corresponding, scientifically-observed phenotypes \cite{Simonis:2009}. Solving the Laplacian linear system for a protein network can highlight unobserved, tangential protein-phenotype relationships \cite{Gleich:2015}.
+
 \begin{figure}
 \centering
 
 \includegraphics[width=\linewidth]{gene_degree_histogram.png}
-\caption{Protein Network with Corresponding Phenotypes of C. Elegans \cite{Simonis:2009}}
+\caption{Protein Network with Corresponding Phenotypes of \textit{C. Elegans}}
   
 \end{figure}
 
@@ -60,11 +67,16 @@ We have a set of graphs that are similar to the power-law graphs from Watts-Stro
 \caption{Spy Plot of Protein Network Laplacian Matrix}
 \end{figure}
 
+While the \textit{C. Elegans} worm is an incredibly, biologically simple organism, it is useful as a test case for solving much larger linear systems for more complex organisms. The ultimate goal, of course, to map the biological systems of humans. Already, work is being done to map the human interactome \cite{Rual:2005,Rolland:2014} and parts of the human neural network \cite{Toga:2012}. All three of the worm networks are comprised of a highly locally-connected subgraph and small teleportation subgraph making them amenable to my method. 
+
+\subsubsection{Facebook Friend Circles}
+The largest graph I work with contains the 88,234 Facebook friend connections between 4039 users  \cite{Mcauley:2012}. Social scientists are interested in identifying sources of influence in a social network. By solving the Laplacian linear system associated with the Facebook graph I can solve a so-called "reverse" PageRank system. This finds the origins of influence; for a circle of facebook friends, it might identify how those people became connected through a few key people. This can be applied to any network of human interactions including other social networks, or organizational systems \cite{Gleich:2015}. This graph is also highly locally-connected, and is a good example of how my method scales to larger networks.
+
 \begin{figure}
 \centering
 
 \includegraphics[width=\linewidth]{fb_degree_histogram.png}
-\caption{Facebook Friend Network \cite{Mcauley:2012}}
+\caption{Facebook Friend Network}
   
 \end{figure}
 
@@ -74,11 +86,14 @@ We have a set of graphs that are similar to the power-law graphs from Watts-Stro
 \caption{Spy Plot of Facebook Network Laplacian Matrix}
 \end{figure}
 
+\subsubsection{Western US Power Grid}
+The final dataset illustrates how my method fails. The Western US power grid has 4941 nodes and 6594 connections \cite{Watts:1998}; this is a much lower edge/node ratio than the previous datasets and explains why this graph is not very locally-connected. Whereas the previous 4 examples resulted in low-rank teleportation laplacian matrix, $T_L$ for the power grid is almost full-rank. As seen further, the resulting linear system solve requires way too many floating point operations. Solving this system can describe the flow of electricity through the grid \cite{Pagani:2013}, however my method clearly is not appropriate. 
+
 \begin{figure}
 \centering
 
 \includegraphics[width=\linewidth]{power_degree_histogram.png}
-\caption{Network of Western Power Grid \cite{Watts:1998}}
+\caption{Network of Western Power Grid}
   
 \end{figure}
 
@@ -88,20 +103,59 @@ We have a set of graphs that are similar to the power-law graphs from Watts-Stro
 \caption{Spy Plot of Power Grid Laplacian Matrix}
 \end{figure}
 
+\subsubsection{Graph Overview}
+The key part of my algorithm is partitioning a graph into a large locally-connected subgraph and a small teleportation subgraph. Four of these examples fully fit into this class of graphs, whereas the power grid most certainly does not as evidenced below. The important attribute to look for is low rank of the teleportation Laplacian matrix relative to the number of the nodes (which is the size of the entire square Laplacian matrix). Here is a table summarizing the datasets:
+
 
 \begin{center}
 \renewcommand{\arraystretch}{1.5}
-    \begin{tabular}{| l | l | l | l | l | l |}
+    \begin{tabular}{| l | l |}
     \hline
-    Graph (nodes, edges) & Avg. Deg. & Rank $T_L$ & Nx part. (s) & Part. (s) & Iter. \\ \hline
-    Neural (297, 2148) & 14.46 & 22 & 11 & 1.6 & 2 \\ \hline
-    Metabolic (453, 2025) & 8.94 & 49 & 12 & 2.3 & 2 \\  \hline
-    Protein (912, 22738) & 49.86 & 26 & 1915 & 53 & 1 \\ \hline
-    Facebook (4039, 88234) & 43.69 &  180 & 11593 & 480 & 2 \\ \hline
-    Power (4941, 6594) & 2.669 & 4284 & 2.1 & .33 & 2 \\ 
+    Graph (nodes, edges) & Rank $T_L$ \\ \hline
+    Neural (297, 2148) & 22 \\ \hline
+    Metabolic (453, 2025) & 49\\  \hline
+    Protein (912, 22738) & 26 \\ \hline
+    Facebook (4039, 88234) &  180 \\ \hline
+    Power (4941, 6594) & 4284 \\ 
     \hline
     \end{tabular}
 \end{center}
+
+\subsection{Graph Partitioning}
+Partitioning the complete graph into the maximum locally-connected subgraph and the teleportation graph is the unique part of this algorithm. This requires an initial computational step as an overhead cost. Any graph must only be partitioned once, as the unique edgelists can be written into files for future use. In the methodology section I mentioned that that each graph follows a power-law degree distribution with $2 < \gamma < 3$ which affects its expected degree. However, for finite node graphs, $\gamma$ can be less than 2 and the degree sequence decay is stretched. Let's take a look at the degree histrogram for the \textit{C. Elegans} neural network compared to a typical power-law degree distribution and a stretched power-law distribution:
+
+\begin{figure}
+\centering
+\includegraphics[width = \linewidth]{neuralsequenceplot2.png}
+\caption{Degree sequences of Neural Network and standard power law distribution ($\gamma = 2.1$)}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width = \linewidth]{neuralsequenceplot.png}
+\caption{Degree sequences of Neural Network and stretched power law distribution ($\gamma = .6$ in numerator)}
+\end{figure}
+
+Clearly the stretched power-law distribution fits the data better. The finite node power-law distribution has $E[d] \approx 1$, the stretched power-law distribution has $E[d] = 14.39$ and the average degree of the neural network is 14.46. This matters because it affects the complexity of the partitioning algorithm which has $O(iter.\times m\times (E[d]^3))$. I want to more accurately predict the computational cost of the partitioning algorithm.
+
+\subsubsection{Table of Partitioning results} 
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{| l | l | l | l | l |}
+    \hline
+    Graph (nodes, edges) & Avg. Deg. & Nx Part. (s) & Part. (s) & Iter. \\ \hline
+    Neural (297, 2148) & 14.46 & 11 & 1.6 & 3 \\ \hline
+    Metabolic (453, 2025) & 8.94 & 12 & 2.3 & 3 \\  \hline
+    Protein (912, 22738) & 49.86 & 1915 & 53 & 2 \\ \hline
+    Facebook (4039, 88234) & 43.69 & 11593 & 480 & 3 \\ \hline
+    Power (4941, 6594) & 2.669 & 2.1 & .33 & 3 \\ 
+    \hline
+    \end{tabular}
+\end{center}
+
+The partitioning times are in line with the theoretical complexity except for the metabolic network which has a similar number of edges but lower average degree than the neural network, but takes longer to partition. I hypothesize that because the graph is double the size, there is an additional overhead to using the NetworkX functions to create pathways and loop through all possible edges. I add the NetworkX partitioning times (Nx Part. (s)) to show how much more computation the NetworkX partitioning requires with the shortest path algorithm. Granted, searching through increasing path lengths requires exponentially more work, so this is probabily infeasible for increasing $k$ beyond 5.
+
+\subsection{Linear System Solve}
 I want to dig deeper into the solve portion to determine if the operations correspond with their given theoretical complexities. Here is a table of the timings for the individual operations:\\
 
 \begin{center}
@@ -120,7 +174,7 @@ I want to dig deeper into the solve portion to determine if the operations corre
     $y_3 = Uy_2$ & $O(rn)$ & .0001 & .0002 & .0003 & .0025 & .1867 \\ \hline
     $y_4 = P_L^{-1}y_3$ (MG) & $O(n)$ &.0128 & .0070 & .1183 & .8249 & .0059 \\ \hline
     $x = y - y_4$ & $O(n)$ &.0003 & .0003 & .0003 & .0004 & .0003 \\ \hline
-    \textbf{Total} & $O(n^3)$ & .51 & .966 & 1.44 & 64.46 & 560 \\
+    \textbf{Total} & \textbf{$O(n^3)$} & \textbf{.51} & \textbf{.966} & \textbf{1.44} & \textbf{64.46} & \textbf{560} \\
     \hline
     \end{tabular}
 \end{center}

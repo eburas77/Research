@@ -35,10 +35,19 @@
   7th Python in Science Conference (SciPy2008), Pasadena, CA USA, Aug. 2008,
   pp.~11--15.
 
+\bibitem{Hestenes:1952}
+{\sc M.~R. Hestenes and E.~Stiefel}, {\em Methods of conjugate gradients for
+  solving linear systems}, vol.~49, NBS, 1952.
+
 \bibitem{Jiang:2009}
 {\sc B.-B. Jiang, J.-G. Wang, Y.~Wang, and J.~Xiao}, {\em Gene prioritization
   for type 2 diabetes in tissue-specific protein interaction networks}, Syst
   Biol, 10801131 (2009), pp.~319--28.
+
+\bibitem{Khaira:1992}
+{\sc M.~S. Khaira, G.~L. Miller, and T.~J. Sheffler}, {\em Nested Dissection: A
+  survey and comparison of various nested dissection algorithms},
+  Carnegie-Mellon University. Department of Computer Science, 1992.
 
 \bibitem{Kim:2013}
 {\sc M.~Kim, R.~Sumbaly, and S.~Shah}, {\em Root cause detection in a
@@ -79,9 +88,29 @@
 {\sc G.~L. Miller and J.~Naor}, {\em Flow in planar graphs with multiple
   sources and sinks}, SIAM Journal on Computing, 24 (1995), pp.~1002--1017.
 
+\bibitem{Pagani:2013}
+{\sc G.~A. Pagani and M.~Aiello}, {\em The power grid as a complex network: a
+  survey}, Physica A: Statistical Mechanics and its Applications, 392 (2013),
+  pp.~2688--2700.
+
 \bibitem{Page:1999}
 {\sc L.~Page, S.~Brin, R.~Motwani, and T.~Winograd}, {\em The pagerank citation
   ranking: bringing order to the web.},  (1999).
+
+\bibitem{Rolland:2014}
+{\sc T.~Rolland, M.~Ta{\c{s}}an, B.~Charloteaux, S.~J. Pevzner, Q.~Zhong,
+  N.~Sahni, S.~Yi, I.~Lemmens, C.~Fontanillo, R.~Mosca, et~al.}, {\em A
+  proteome-scale map of the human interactome network}, Cell, 159 (2014),
+  pp.~1212--1226.
+
+\bibitem{Rual:2005}
+{\sc J.-F. Rual, K.~Venkatesan, T.~Hao, T.~Hirozane-Kishikawa, A.~Dricot,
+  N.~Li, G.~F. Berriz, F.~D. Gibbons, M.~Dreze, N.~Ayivi-Guedehoussou, et~al.},
+  {\em Towards a proteome-scale map of the human protein--protein interaction
+  network}, Nature, 437 (2005), pp.~1173--1178.
+
+\bibitem{Saad:2003}
+{\sc Y.~Saad}, {\em Iterative methods for sparse linear systems}, Siam, 2003.
 
 \bibitem{Simonis:2009}
 {\sc N.~Simonis, J.-F. Rual, A.-R. Carvunis, M.~Tasan, I.~Lemmens,
@@ -97,6 +126,10 @@
 \bibitem{Spielman:2008}
 {\sc D.~A. Spielman and S.~Teng}, {\em Spectral sparsification of graphs},
   CoRR, abs/0808.4134 (2008).
+
+\bibitem{Toga:2012}
+{\sc A.~W. Toga, K.~A. Clark, P.~M. Thompson, D.~W. Shattuck, and J.~D.
+  Van~Horn}, {\em Mapping the human connectome}, Neurosurgery, 71 (2012), p.~1.
 
 \bibitem{Urschel:2014}
 {\sc J.~C. Urschel, X.~Hu, J.~Xu, and L.~T. Zikatanov}, {\em A cascadic
@@ -116,5 +149,9 @@
 {\sc J.~White, E.~Southgate, J.~Thomson, and S.~Brenner}, {\em The structure of
   the nervous system of the nematode caenorhabditis elegans: the mind of a
   worm}, Phil. Trans. R. Soc. Lond, 314 (1986), pp.~1--340.
+
+\bibitem{Woodbury:1950}
+{\sc M.~A. Woodbury}, {\em Inverting modified matrices}, Memorandum report, 42
+  (1950), p.~106.
 
 \end{thebibliography}

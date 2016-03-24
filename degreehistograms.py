@@ -66,7 +66,7 @@ gamma = 2.1
 #plt.savefig('powerlawdeg.png')
 
 powerlaw = np.arange(1,G.number_of_nodes()+1)
-powerlaw = np.power(powerlaw, -gamma/(3.5))
+powerlaw = np.power(powerlaw, -gamma/3.5)
 powerlaw = G.number_of_nodes()*powerlaw
 powerlaw = powerlaw/(mzeta(gamma,0))
 
@@ -76,11 +76,11 @@ powerlaw2 = G.number_of_nodes()*powerlaw2
 powerlaw2 = powerlaw2/(mzeta(gamma,0))
 
 plt.semilogy(np.arange(1,G.number_of_nodes()+1),degree_sequence,'-',label = 'neural degree histogram')
-plt.semilogy(np.arange(1,G.number_of_nodes()+1),powerlaw2,'--',label = 'regular power law')
+plt.semilogy(np.arange(1,G.number_of_nodes()+1),powerlaw,'--',label = 'regular power law')
 plt.ylabel("Degree")
 plt.xlabel("Nodes (Ranked by Degree)")
 plt.legend(prop={'size':14})
-plt.savefig('neuralsequenceplot2.png')
+plt.savefig('neuralsequenceplot.png')
 # draw graph in inset
 plt.axes([0.45,0.45,0.45,0.45])
 Gcc=sorted(nx.connected_component_subgraphs(G), key = len, reverse=True)[0]

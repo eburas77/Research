@@ -13,25 +13,25 @@
 
 \section{Background}
 \subsection{Graph Laplacian Problem}
-Information about a weighted, undirected graph $G$ with vertex list $V$ and edge list $E$ can be stored in a matrix fThis is called the adjacency matrix which is defined as blah. Then do this for the diagonal matrix. then laplacian is L = D-A. this is done because it is similar to the finite difference discretization of the laplacian on a grid This is called the Laplacian which contains edge connectivity and vertex degree information for the graph. For any vertex $u \in V$, the degree of $u$ is:\\
-\begin{center} $d(u) = \sum_{v \in V} w_{u,v}$ \cite{Spielman:2010} \\
+Information about a weighted, undirected graph $G$ with vertex list $V$ and edge list $E$ can be stored in a matrix. This is called the adjacency matrix which is defined as:\\
+\begin{center} 
+$A(u,v) = 1$ if $(u,v) \in E$ and $0$ otherwise.\\
 \end{center}
-Let $D$ be the diagonal matrix of degree information for $V$. The adjacency matrix, $A$ of the graph $G$ is defined as:\\
-\begin{center} $A(u,v) = w_{u,v}$ if $(u,v) \in E$ and $0$ otherwise. \cite{Spielman:2010} \\
+The diagonal matrix, $D$ is a matrix of the degree sequence along the diagonal:\\
+\begin{center}
+$D(u,u) = d_u$
 \end{center}
-The Laplacian of $G$ is:\\
-\begin{center} $L = D-A$ \cite{Spielman:2010} \\
+The laplacian matrix is $L = D-A$. This is done because it is similar to the finite difference discretization of the laplacian on a grid (cite?). To see how information flows through paths in a network, the graph laplacian matrix can be used as an operator on an input vector. To find a weighted average of paths in a network one can repeatedly apply the laplacian operator on an input:\\
+\begin{center}
+$b + Lb + L^{2}b + L^{3}b + L^{4}b + ... = \sum_{i = 0}^{\infty} L^{i}b = (I-L)^{-1}b$\\
 \end{center}
-
-why is this called the laplacian. -1 for all connecting edges. looks like the discretization of the 
-
-In problems related to graph regression, spectral graph theory, maximum and minimum cost flow, resistor networks, and partial differential equations it is common to use the inverse operator of the graph laplacian. \cite{Spielman:2010}
+Thus in problems related to graph regression, spectral graph theory, maximum and minimum cost flow, resistor networks, and partial differential equations it is common to use the inverse operator of the graph laplacian. \cite{Spielman:2010}
 
 \subsection{Current Solution Approaches}
-Solution algorithms for linear systems can be divided into direct methods and iterative methods. Standard direct methods such as $LU$ or Cholesky factorization are accurate and suitable for graphs with small numbers of edges/vertices, however become very costly in terms of memory and time as the size and edge density of the graph increases. Fast matrix inversion can be applied with order $O(n^{2.376})$ \cite{Spielman:2010}, yet this can be improved upon still (mention nested dissection and memory blowup). In contrast to direct solvers, iterative methods compute better and better approximate solutions to the linear system. A standard iterative method is the Conjugate Gradient method (cite get from wikipedia). To speed up these iterative methods, it is possible to introduce a preconditioner that creates an equivalent linear system that is much easier to solve than the original. (cite yousef saad iterative methods for sparse linear systems). Yet none of these basic solvers take into account attributes of the graph Laplacian that can drastically improve method performance.
+Solution algorithms for linear systems can be divided into direct methods and iterative methods. Standard direct methods such as $LU$ or Cholesky factorization are accurate and suitable for graphs with small numbers of edges/vertices, however become very costly in terms of memory and time as the size and edge density of the graph increases. Fast matrix inversion can be applied with order $O(n^{2.376})$ \cite{Spielman:2010}, yet this can be improved upon still. Alternatively one can use nested dissection, however computational memory requirements blow up as size increases \cite{Khaira:1992}. In contrast to direct solvers, iterative methods compute better and better approximate solutions to the linear system. A standard iterative method is the Conjugate Gradient method \cite{Hestenes:1952}. To speed up these iterative methods, it is possible to introduce a preconditioner that creates an equivalent linear system that is much easier to solve than the original \cite{Saad:2003}. Yet none of these basic solvers take into account attributes of the graph Laplacian that can drastically improve method performance.
 
 \subsubsection{Spielman-Teng, Koutis et. al.}
-An analogy with preconditioning, we want to find an approximation to a graph $G$ with similar spectrum for easier computing. Spielman and Teng introduce the idea of a spectral sparsifier (define this). The Laplacian for this approximation is similar to the Laplacian for the original graph because of similar spectrum, thus resulting in a good preconditioner for the original linear system. Multiple cycles of sparsification and factorization combine to solve the original problem. They have a multilevel version of this. Spielman and Teng (S-T) were thus able to solve symmetric diagonally dominant systems in nearly linear time \cite{Spielman:2008}.  This line of work combined with Vaidya's \cite{Vaidya:1991} work on subgraph preconditioners (capacitance matrix methods) resulted in Koutis and Miller's work solving linear systems based on planar Laplacians \cite{Koutis:2007}. Koutis, et. al. were then able to further decrease the time complexity of S-T for general symmetric diagonally dominant systems \cite{Koutis:2010}. (this is not our main problem)
+An analogy with preconditioning, we want to find an approximation to a graph $G$ with similar spectrum for easier computing. Spielman and Teng introduce the idea of a spectral sparsifier. The Laplacian for this approximation is similar to the Laplacian for the original graph because of similar spectrum, thus resulting in a good preconditioner for the original linear system. Multiple cycles of sparsification and factorization combine to solve the original problem. They have a multilevel version of this. Spielman and Teng (S-T) were thus able to solve symmetric diagonally dominant systems in nearly linear time \cite{Spielman:2008}.  This line of work combined with Vaidya's \cite{Vaidya:1991} work on subgraph preconditioners (capacitance matrix methods) resulted in Koutis and Miller's work solving linear systems based on planar Laplacians \cite{Koutis:2007}. Koutis, et. al. were then able to further decrease the time complexity of S-T for general symmetric diagonally dominant systems \cite{Koutis:2010}.
 
 \subsubsection{Multigrid Approaches}
 Algebraic Multigrid utilizes a Galerkin operator in multiple graph coarsening cycles to solve a linear system. It is mostly used to solve discretized partial differential equations, but has also become more popular in solving graph Laplacian systems. AMG has optimal time complexity and demonstrates good parallel scaling thus it is useful for solving incredibly large problems \cite{Livne:2012}. Three current multigrid approaches are combinatorial multigrid (CMG) from Koutis et. al., Cascadic multigrid from Urschel et. al., and Lean Algebraic Multigrid (LAMG) from Livne and Brandt. All three propose coarsening over the entire graph, but an important question to ask is: how do you coarsen a graph with edges of varying degrees? How do you know which edges or vertices can be aggregated and still preserve information?
@@ -47,7 +47,8 @@ Livne and Brandt ran a "lean" multigrid algorithm on graph Laplacian systems for
 \subsubsection{Cascadic Multigrid}
 A final alternative form of multigrid was proposed by Urshel et. al. to solve a related problem to the graph Laplacian linear system; they wanted to calculate the Fiedler vector (eigenvector corresponding to the second smallest eigenvalue) of a graph Laplacian. This cascadic multigrid utilizes heavy edge maching to quickly coarsen a graph \cite{Urschel:2014}. It remains to be seen whether this approach will be successful for solving an entire Laplacian linear system accurately.
 
-
+\subsection{Graph Partitioning and Multigrid}
+I have studied the methods of graph partitioning and sparsification for solving linear systems, and using multigrid to solve the graph laplacian linear system specifically. I combine these two approaches using Chung and Lu's work \cite{Chung:2004} and optimal multigrid to solve similar linear systems.
 %\bibliographystyle{siam}
 %\bibliography{mastersbib}
 

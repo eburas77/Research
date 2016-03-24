@@ -10,45 +10,45 @@ A level-1 auxiliary file: BurasConclusions.aux
 The style file: siam.bst
 Database file #1: mastersbib.bib
 Warning--empty journal in Page:1999
-You've used 24 entries,
+You've used 32 entries,
             2030 wiz_defined-function locations,
-            681 strings with 8473 characters,
-and the built_in function-call counts, 9707 in all, are:
-= -- 935
-> -- 489
+            739 strings with 10061 characters,
+and the built_in function-call counts, 12913 in all, are:
+= -- 1221
+> -- 691
 < -- 1
-+ -- 196
-- -- 168
-* -- 776
-:= -- 1493
-add.period$ -- 25
-call.type$ -- 24
-change.case$ -- 153
++ -- 278
+- -- 240
+* -- 1043
+:= -- 2009
+add.period$ -- 33
+call.type$ -- 32
+change.case$ -- 208
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 421
-empty$ -- 666
-format.name$ -- 168
-if$ -- 2063
+cite$ -- 33
+duplicate$ -- 552
+empty$ -- 869
+format.name$ -- 240
+if$ -- 2724
 int.to.chr$ -- 0
-int.to.str$ -- 24
-missing$ -- 24
-newline$ -- 76
-num.names$ -- 48
-pop$ -- 143
+int.to.str$ -- 32
+missing$ -- 35
+newline$ -- 100
+num.names$ -- 64
+pop$ -- 204
 preamble$ -- 1
-purify$ -- 131
+purify$ -- 181
 quote$ -- 0
-skip$ -- 374
+skip$ -- 484
 stack$ -- 0
-substring$ -- 658
-swap$ -- 191
+substring$ -- 828
+swap$ -- 245
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 92
+type$ -- 118
 warning$ -- 1
-while$ -- 96
-width$ -- 26
-write$ -- 218
+while$ -- 123
+width$ -- 34
+write$ -- 288
 (There was 1 warning)
