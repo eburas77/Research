@@ -70,7 +70,7 @@ The final \textit{C. Elegans} dataset is an order of magnitude larger than the p
 While the \textit{C. Elegans} worm is an incredibly, biologically simple organism, it is useful as a test case for solving much larger linear systems for more complex organisms. The ultimate goal, of course, to map the biological systems of humans. Already, work is being done to map the human interactome \cite{Rual:2005,Rolland:2014} and parts of the human neural network \cite{Toga:2012}. All three of the worm networks are comprised of a highly locally-connected subgraph and small teleportation subgraph making them amenable to my method. 
 
 \subsubsection{Facebook Friend Circles}
-The largest graph I work with contains the 88,234 Facebook friend connections between 4039 users  \cite{Mcauley:2012}. Social scientists are interested in identifying sources of influence in a social network. By solving the Laplacian linear system associated with the Facebook graph I can solve a so-called "reverse" PageRank system. This finds the origins of influence; for a circle of facebook friends, it might identify how those people became connected through a few key people. This can be applied to any network of human interactions including other social networks, or organizational systems \cite{Gleich:2015}. This graph is also highly locally-connected, and is a good example of how my method scales to larger networks.
+The largest graph I work with contains the 88,234 Facebook friend connections between 4039 users  \cite{Mcauley:2012}. Social scientists are interested in identifying sources of influence in a social network. By solving the Laplacian linear system associated with the Facebook graph I can solve a so-called "reverse" PageRank system. This finds the origins of influence; for a circle of Facebook friends, it might identify how those people became connected through a few key people. This can be applied to any network of human interactions including other social networks, or organizational systems \cite{Gleich:2015}. This graph is also highly locally-connected, and is a good example of how my method scales to larger networks.
 
 \begin{figure}
 \centering
@@ -162,7 +162,7 @@ I want to dig deeper into the solve portion to determine if the operations corre
 \renewcommand{\arraystretch}{1.5}
     \begin{tabular}{ | l | l | l | l | l | l | l |}
     \hline
-    \textbf{Operation} & \textbf{$O(n)$} & \textbf{Neur.} & \textbf{Meta.} & \textbf{Prot.} & \textbf{FB} & \textbf{Pow.} \\ \hline
+    \textbf{Operation} & \textbf{$O(r,n)$} & \textbf{Neur.} & \textbf{Meta.} & \textbf{Prot.} & \textbf{FB} & \textbf{Pow.} \\ \hline
     $USV = T_L$ & $O(n^3)$ & .0334 & .0737 & .4183 & 38.47 & 72.86  \\ \hline
     $S^{-1}$ & $O(r)$ & .0005 & .0007 & .0001 & .0023 & 5.104 \\ \hline
     $y = P_L^{-1}b$ (MG) & $O(n)$ & .0857 & .0962 & .3552 & 1.347 & .1152  \\  \hline

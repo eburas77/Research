@@ -5,7 +5,7 @@ import networkx as nx
 import numpy as np
 import scipy
 import timeit
-#import matplotlib.pylab as plt
+import matplotlib.pylab as plt
 import kl_connected_subgraph as kl
 time = timeit.default_timer()
 F = nx.read_gml('celegansneural.gml')
@@ -142,8 +142,7 @@ time2 = timeit.default_timer()
 #T = np.array([[1,2,3],[4,5,6],[7,8,9]])
 #P_L = np.array([[10,11,12],[13,14,15],[16,17,18]])
 
-#plt.spy(A,precision=0.01, markersize=1)
-#plt.savefig('celeganspy.png')
+
 #print P_L
 #print ""
 #print T
