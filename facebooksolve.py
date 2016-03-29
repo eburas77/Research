@@ -5,7 +5,7 @@ import networkx as nx
 import numpy as np
 import scipy
 import timeit
-#import matplotlib.pylab as plt
+import matplotlib.pylab as plt
 import kl_connected_subgraph as kl
 
 
@@ -137,6 +137,10 @@ U,s,V = np.linalg.svd(T)
 timesvd = timeit.default_timer()-time2
 print "timesvd: ", timesvd
 size = sum(s>.00000001)
+#plt.semilogy(s)
+#plt.ylabel("Singular Value")
+#plt.xlabel("Facebook Network Singular Values")
+#plt.savefig('fbsing.png')
 
 
 #remove rows and columns for low rank matrix

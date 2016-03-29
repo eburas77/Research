@@ -1,26 +1,83 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Chung:2004}
+{\sc F.~Chung and L.~Lu}, {\em Complex Networks}, Springer Berlin Heidelberg,
+  Berlin, Heidelberg, 2004, ch.~The Small World Phenomenon in Hybrid Power Law
+  Graphs, pp.~89--104.
 
 \bibitem{Gleich:2015}
 {\sc D.~F. Gleich}, {\em {PageRank} beyond the web}, SIAM Review, 57 (2015),
   pp.~321--363.
+
+\bibitem{Hestenes:1952}
+{\sc M.~R. Hestenes and E.~Stiefel}, {\em Methods of conjugate gradients for
+  solving linear systems}, vol.~49, NBS, 1952.
 
 \bibitem{Jiang:2009}
 {\sc B.-B. Jiang, J.-G. Wang, Y.~Wang, and J.~Xiao}, {\em Gene prioritization
   for type 2 diabetes in tissue-specific protein interaction networks}, Syst
   Biol, 10801131 (2009), pp.~319--28.
 
+\bibitem{Khaira:1992}
+{\sc M.~S. Khaira, G.~L. Miller, and T.~J. Sheffler}, {\em Nested Dissection: A
+  survey and comparison of various nested dissection algorithms},
+  Carnegie-Mellon University. Department of Computer Science, 1992.
+
 \bibitem{Kim:2013}
 {\sc M.~Kim, R.~Sumbaly, and S.~Shah}, {\em Root cause detection in a
   service-oriented architecture}, ACM SIGMETRICS Performance Evaluation Review,
   41 (2013), pp.~93--104.
+
+\bibitem{Koutis:2007}
+{\sc I.~Koutis and G.~L. Miller}, {\em A linear work, o (n 1/6) time, parallel
+  algorithm for solving planar laplacians}, in Proceedings of the eighteenth
+  annual ACM-SIAM symposium on Discrete algorithms, Society for Industrial and
+  Applied Mathematics, 2007, pp.~1002--1011.
+
+\bibitem{Koutis:2010}
+{\sc I.~Koutis, G.~L. Miller, and R.~Peng}, {\em Approaching optimality for
+  solving {SDD} systems}, CoRR, abs/1003.2958 (2010).
+
+\bibitem{Koutis:2011}
+{\sc I.~Koutis, G.~L. Miller, and D.~Tolliver}, {\em Combinatorial
+  preconditioners and multilevel solvers for problems in computer vision and
+  image processing}, Computer Vision and Image Understanding, 115 (2011),
+  pp.~1638--1646.
 
 \bibitem{Liu:2005}
 {\sc X.~Liu, J.~Bollen, M.~L. Nelson, and H.~Van~de Sompel}, {\em Co-authorship
   networks in the digital library research community}, Information processing
   \& management, 41 (2005), pp.~1462--1480.
 
+\bibitem{Livne:2012}
+{\sc O.~E. Livne and A.~Brandt}, {\em Lean algebraic multigrid (lamg): Fast
+  graph laplacian linear solver}, SIAM Journal on Scientific Computing, 34
+  (2012), pp.~B499--B522.
+
 \bibitem{Page:1999}
 {\sc L.~Page, S.~Brin, R.~Motwani, and T.~Winograd}, {\em The pagerank citation
   ranking: bringing order to the web.},  (1999).
+
+\bibitem{Saad:2003}
+{\sc Y.~Saad}, {\em Iterative methods for sparse linear systems}, Siam, 2003.
+
+\bibitem{Spielman:2010}
+{\sc D.~A. Spielman}, {\em Algorithms, graph theory, and linear equations in
+  laplacian matrices}, in Proceedings of the International Congress of
+  Mathematicians, vol.~4, 2010, pp.~2698--2722.
+
+\bibitem{Spielman:2008}
+{\sc D.~A. Spielman and S.~Teng}, {\em Spectral sparsification of graphs},
+  CoRR, abs/0808.4134 (2008).
+
+\bibitem{Urschel:2014}
+{\sc J.~C. Urschel, X.~Hu, J.~Xu, and L.~T. Zikatanov}, {\em A cascadic
+  multigrid algorithm for computing the fiedler vector of graph laplacians},
+  arXiv preprint arXiv:1412.0565,  (2014).
+
+\bibitem{Vaidya:1991}
+{\sc P.~Vaidya}, {\em Solving linear equations with symmetric diagonally
+  dominant matrices by constructing good preconditioners}.
+\newblock IMA Workshop on Graph Theory and Sparse Matrix Computation, 1991.
 
 \end{thebibliography}

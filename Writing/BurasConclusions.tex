@@ -7,12 +7,13 @@
 \usepackage{verbatim}
 \usepackage{amsmath}
 
+\linespread{1.5}
 
 
 \begin{document}
 
 \section{Conclusions and Future Work}
-In conclusion I have utilized maximum locally-connected subgraph partitioning from Chung-Lu to partition a graph into a planar subgraph and a teleportation subgraph. I then combine optimal multigrid solves on the planar subgraph with linear algebra and a direct solve on the teleportation subgraph. I have now solved the original laplacian linear system. I give a complexity model for the partitioning algorithm, $O(num\_iter. \times num\_edges \times E[d]^3)$, and a suboptimal complexity for the linear system solve, $O(num\_nodes^3)$. Using the Woodbury matrix identity \cite{Woodbury:1950} I solve the laplacian linear systems for biological networks of \textit{C. Elegans}, for Facebook friend circles, and show how my method does not work for the power grid of the Western US. The individual operations align with their theoretical computational cost. However, there is much to continue working on.
+In conclusion I have utilized maximum locally-connected subgraph partitioning from Chung-Lu to partition a graph into a planar subgraph and a teleportation subgraph. I then combine optimal multigrid solves on the planar subgraph with linear algebra and a direct solve on the teleportation subgraph. I have now solved the original laplacian linear system in a simple and straightforward manner that can be replicated easily. I give a complexity model for the partitioning algorithm, $O(num\_iter. \times num\_edges \times E[d]^3)$, and a suboptimal complexity for the linear system solve, $O(num\_nodes^3)$. Using the Woodbury matrix identity \cite{Woodbury:1950} I solve the laplacian linear systems for biological networks of \textit{C. Elegans}, for Facebook friend circles, and show how my method does not work for the power grid of the Western US. The individual operations align with their theoretical computational cost. However, there is much to continue working on.
 
 \subsection{Graph Partitioning}
 My graph partitioning algorithm is written in python mainly because of ease-of-use and because of the NetworkX library that provides simple graph computations. However I can rewrite much of the code in C to efficiently create graph structs. I can then test local-connectivity for edges in parallel, drastically decreasing time to partition. I would also like to submit my graph partitioning algorithm to the open source NetworkX library as an alternative to the k,l\_connected\_subgraph function for small $k$ \cite{Hagberg:2008}.

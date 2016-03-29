@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  23 MAR 2016 21:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 MAR 2016 13:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -374,25 +374,28 @@ Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 \c@subfigure=\count123
 \c@subtable=\count124
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
 (./BurasCompleteMasters.aux (./BurasAbstract.aux) (./BurasIntro.aux)
 (./BurasBackground.aux) (./BurasMethodology.aux) (./BurasResults.aux)
 (./BurasConclusions.aux))
 \openout1 = `BurasCompleteMasters.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -423,7 +426,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring OFF on input line 14.
+Package hyperref Info: Link coloring OFF on input line 15.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -433,9 +436,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count131
 )
-LaTeX Info: Redefining \ref on input line 14.
-LaTeX Info: Redefining \pageref on input line 14.
-LaTeX Info: Redefining \nameref on input line 14.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
 
 (./BurasCompleteMasters.out) (./BurasCompleteMasters.out)
 \@outlinefile=\write3
@@ -468,10 +471,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--24
 
  []
 
-) [2
+[2
 
 
-]
+]) [3]
 \openout2 = `BurasBackground.aux'.
 
  (./BurasBackground.tex
@@ -484,186 +487,253 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
+<laplace.png, id=189, 513.92pt x 301.125pt>
+File: laplace.png Graphic file (type png)
+ <use laplace.png>
+Package pdftex.def Info: laplace.png used on input line 27.
+(pdftex.def)             Requested size: 345.0pt x 202.15244pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--25
+Underfull \hbox (badness 10000) in paragraph at lines 24--31
 
  []
 
-[3
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--34
+
+ []
+
+[4
 
 
-] [4]) [5]
+ <./laplace.png>] [5] [6] [7]) [8]
 \openout2 = `BurasMethodology.aux'.
 
- (./BurasMethodology.tex
-<entiregraph.png, id=224, 433.62pt x 289.08pt>
-File: entiregraph.png Graphic file (type png)
- <use entiregraph.png>
-Package pdftex.def Info: entiregraph.png used on input line 40.
-(pdftex.def)             Requested size: 172.5pt x 114.99918pt.
-
-<planargraph.png, id=226, 433.62pt x 289.08pt>
-File: planargraph.png Graphic file (type png)
- <use planargraph.png>
-Package pdftex.def Info: planargraph.png used on input line 46.
-(pdftex.def)             Requested size: 172.5pt x 114.99918pt.
- [6
+ (./BurasMethodology.tex [9
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
+<entiregraph.png, id=262, 433.62pt x 289.08pt>
+File: entiregraph.png Graphic file (type png)
+ <use entiregraph.png>
+Package pdftex.def Info: entiregraph.png used on input line 43.
+(pdftex.def)             Requested size: 172.5pt x 114.99918pt.
+
+<planargraph.png, id=263, 433.62pt x 289.08pt>
+File: planargraph.png Graphic file (type png)
+ <use planargraph.png>
+Package pdftex.def Info: planargraph.png used on input line 49.
+(pdftex.def)             Requested size: 172.5pt x 114.99918pt.
+ [10 <./entiregraph.png> <./planargraph.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
-[7 <./entiregraph.png> <./planargraph.png>] [8]
-Overfull \hbox (9.05618pt too wide) in paragraph at lines 85--86
+[11] [12]
+Overfull \hbox (9.05618pt too wide) in paragraph at lines 94--95
 \OT1/cmr/m/n/10 The small-world net-works that Watts-Strogatz and Chung-Lu work
 ed with roughly
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
-<powerlawdeg.png, id=259, 433.62pt x 289.08pt>
+<powerlawdeg.png, id=297, 433.62pt x 289.08pt>
 File: powerlawdeg.png Graphic file (type png)
  <use powerlawdeg.png>
-Package pdftex.def Info: powerlawdeg.png used on input line 94.
+Package pdftex.def Info: powerlawdeg.png used on input line 105.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
- [9]
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
+ [13]
+[14 <./powerlawdeg.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
-[10 <./powerlawdeg.png>]) [11]
+[15]) [16]
 \openout2 = `BurasResults.aux'.
 
  (./BurasResults.tex
-<neural_degree_histogram.png, id=279, 433.62pt x 289.08pt>
+<neural_degree_histogram.png, id=322, 433.62pt x 289.08pt>
 File: neural_degree_histogram.png Graphic file (type png)
 
 <use neural_degree_histogram.png>
-Package pdftex.def Info: neural_degree_histogram.png used on input line 27.
+Package pdftex.def Info: neural_degree_histogram.png used on input line 28.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
- <neuralspy.png, id=280, 433.62pt x 289.08pt>
+ <neuralspy.png, id=323, 433.62pt x 289.08pt>
 File: neuralspy.png Graphic file (type png)
 
 <use neuralspy.png>
-Package pdftex.def Info: neuralspy.png used on input line 34.
+Package pdftex.def Info: neuralspy.png used on input line 35.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
- <meta_degree_histogram.png, id=282, 433.62pt x 289.08pt>
+ <neuralsing.png, id=324, 433.62pt x 289.08pt>
+File: neuralsing.png Graphic file (type png)
+
+<use neuralsing.png>
+Package pdftex.def Info: neuralsing.png used on input line 40.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+ <meta_degree_histogram.png, id=326, 433.62pt x 289.08pt>
 File: meta_degree_histogram.png Graphic file (type png)
 
 <use meta_degree_histogram.png>
-Package pdftex.def Info: meta_degree_histogram.png used on input line 43.
+Package pdftex.def Info: meta_degree_histogram.png used on input line 48.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
- <metaspy.png, id=283, 433.62pt x 289.08pt>
+ <metaspy.png, id=327, 433.62pt x 289.08pt>
 File: metaspy.png Graphic file (type png)
 
 <use metaspy.png>
-Package pdftex.def Info: metaspy.png used on input line 49.
+Package pdftex.def Info: metaspy.png used on input line 54.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
- <gene_degree_histogram.png, id=286, 433.62pt x 289.08pt>
+ <metasing.png, id=328, 433.62pt x 289.08pt>
+File: metasing.png Graphic file (type png)
+
+<use metasing.png>
+Package pdftex.def Info: metasing.png used on input line 59.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+ [17
+
+
+] [18 <./neural_degree_histogram.png> <./neuralspy.png>]
+[19 <./neuralsing.png> <./meta_degree_histogram.png>] [20 <./metaspy.png> <./me
+tasing.png>] <gene_degree_histogram.png, id=364, 433.62pt x 289.08pt>
 File: gene_degree_histogram.png Graphic file (type png)
 
 <use gene_degree_histogram.png>
-Package pdftex.def Info: gene_degree_histogram.png used on input line 59.
+Package pdftex.def Info: gene_degree_histogram.png used on input line 68.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
- <genespy.png, id=287, 433.62pt x 289.08pt>
+ <genespy.png, id=365, 433.62pt x 289.08pt>
 File: genespy.png Graphic file (type png)
 
 <use genespy.png>
-Package pdftex.def Info: genespy.png used on input line 66.
+Package pdftex.def Info: genespy.png used on input line 75.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
- [12
+ <proteinsing.png, id=366, 433.62pt x 289.08pt>
+File: proteinsing.png Graphic file (type png)
 
-
-] [13 <./neural_degree_histogram.png> <./neuralspy.png>]
-[14 <./meta_degree_histogram.png> <./metaspy.png>] [15 <./gene_degree_histogram
-.png> <./genespy.png>] <fb_degree_histogram.png, id=329, 433.62pt x 289.08pt>
+<use proteinsing.png>
+Package pdftex.def Info: proteinsing.png used on input line 80.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+ [21 <./gene_degree_histogram.png>] [22 <./genespy.png> <./proteinsing.png>] <f
+b_degree_histogram.png, id=390, 433.62pt x 289.08pt>
 File: fb_degree_histogram.png Graphic file (type png)
 
 <use fb_degree_histogram.png>
-Package pdftex.def Info: fb_degree_histogram.png used on input line 78.
+Package pdftex.def Info: fb_degree_histogram.png used on input line 91.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
- <fbspy.png, id=330, 433.62pt x 289.08pt>
+ <fbspy.png, id=391, 433.62pt x 289.08pt>
 File: fbspy.png Graphic file (type png)
 
 <use fbspy.png>
-Package pdftex.def Info: fbspy.png used on input line 85.
+Package pdftex.def Info: fbspy.png used on input line 98.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
- <power_degree_histogram.png, id=333, 433.62pt x 289.08pt>
+ <fbsing.png, id=392, 433.62pt x 289.08pt>
+File: fbsing.png Graphic file (type png)
+ <use fbsing.png>
+Package pdftex.def Info: fbsing.png used on input line 103.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+
+[23 <./fb_degree_histogram.png>] [24 <./fbspy.png> <./fbsing.png>]
+<power_degree_histogram.png, id=410, 433.62pt x 289.08pt>
 File: power_degree_histogram.png Graphic file (type png)
 
 <use power_degree_histogram.png>
-Package pdftex.def Info: power_degree_histogram.png used on input line 95.
+Package pdftex.def Info: power_degree_histogram.png used on input line 112.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
- <powerspy.png, id=334, 433.62pt x 289.08pt>
+ <powerspy.png, id=411, 433.62pt x 289.08pt>
 File: powerspy.png Graphic file (type png)
 
 <use powerspy.png>
-Package pdftex.def Info: powerspy.png used on input line 102.
+Package pdftex.def Info: powerspy.png used on input line 119.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
- [16 <./fb_degree_histogram.png>] [17 <./fbspy.png> <./power_degree_histogram.p
-ng>] [18 <./powerspy.png>]
-<neuralsequenceplot2.png, id=358, 433.62pt x 289.08pt>
+ <powersing.png, id=412, 433.62pt x 289.08pt>
+File: powersing.png Graphic file (type png)
+
+<use powersing.png>
+Package pdftex.def Info: powersing.png used on input line 125.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+ [25 <./power_degree_histogram.png>] [26 <./powerspy.png> <./powersing.png>] <n
+euralsequenceplot2.png, id=429, 433.62pt x 289.08pt>
 File: neuralsequenceplot2.png Graphic file (type png)
 
 <use neuralsequenceplot2.png>
-Package pdftex.def Info: neuralsequenceplot2.png used on input line 129.
+Package pdftex.def Info: neuralsequenceplot2.png used on input line 152.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
 
-<neuralsequenceplot.png, id=359, 433.62pt x 289.08pt>
+<neuralsequenceplot.png, id=430, 433.62pt x 289.08pt>
 File: neuralsequenceplot.png Graphic file (type png)
 
 <use neuralsequenceplot.png>
-Package pdftex.def Info: neuralsequenceplot.png used on input line 135.
+Package pdftex.def Info: neuralsequenceplot.png used on input line 158.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
- [19 <./neuralsequenceplot2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+ [27] [28 <./neuralsequenceplot2.png> <./neuralsequenceplot.png>] <ptimes.png, 
+id=443, 433.62pt x 289.08pt>
+File: ptimes.png Graphic file (type png)
+ <use ptimes.png>
+Package pdftex.def Info: ptimes.png used on input line 183.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+
+[29 <./ptimes.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
-[20 <./neuralsequenceplot.png>]) [21]
+<operationtimes.png, id=450, 433.62pt x 289.08pt>
+File: operationtimes.png Graphic file (type png)
+ <use operationtimes.png>
+Package pdftex.def Info: operationtimes.png used on input line 215.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+
+<stimes.png, id=451, 433.62pt x 289.08pt>
+File: stimes.png Graphic file (type png)
+ <use stimes.png>
+Package pdftex.def Info: stimes.png used on input line 221.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+ [30] [31 <./operationtimes.png> <./stimes.png>] <total.png, id=468, 433.62pt x
+ 289.08pt>
+File: total.png Graphic file (type png)
+
+<use total.png>
+Package pdftex.def Info: total.png used on input line 233.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+) [32] [33 <./total.png>]
 \openout2 = `BurasConclusions.aux'.
 
- (./BurasConclusions.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 26--20
+ (./BurasConclusions.tex [34
+
+
+])
+Underfull \hbox (badness 10000) in paragraph at lines 27--21
 
  []
 
-[22
-
-
-] [23] (./BurasCompleteMasters.bbl
+[35] (./BurasCompleteMasters.bbl
 Underfull \hbox (badness 3492) in paragraph at lines 4--9
 \OT1/cmr/m/sc/10 K. Buschel-man, L. Dal-cin, V. Ei-jkhout, W. D. Gropp,
  []
 
-[24
+[36
 
-] [25])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 25.
- [26]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 25.
+] [37])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 27.
+ [38]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 27.
  (./BurasCompleteMasters.aux (./BurasAbstract.aux)
 (./BurasIntro.aux) (./BurasBackground.aux) (./BurasMethodology.aux)
 (./BurasResults.aux) (./BurasConclusions.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 25.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 25.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 27.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 27.
 Package rerunfilecheck Info: File `BurasCompleteMasters.out' has not changed.
-(rerunfilecheck)             Checksum: ACADA592B6057D558ED227A78D00502E;2698.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 25.
+(rerunfilecheck)             Checksum: F95EC3B730ED11B02F68B3C965E3612C;2851.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 27.
  ) 
 Here is how much of TeX's memory you used:
- 9421 strings out of 493089
- 146108 string characters out of 6134842
- 241090 words of memory out of 5000000
- 12605 multiletter control sequences out of 15000+600000
+ 9535 strings out of 493089
+ 147934 string characters out of 6134842
+ 243999 words of memory out of 5000000
+ 12676 multiletter control sequences out of 15000+600000
  10328 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,9n,96p,1673b,595s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,9n,96p,1675b,590s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
@@ -674,15 +744,16 @@ Here is how much of TeX's memory you used:
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on BurasCompleteMasters.pdf (26 pages, 452098 bytes).
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on BurasCompleteMasters.pdf (38 pages, 575728 bytes).
 PDF statistics:
- 479 PDF objects out of 1000 (max. 8388607)
- 401 compressed objects within 5 object streams
- 110 named destinations out of 1000 (max. 500000)
- 364 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 592 PDF objects out of 1000 (max. 8388607)
+ 481 compressed objects within 5 object streams
+ 139 named destinations out of 1000 (max. 500000)
+ 430 words of extra memory for PDF output out of 10000 (max. 10000000)
 

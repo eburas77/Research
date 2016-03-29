@@ -7,6 +7,11 @@
   manual}, Tech. Rep. ANL-95/11 - Revision 3.6, Argonne National Laboratory,
   2015.
 
+\bibitem{Berry:2006}
+{\sc M.~W. Berry, D.~Mezher, B.~Philippe, and A.~Sameh}, {\em Parallel
+  algorithms for the singular value decomposition}, Statistics Textbooks and
+  Monographs, 184 (2006), p.~117.
+
 \bibitem{Brandt:1984}
 {\sc A.~Brandt and O.~E. Livne}, {\em Multigrid techniques: 1984 guide with
   applications to fluid dynamics}, vol.~67, SIAM, 2011.
@@ -20,6 +25,10 @@
 {\sc L.~D. Dalcin, R.~R. Paz, P.~A. Kler, and A.~Cosimo}, {\em Parallel
   distributed computing using python}, Advances in Water Resources, 34 (2011),
   pp.~1124--1139.
+
+\bibitem{Dijkstra:1959}
+{\sc E.~W. Dijkstra}, {\em A note on two problems in connexion with graphs},
+  Numerische mathematik, 1 (1959), pp.~269--271.
 
 \bibitem{Duch:2005}
 {\sc J.~Duch and A.~Arenas}, {\em Community detection in complex networks using
@@ -35,6 +44,11 @@
   7th Python in Science Conference (SciPy2008), Pasadena, CA USA, Aug. 2008,
   pp.~11--15.
 
+\bibitem{Halko:2011}
+{\sc N.~Halko, P.-G. Martinsson, and J.~A. Tropp}, {\em Finding structure with
+  randomness: Probabilistic algorithms for constructing approximate matrix
+  decompositions}, SIAM review, 53 (2011), pp.~217--288.
+
 \bibitem{Hestenes:1952}
 {\sc M.~R. Hestenes and E.~Stiefel}, {\em Methods of conjugate gradients for
   solving linear systems}, vol.~49, NBS, 1952.
@@ -43,6 +57,9 @@
 {\sc B.-B. Jiang, J.-G. Wang, Y.~Wang, and J.~Xiao}, {\em Gene prioritization
   for type 2 diabetes in tissue-specific protein interaction networks}, Syst
   Biol, 10801131 (2009), pp.~319--28.
+
+\bibitem{Kantorovich:1982}
+{\sc L.~Kantorovich and G.~Akilov}, {\em Functional analysis. 1982}.
 
 \bibitem{Khaira:1992}
 {\sc M.~S. Khaira, G.~L. Miller, and T.~J. Sheffler}, {\em Nested Dissection: A
@@ -87,6 +104,10 @@
 \bibitem{Miller:1995}
 {\sc G.~L. Miller and J.~Naor}, {\em Flow in planar graphs with multiple
   sources and sinks}, SIAM Journal on Computing, 24 (1995), pp.~1002--1017.
+
+\bibitem{Neumann:1877}
+{\sc C.~Neumann and I.~Newton}, {\em Untersuchungen uber das logarithmische und
+  Newton'sche Potential}, BG Teubner, 1877.
 
 \bibitem{Pagani:2013}
 {\sc G.~A. Pagani and M.~Aiello}, {\em The power grid as a complex network: a

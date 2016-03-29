@@ -152,6 +152,11 @@ timesvd = timeit.default_timer()-time2
 print "timesvd: ", timesvd
 size = sum(s>.00000001)
 
+plt.semilogy(s)
+plt.ylabel("Singular Value")
+plt.xlabel("Neural Network Singular Values")
+plt.savefig('neuralsing.png')
+
 
 #remove rows and columns for low rank matrix
 U = np.array(U[:,0:size])

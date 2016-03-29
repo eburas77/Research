@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  23 MAR 2016 21:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 MAR 2016 12:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -271,20 +271,20 @@ LaTeX Info: Redefining \] on input line 2666.
 (./BurasConclusions.aux)
 \openout1 = `BurasConclusions.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -315,7 +315,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 12.
+Package hyperref Info: Link coloring OFF on input line 13.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -325,9 +325,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count124
 )
-LaTeX Info: Redefining \ref on input line 12.
-LaTeX Info: Redefining \pageref on input line 12.
-LaTeX Info: Redefining \nameref on input line 12.
+LaTeX Info: Redefining \ref on input line 13.
+LaTeX Info: Redefining \pageref on input line 13.
+LaTeX Info: Redefining \nameref on input line 13.
 
 (./BurasConclusions.out) (./BurasConclusions.out)
 \@outlinefile=\write3
@@ -336,40 +336,40 @@ LaTeX Info: Redefining \nameref on input line 12.
 \c@lstlisting=\count125
 
 
-LaTeX Warning: Citation `Woodbury:1950' on page 1 undefined on input line 15.
+LaTeX Warning: Citation `Woodbury:1950' on page 1 undefined on input line 16.
 
 
-LaTeX Warning: Citation `Hagberg:2008' on page 1 undefined on input line 18.
+LaTeX Warning: Citation `Hagberg:2008' on page 1 undefined on input line 19.
 
 
-LaTeX Warning: Citation `petsc-user-ref' on page 1 undefined on input line 23.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 31.
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--31
-
- []
+LaTeX Warning: Citation `petsc-user-ref' on page 1 undefined on input line 24.
 
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--32
+
+ []
+
 [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 31.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
  (./BurasConclusions.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 31.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 31.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 32.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
 Package rerunfilecheck Info: File `BurasConclusions.out' has not changed.
 (rerunfilecheck)             Checksum: 60C3E276FB8CA596266BFE2CD0168C59;369.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 31.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 32.
  ) 
 Here is how much of TeX's memory you used:
  6874 strings out of 493089
  100895 string characters out of 6134842
- 192532 words of memory out of 5000000
+ 190535 words of memory out of 5000000
  10309 multiletter control sequences out of 15000+600000
  5958 words of font info for 22 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -381,7 +381,7 @@ Here is how much of TeX's memory you used:
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on BurasConclusions.pdf (2 pages, 86138 bytes).
+Output written on BurasConclusions.pdf (2 pages, 86269 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  56 compressed objects within 1 object stream
