@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 MAR 2016 13:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 MAR 2016 14:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -268,37 +268,45 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count118
+\float@exts=\toks23
+\float@box=\box30
+\@float@everytoks=\toks24
+\@floatcapt=\box31
+)
 (./BurasBackground.aux)
 \openout1 = `BurasBackground.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count118
+\scratchcounter=\count119
 \scratchdimen=\dimen122
-\scratchbox=\box30
-\nofMPsegments=\count119
-\nofMParguments=\count120
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count121
+\scratchbox=\box32
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count122
 \MPscratchDim=\dimen123
-\MPnumerator=\count122
-\makeMPintoPDFobject=\count123
-\everyMPtoPDFconversion=\toks24
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks26
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -314,8 +322,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 12.
+\AtBeginShipoutBox=\box33
+Package hyperref Info: Link coloring OFF on input line 13.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -323,128 +331,141 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count124
+\c@section@level=\count125
 )
-LaTeX Info: Redefining \ref on input line 12.
-LaTeX Info: Redefining \pageref on input line 12.
-LaTeX Info: Redefining \nameref on input line 12.
+LaTeX Info: Redefining \ref on input line 13.
+LaTeX Info: Redefining \pageref on input line 13.
+LaTeX Info: Redefining \nameref on input line 13.
 
 (./BurasBackground.out) (./BurasBackground.out)
 \@outlinefile=\write3
 \openout3 = `BurasBackground.out'.
 
-\c@lstlisting=\count125
+\c@lstlisting=\count126
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-<laplace.png, id=40, 513.92pt x 301.125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+<laplace.png, id=4, 513.92pt x 301.125pt>
 File: laplace.png Graphic file (type png)
  <use laplace.png>
-Package pdftex.def Info: laplace.png used on input line 27.
+Package pdftex.def Info: laplace.png used on input line 28.
 (pdftex.def)             Requested size: 345.0pt x 202.15244pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--31
+Underfull \hbox (badness 10000) in paragraph at lines 25--31
 
  []
 
 
-LaTeX Warning: Citation `Neumann:1877' on page 1 undefined on input line 33.
+LaTeX Warning: Citation `Neumann:1877' on page 1 undefined on input line 34.
 
 
-LaTeX Warning: Citation `Kantorovich:1982' on page 1 undefined on input line 33
+LaTeX Warning: Citation `Kantorovich:1982' on page 1 undefined on input line 34
 .
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--34
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
-[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[1
 
- <./laplace.png>]
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}pdfTeX wa
+rning (ext4): destination with the same identifier (name{figure.1}) has been al
+ready used, duplicate ignored
 
-LaTeX Warning: Citation `Spielman:2010' on page 2 undefined on input line 37.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.35 \begin{center}
+                    <./laplace.png>]
 
-
-LaTeX Warning: Citation `Spielman:2010' on page 2 undefined on input line 40.
-
-
-LaTeX Warning: Citation `Khaira:1992' on page 2 undefined on input line 40.
-
-
-LaTeX Warning: Citation `Hestenes:1952' on page 2 undefined on input line 40.
+LaTeX Warning: Citation `Spielman:2010' on page 2 undefined on input line 38.
 
 
-LaTeX Warning: Citation `Saad:2003' on page 2 undefined on input line 40.
+LaTeX Warning: Citation `Spielman:2010' on page 2 undefined on input line 41.
 
 
-LaTeX Warning: Citation `Spielman:2008' on page 2 undefined on input line 43.
+LaTeX Warning: Citation `Khaira:1992' on page 2 undefined on input line 41.
 
 
-LaTeX Warning: Citation `Vaidya:1991' on page 2 undefined on input line 43.
+LaTeX Warning: Citation `Hestenes:1952' on page 2 undefined on input line 41.
 
 
-LaTeX Warning: Citation `Koutis:2007' on page 2 undefined on input line 43.
+LaTeX Warning: Citation `Saad:2003' on page 2 undefined on input line 41.
 
 
-LaTeX Warning: Citation `Koutis:2010' on page 2 undefined on input line 43.
+LaTeX Warning: Citation `Spielman:2008' on page 2 undefined on input line 44.
+
+
+LaTeX Warning: Citation `Vaidya:1991' on page 2 undefined on input line 44.
+
+
+LaTeX Warning: Citation `Koutis:2007' on page 2 undefined on input line 44.
+
+
+LaTeX Warning: Citation `Koutis:2010' on page 2 undefined on input line 44.
 
 [2]
 
-LaTeX Warning: Citation `Livne:2012' on page 3 undefined on input line 46.
+LaTeX Warning: Citation `Livne:2012' on page 3 undefined on input line 47.
 
 
-LaTeX Warning: Citation `Koutis:2011' on page 3 undefined on input line 46.
+LaTeX Warning: Citation `Koutis:2011' on page 3 undefined on input line 47.
 
 
-LaTeX Warning: Citation `Urschel:2014' on page 3 undefined on input line 46.
+LaTeX Warning: Citation `Urschel:2014' on page 3 undefined on input line 47.
 
 
-LaTeX Warning: Citation `Livne:2012' on page 3 undefined on input line 46.
+LaTeX Warning: Citation `Livne:2012' on page 3 undefined on input line 47.
 
 
-LaTeX Warning: Citation `Koutis:2011' on page 3 undefined on input line 50.
+LaTeX Warning: Citation `Koutis:2011' on page 3 undefined on input line 51.
 
 [3]
 
-LaTeX Warning: Citation `Livne:2012' on page 4 undefined on input line 54.
+LaTeX Warning: Citation `Livne:2012' on page 4 undefined on input line 55.
 
 
-LaTeX Warning: Citation `Urschel:2014' on page 4 undefined on input line 59.
+LaTeX Warning: Citation `Urschel:2014' on page 4 undefined on input line 60.
 
 
-LaTeX Warning: Citation `Chung:2004' on page 4 undefined on input line 62.
+LaTeX Warning: Citation `Chung:2004' on page 4 undefined on input line 63.
 
 [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 67.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
  [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 67.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
  (./BurasBackground.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 67.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 67.
-Package rerunfilecheck Info: File `BurasBackground.out' has not changed.
-(rerunfilecheck)             Checksum: DC49AF01D616B8AC115FF91C74BE7F69;690.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
 
+
+Package rerunfilecheck Warning: File `BurasBackground.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `BurasBackground.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  DC49AF01D616B8AC115FF91C74BE7F69;690.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 67.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
  ) 
 Here is how much of TeX's memory you used:
- 6901 strings out of 493089
- 101241 string characters out of 6134842
- 191202 words of memory out of 5000000
- 10327 multiletter control sequences out of 15000+600000
+ 6945 strings out of 493089
+ 101797 string characters out of 6134842
+ 192438 words of memory out of 5000000
+ 10367 multiletter control sequences out of 15000+600000
  5612 words of font info for 21 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,7n,32p,1271b,337s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,7n,32p,1271b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -455,10 +476,10 @@ local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on BurasBackground.pdf (5 pages, 138774 bytes).
+Output written on BurasBackground.pdf (5 pages, 138194 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  16 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

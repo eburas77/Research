@@ -10,13 +10,14 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{setspace}
+\usepackage{float}
 
 \linespread{1.5}
 
 \begin{document}
 \section{Methodology}
 \subsection{Graph Partitioning}
-In studying 'small world' networks proposed by Watts and Strogatz \cite{Watts:1998} Fan Chung and Linyuan Lu propose an algorithm that separates a graph into a locally connected component and a teleportation component. This essentially breaks a graph into a group of edges between highly connected nodes with many paths between them, and a remainder graph which is much more sparsely
+Chung and Lu study 'small world' networks from Watts and Strogatz \cite{Watts:1998} and propose an algorithm that separates a graph into a locally-connected component and a teleportation component. This breaks a graph into a group of edges between highly connected nodes with many paths between them, and a remainder graph which is much more sparsely
 connected and yet of small diameter. Given integers $k \geq 2$ and $l \geq 2$, a $(k,l)$ locally connected graph will have at least $l$ paths connecting any given pair of nodes where the edges are distinct in each path. The length of each path can be at most $k$ edges for this pair. A grid network can be described locally with $k=3$ and $l=3$, and is a good example of how a planar graph is connected. I set these values for $k$ and $l$ for the remainder of the paper. Given graph, $G$, its maximum $k,l$-locally connected subgraph is the union of all $k,l$-locally connected subgraphs within the entire graph. It is important that this maximum is unique, and can be found through an iterative edge deletion algorithm \cite{Chung:2004}. Search through all edges in the graph, and remove an edge if it does not have at least $l$ edge-disjoint paths of length less than or equal to $k$. Repeat this cycle until no edges can be removed. Chung and Lu prove that this algorithm succeeds regardless of the order of edges removed \cite{Chung:2004}.
 
 \subsubsection{Partitioning Algorithm}
@@ -36,7 +37,7 @@ $P$ is the maximum $k,l$-locally connected subgraph of G.
 \end{spacing}	
 
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -100,7 +101,7 @@ E[d] & = \frac{\zeta(\gamma-1)}{\zeta(\gamma)}\\
 \end{align*}
 \end{spacing}
 As $\gamma$ increases from two to three, the expected value of the distribution decreases. For most realistic values of $\gamma$, the expected value is small, and this is why they are sometimes described as graphs with "preferential attachment"; edges are added between nodes that already have many edges. It is important to note that graphs with finite nodes can be described with $\gamma \leq 2$. The degree decay of these distributions is stretched. These stretched power law distributions do not have an expected value because they are not well-defined for node numberings approaching infinity, however an average value can be calculated over a set of finite nodes. This might be a more appropriate fit for datasets described in the Results section.\\
-\begin{figure}
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width=\linewidth]{powerlawdeg.png}
   \caption{Power-law distribution (pdf) of degree sequence multiplied by the number of nodes, $\gamma = 2.1$. Note the rapid degree decay after the first 5 nodes.}
@@ -132,6 +133,7 @@ After splitting the entire n-node graph into locally-connected subgraph and tele
     \end{tabular}
 \end{center}
 \end{spacing}
+\vspace{.2in}
 In summary: given $n\times n$ graph Laplacian matrix and rank-r teleportation matrix, the method is $O(n^3)$, however with work to implement the low rank SVD, it is $O(r^3+r^2 n)$. Usually, the complexity of the method would depend on the order of the linear system solves. However, I can obtain optimal work complexity with multigrid solves on the locally-connected subgraph Laplacian, $P_L$, because I know how to get sufficient coarsening ratios for the coarse solves.\\
 It is clear that the complexity of the solve depend on $r$, the rank of the teleportation matrix $T_L$. We will show in the results section how the theoretical complexity of the algorithm compares to the calculated timings for the graph partitioning and each operation in the linear system solve.
 

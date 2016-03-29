@@ -11,6 +11,7 @@
 \usepackage{subcaption}
 \usepackage{placeins}
 \usepackage{setspace}
+\usepackage{float}
 
 \linespread{1.5}
 
@@ -18,112 +19,22 @@
 
 \section{Results}
 \subsection{Graphs}
-We have a set of graphs that are similar to the power-law graphs from Watts-Strogatz and Chung-Lu \cite{Watts:1998,Chung:2004}. These encompass a wide range of subjects from biological processes, social networks, and urban infrastructure. To standardize the datasets, I coerced them into undirected, unweighted networks, however I can solve a similar linear system if they are in their original form. In addition to a short description of the datasets and what it means to solve their Laplacian linear system, I created a spy plot of the Laplacian matrix, a degree histogram, a simple network graphic to illustrate connections in the data, and a plot of the singular values of $T_L$ to show its low-rank structure.
+We have a set of graphs that are similar to the power-law graphs from Watts-Strogatz and Chung-Lu \cite{Watts:1998,Chung:2004}. These encompass a wide range of subjects from biological processes, social networks, and urban infrastructure. To standardize the datasets, I coerced them into undirected, unweighted networks, however I can solve a similar linear system if they are in their original form. In addition to a short description of the datasets and what it means to solve their Laplacian linear system, there is an appendix with figures for each graph: a spy plot of the Laplacian matrix, a degree histogram, a simple network graphic to illustrate connections in the data, and a plot of the singular values of $T_L$ to show its low-rank structure.
 \subsubsection{\textit{C. Elegans} Worm Data}
-The \textit{C. Elegans} worm has been studied extensively due to the low complexity of it's biological systems. The smallest graph in this results section is the completely mapped nervous system of 297 neurons in the worm with 2148 connections from initial experimental data given by White et. al. in 1986 \cite{White:1986,Watts:1998}. Solving the Laplacian linear system of a neural network is analogous to finding the PageRank vector of  influences for each neuron. The neural edge information can be combined with anatomical information about brain regions to study which parts of the brain are more important for different functions. Another possible study identifies how an organism's brain of an organism develops as it ages \cite{Gleich:2015}.
+The \textit{C. Elegans} worm has been studied extensively due to the low complexity of it's biological systems. The smallest graph in this results section is the completely mapped nervous system of 297 neurons in the worm with 2148 connections from initial experimental data given by White et. al. in 1986 \cite{White:1986,Watts:1998}. Solving the Laplacian linear system of a neural network is analogous to finding the PageRank vector of  influences for each neuron. The neural edge information can be combined with anatomical information about brain regions to study which parts of the brain are more important for different functions. Another possible study identifies how an organism's brain of an organism develops as it ages \cite{Gleich:2015}.\\
 
-\begin{figure}
-\centering
+The second \textit{C. Elegans} dataset describes the 453 metabolic processes and their 2025 connections that comprise the metabolism of the worm \cite{Duch:2005}. Again, this is a simple network of a simple organism. Solving the Laplacian linear system can offer insights into the key metabolic processes.\\
 
-\includegraphics[width=\linewidth]{neural_degree_histogram.png}
-\caption{Neural Network of \textit{C. Elegans}}
-  
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width = \linewidth]{neuralspy.png}
-\caption{Spy Plot of Neural Network Laplacian Matrix}
-\end{figure}
-\begin{figure}
-\centering
-\includegraphics[width = \linewidth]{neuralsing.png}
-\end{figure}
-
-The second \textit{C. Elegans} dataset describes the 453 metabolic processes and their 2025 connections that comprise the metabolism of the worm \cite{Duch:2005}. Again, this is a simple network of a simple organism. Solving the Laplacian linear system can offer insights into the key metabolic processes.
-
-\begin{figure}
-\centering
-
-\includegraphics[width=\linewidth]{meta_degree_histogram.png}
-\caption{Metabolic Network of \textit{C. Elegans}}
-  
-\end{figure}
-\begin{figure}
-\centering
-\includegraphics[width = \linewidth]{metaspy.png}
-\caption{Spy Plot of Metabolic Network Laplacian Matrix}
-\end{figure}
-\begin{figure}
-\centering
-\includegraphics[width = \linewidth]{metasing.png}
-\end{figure}
-
-
-The final \textit{C. Elegans} dataset is an order of magnitude larger than the previous two. The worm's genetics encode proteins that ultimately display phenotypes. Networks of this type are described as interactomes. The graph I study has 912 proteins with 22,738 edges for protein-protein interactions with corresponding, scientifically-observed phenotypes \cite{Simonis:2009}. Solving the Laplacian linear system for a protein network can highlight unobserved, tangential protein-phenotype relationships \cite{Gleich:2015}.
-
-\begin{figure}
-\centering
-
-\includegraphics[width=\linewidth]{gene_degree_histogram.png}
-\caption{Protein Network with Corresponding Phenotypes of \textit{C. Elegans}}
-  
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width = \linewidth]{genespy.png}
-\caption{Spy Plot of Protein Network Laplacian Matrix}
-\end{figure}
-\begin{figure}
-\centering
-\includegraphics[width = \linewidth]{proteinsing.png}
-\end{figure}
+The final \textit{C. Elegans} dataset is an order of magnitude larger than the previous two. The worm's genetics encode proteins that ultimately display phenotypes. Networks of this type are described as interactomes. The graph I study has 912 proteins with 22,738 edges for protein-protein interactions with corresponding, scientifically-observed phenotypes \cite{Simonis:2009}. Solving the Laplacian linear system for a protein network can highlight unobserved, tangential protein-phenotype relationships \cite{Gleich:2015}.\\
 
 While the \textit{C. Elegans} worm is an incredibly, biologically simple organism, it is useful as a test case for solving much larger linear systems for more complex organisms. The ultimate goal, of course, to map the biological systems of humans. Already, work is being done to map the human interactome \cite{Rual:2005,Rolland:2014} and parts of the human neural network \cite{Toga:2012}. All three of the worm networks are comprised of a highly locally-connected subgraph and small teleportation subgraph making them amenable to my method. 
 
 \subsubsection{Facebook Friend Circles}
 The largest graph I work with contains the 88,234 Facebook friend connections between 4039 users  \cite{Mcauley:2012}. Social scientists are interested in identifying sources of influence in a social network. By solving the Laplacian linear system associated with the Facebook graph I can solve a so-called "reverse" PageRank system. This finds the origins of influence; for a circle of Facebook friends, it might identify how those people became connected through a few key people. This can be applied to any network of human interactions including other social networks, or organizational systems \cite{Gleich:2015}. This graph is also highly locally-connected, and is a good example of how my method scales to larger networks.
 
-\begin{figure}
-\centering
-
-\includegraphics[width=\linewidth]{fb_degree_histogram.png}
-\caption{Facebook Friend Network}
-  
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width = \linewidth]{fbspy.png}
-\caption{Spy Plot of Facebook Network Laplacian Matrix}
-\end{figure}
-\begin{figure}
-\centering
-\includegraphics[width = \linewidth]{fbsing.png}
-\end{figure}
 
 \subsubsection{Western US Power Grid}
-The final dataset illustrates how my method fails. The Western US power grid has 4941 nodes and 6594 connections \cite{Watts:1998}; this is a much lower edge/node ratio than the previous datasets and explains why this graph is not very locally-connected. Whereas the previous 4 examples resulted in low-rank teleportation laplacian matrix, $T_L$ for the power grid is almost full-rank. As seen further, the resulting linear system solve requires way too many floating point operations. Solving this system can describe the flow of electricity through the grid \cite{Pagani:2013}, however my method clearly is not appropriate. 
-
-\begin{figure}
-\centering
-
-\includegraphics[width=\linewidth]{power_degree_histogram.png}
-\caption{Network of Western Power Grid}
-  
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width = \linewidth]{powerspy.png}
-\caption{Spy Plot of Power Grid Laplacian Matrix}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width = \linewidth]{powersing.png}
-\end{figure}
+The final dataset illustrates how my method fails. The Western US power grid has 4941 nodes and 6594 connections \cite{Watts:1998}; this is a much lower edge/node ratio than the previous datasets and explains why this graph is not very locally-connected. Whereas the previous 4 examples resulted in low-rank teleportation laplacian matrix, $T_L$ for the power grid is almost full-rank. As seen further, the resulting linear system solve requires way too many floating point operations. Solving this system can describe the flow of electricity through the grid \cite{Pagani:2013}, however my method clearly is not appropriate. Despite this particular power-grid graph failing, those who supplied the data may have removed much of the locally-connected graph prior to publication. The edgelist may only contain major power lines, whereas a full dataset would have many many more minor nodes and edges.
 
 \subsubsection{Graph Overview}
 The key part of my algorithm is partitioning a graph into a large locally-connected subgraph and a small teleportation subgraph. Four of these examples fully fit into this class of graphs, whereas the power grid most certainly does not as evidenced below. The important attribute to look for is low rank of the teleportation Laplacian matrix relative to the number of the nodes (which is the size of the entire square Laplacian matrix). Here is a table summarizing the datasets:
@@ -147,13 +58,13 @@ The key part of my algorithm is partitioning a graph into a large locally-connec
 \subsection{Graph Partitioning}
 Partitioning the complete graph into the maximum locally-connected subgraph and the teleportation graph is the unique part of this algorithm. This requires an initial computational step as an overhead cost. Any graph must only be partitioned once, as the unique edgelists can be written into files for future use. In the methodology section I mentioned that that each graph follows a power-law degree distribution with $2 < \gamma < 3$ which affects its expected degree. However, for finite node graphs, $\gamma$ can be less than 2 and the degree sequence decay is stretched. Let's take a look at the degree histrogram for the \textit{C. Elegans} neural network compared to a typical power-law degree distribution and a stretched power-law distribution:
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width = \linewidth]{neuralsequenceplot2.png}
 \caption{Degree sequences of Neural Network and standard power law distribution ($\gamma = 2.1$)}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width = \linewidth]{neuralsequenceplot.png}
 \caption{Degree sequences of Neural Network and stretched power law distribution ($\gamma = .6$ in numerator)}
@@ -178,7 +89,7 @@ Clearly the stretched power-law distribution fits the data better. The finite no
 \end{center}
 \end{spacing}
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width = \linewidth]{ptimes.png}
 \caption{Partitioning graph times. Note how the time increases by the third power for the first four. The Partitioning drops for the power grid with low average degree.}
@@ -210,13 +121,13 @@ I want to dig deeper into the solve portion to determine if the operations corre
     \end{tabular}
 \end{center}
 \end{spacing}
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width = \linewidth]{operationtimes.png}
 \caption{Solve times for the limiting operations. Note: does not scale for full-rank power grid graph}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width = \linewidth]{stimes.png}
 \caption{Linear system solve times.}
@@ -228,7 +139,7 @@ The SVD is an efficient operation that allows for peak performance (work done pe
 \subsubsection{Power Grid}
 However for the full rank power-grid solve, the limiting operations are the SVD, the matrix-matrix multiplication, $Q_1 = VQ$, and the matrix solve, $y_2 = Q_2^{-1}y_1$. The latter two cannot be optimized for dense matrices, and will not scale well for larger graphs without the low-rank structure of the teleportation subgraph Laplacian matrix. Thus graphs with low average degree, large $V$, and lacking a large locally-connected portion should not be used for solving Laplacian linear systems with my method.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width = \linewidth]{total.png}
 \caption{Total solve time for each graph Laplacian linear system.}

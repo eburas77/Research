@@ -6,6 +6,7 @@
 \usepackage{color}
 \usepackage{verbatim}
 \usepackage{amsmath}
+\usepackage{float}
 
 
 \linespread{1.5}
@@ -22,12 +23,12 @@ The diagonal matrix, $D$ is a matrix of the degree sequence along the diagonal:\
 $D(u,u) = d_u$
 \end{center}
 The laplacian matrix is $L = D-A$. This is done because it is similar to the finite difference discretization of the laplacian on a grid.\\
-\begin{figure}
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width=\linewidth]{laplace.png}
   \caption{Finite difference discretization on a grid}
   \end{center}
-  \end{figure}\\
+  \end{figure}
  
 The 3D finite difference discretization is similar because each edge contributes two terms: one to the adjacency matrix and one to the diagonal matrix. This is how we build multidimensional graph Laplacians.
 To see how information flows through paths in a network, the graph laplacian matrix can be used as an operator on an input vector. To find a weighted average of paths in a network one can repeatedly apply the Laplacian operator on an input. This results in a Neumann Series with inverse defined if the series converges in the operator norm \cite{Neumann:1877,Kantorovich:1982}:\\

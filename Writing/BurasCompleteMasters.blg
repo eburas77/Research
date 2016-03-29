@@ -6,13 +6,14 @@ A level-1 auxiliary file: BurasIntro.aux
 A level-1 auxiliary file: BurasBackground.aux
 A level-1 auxiliary file: BurasMethodology.aux
 A level-1 auxiliary file: BurasResults.aux
+A level-1 auxiliary file: BurasAppendix.aux
 A level-1 auxiliary file: BurasConclusions.aux
 The style file: siam.bst
 Database file #1: mastersbib.bib
 Warning--empty journal in Page:1999
 You've used 37 entries,
             2030 wiz_defined-function locations,
-            774 strings with 10845 characters,
+            775 strings with 10862 characters,
 and the built_in function-call counts, 14540 in all, are:
 = -- 1373
 > -- 765

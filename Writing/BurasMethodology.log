@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 MAR 2016 13:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 MAR 2016 14:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -294,37 +294,45 @@ Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count121
+\float@exts=\toks23
+\float@box=\box30
+\@float@everytoks=\toks24
+\@floatcapt=\box31
+)
 (./BurasMethodology.aux)
 \openout1 = `BurasMethodology.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count121
+\scratchcounter=\count122
 \scratchdimen=\dimen129
-\scratchbox=\box30
-\nofMPsegments=\count122
-\nofMParguments=\count123
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count124
+\scratchbox=\box32
+\nofMPsegments=\count123
+\nofMParguments=\count124
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count125
 \MPscratchDim=\dimen130
-\MPnumerator=\count125
-\makeMPintoPDFobject=\count126
-\everyMPtoPDFconversion=\toks24
+\MPnumerator=\count126
+\makeMPintoPDFobject=\count127
+\everyMPtoPDFconversion=\toks26
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -340,8 +348,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 16.
+\AtBeginShipoutBox=\box33
+Package hyperref Info: Link coloring OFF on input line 17.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -349,126 +357,127 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count127
+\c@section@level=\count128
 )
-LaTeX Info: Redefining \ref on input line 16.
-LaTeX Info: Redefining \pageref on input line 16.
-LaTeX Info: Redefining \nameref on input line 16.
+LaTeX Info: Redefining \ref on input line 17.
+LaTeX Info: Redefining \pageref on input line 17.
+LaTeX Info: Redefining \nameref on input line 17.
 
 (./BurasMethodology.out) (./BurasMethodology.out)
 \@outlinefile=\write3
 \openout3 = `BurasMethodology.out'.
 
-\c@lstlisting=\count128
+\c@lstlisting=\count129
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 
-LaTeX Warning: Citation `Watts:1998' on page 1 undefined on input line 19.
+LaTeX Warning: Citation `Watts:1998' on page 1 undefined on input line 20.
 
 
-LaTeX Warning: Citation `Chung:2004' on page 1 undefined on input line 20.
+LaTeX Warning: Citation `Chung:2004' on page 1 undefined on input line 21.
 
 
-LaTeX Warning: Citation `Chung:2004' on page 1 undefined on input line 20.
+LaTeX Warning: Citation `Chung:2004' on page 1 undefined on input line 21.
 
-[1
-
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<entiregraph.png, id=58, 433.62pt x 289.08pt>
+<entiregraph.png, id=48, 433.62pt x 289.08pt>
 File: entiregraph.png Graphic file (type png)
  <use entiregraph.png>
-Package pdftex.def Info: entiregraph.png used on input line 43.
+Package pdftex.def Info: entiregraph.png used on input line 44.
 (pdftex.def)             Requested size: 172.5pt x 114.99918pt.
 
-<planargraph.png, id=60, 433.62pt x 289.08pt>
+<planargraph.png, id=50, 433.62pt x 289.08pt>
 File: planargraph.png Graphic file (type png)
  <use planargraph.png>
-Package pdftex.def Info: planargraph.png used on input line 49.
+Package pdftex.def Info: planargraph.png used on input line 50.
 (pdftex.def)             Requested size: 172.5pt x 114.99918pt.
+ [1
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `Hagberg:2008' on page 2 undefined on input line 59.
 
 
-LaTeX Warning: Citation `Hagberg:2008' on page 2 undefined on input line 58.
+LaTeX Warning: Citation `Chung:2004' on page 2 undefined on input line 59.
 
 
-LaTeX Warning: Citation `Chung:2004' on page 2 undefined on input line 58.
-
-
-LaTeX Warning: Citation `Dijkstra:1959' on page 2 undefined on input line 58.
+LaTeX Warning: Citation `Dijkstra:1959' on page 2 undefined on input line 59.
 
 [2 <./entiregraph.png> <./planargraph.png>]
 
-LaTeX Warning: Citation `Woodbury:1950' on page 3 undefined on input line 64.
+LaTeX Warning: Citation `Woodbury:1950' on page 3 undefined on input line 65.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
 
-LaTeX Warning: Citation `Miller:1995' on page 3 undefined on input line 87.
+LaTeX Warning: Citation `Miller:1995' on page 3 undefined on input line 88.
 
 
-LaTeX Warning: Citation `Brandt:1984' on page 3 undefined on input line 87.
+LaTeX Warning: Citation `Brandt:1984' on page 3 undefined on input line 88.
 
 
-LaTeX Warning: Citation `petsc-user-ref' on page 3 undefined on input line 87.
+LaTeX Warning: Citation `petsc-user-ref' on page 3 undefined on input line 88.
 
 
-LaTeX Warning: Citation `Dalcin:2011' on page 3 undefined on input line 87.
+LaTeX Warning: Citation `Dalcin:2011' on page 3 undefined on input line 88.
 
 [3] [4]
 
-LaTeX Warning: Citation `Chung:2004' on page 5 undefined on input line 94.
+LaTeX Warning: Citation `Chung:2004' on page 5 undefined on input line 95.
 
 
-LaTeX Warning: Citation `Watts:1998' on page 5 undefined on input line 94.
+LaTeX Warning: Citation `Watts:1998' on page 5 undefined on input line 95.
 
 
-Overfull \hbox (9.05618pt too wide) in paragraph at lines 94--95
+Overfull \hbox (9.05618pt too wide) in paragraph at lines 95--96
 \OT1/cmr/m/n/10 The small-world net-works that Watts-Strogatz and Chung-Lu work
 ed with roughly
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
 <powerlawdeg.png, id=80, 433.62pt x 289.08pt>
 File: powerlawdeg.png Graphic file (type png)
  <use powerlawdeg.png>
-Package pdftex.def Info: powerlawdeg.png used on input line 105.
+Package pdftex.def Info: powerlawdeg.png used on input line 106.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
- [5]
-[6 <./powerlawdeg.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--109
+
+ []
+
+[5] [6 <./powerlawdeg.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 146.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
  [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
  (./BurasMethodology.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 146.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
 Package rerunfilecheck Info: File `BurasMethodology.out' has not changed.
 (rerunfilecheck)             Checksum: 83692DFC27A2F3628B572BACB0377557;880.
 
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 8007 strings out of 493089
- 121465 string characters out of 6134842
- 213363 words of memory out of 5000000
- 11412 multiletter control sequences out of 15000+600000
+ 8054 strings out of 493089
+ 122097 string characters out of 6134842
+ 214366 words of memory out of 5000000
+ 11455 multiletter control sequences out of 15000+600000
  5911 words of font info for 22 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,9n,38p,1641b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -482,7 +491,7 @@ local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on BurasMethodology.pdf (8 pages, 158326 bytes).
+Output written on BurasMethodology.pdf (8 pages, 158376 bytes).
 PDF statistics:
  142 PDF objects out of 1000 (max. 8388607)
  114 compressed objects within 2 object streams
