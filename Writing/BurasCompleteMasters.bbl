@@ -162,6 +162,11 @@
   dominant matrices by constructing good preconditioners}.
 \newblock IMA Workshop on Graph Theory and Sparse Matrix Computation, 1991.
 
+\bibitem{numpy}
+{\sc S.~Van Der~Walt, S.~C. Colbert, and G.~Varoquaux}, {\em The numpy array: a
+  structure for efficient numerical computation}, Computing in Science \&
+  Engineering, 13 (2011), pp.~22--30.
+
 \bibitem{Watts:1998}
 {\sc D.~J. Watts and S.~H. Strogatz}, {\em Collective dynamics of 'small-world'
   networks}, nature, 393 (1998), pp.~440--442.

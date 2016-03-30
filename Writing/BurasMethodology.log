@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 MAR 2016 14:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 MAR 2016 21:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -443,6 +443,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
+
+LaTeX Warning: Citation `Watts:1998' on page 5 undefined on input line 103.
+
 <powerlawdeg.png, id=80, 433.62pt x 289.08pt>
 File: powerlawdeg.png Graphic file (type png)
  <use powerlawdeg.png>
@@ -471,16 +474,19 @@ Package rerunfilecheck Info: File `BurasMethodology.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 8054 strings out of 493089
- 122097 string characters out of 6134842
- 214366 words of memory out of 5000000
- 11455 multiletter control sequences out of 15000+600000
+ 8055 strings out of 493089
+ 122116 string characters out of 6134842
+ 214720 words of memory out of 5000000
+ 11456 multiletter control sequences out of 15000+600000
  5911 words of font info for 22 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,9n,38p,1641b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,9n,38p,1645b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -491,7 +497,7 @@ local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on BurasMethodology.pdf (8 pages, 158376 bytes).
+Output written on BurasMethodology.pdf (8 pages, 158238 bytes).
 PDF statistics:
  142 PDF objects out of 1000 (max. 8388607)
  114 compressed objects within 2 object streams

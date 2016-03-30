@@ -12,7 +12,7 @@
 \begin{document}
 
 \section{Introduction}
-In 1999, Stanford graduate students: Larry Page and Sergey Brin proposed a novel algorithm for ordering the information on the world-wide-web. How do you know what links an internet user is likely to follow from any given web-page? Thus, given a network (graph) of connections between web pages, Page and Brin proposed solving a simple linear system resulting in a vector of importances of the web pages for the network. With the shift of a minor parameter, the PageRank linear system was born. Given \textbf{$L$}, a stochastic matrix describing a web graph, \textbf{$b$}, a distribution vector corresponding to the problem data, and $0 < \alpha < 1$, a damping parameter; solve the linear system \cite{Page:1999}:\\
+In 1999, Stanford graduate students Larry Page and Sergey Brin proposed a novel algorithm for ordering the information on the world-wide-web. How do you know what links an internet user is likely to follow from any given web-page? Given a network (graph) of connections between web pages, Page and Brin proposed solving a simple linear system resulting in a vector of importances of the web pages for the network. With the shift of a minor parameter, the PageRank linear system was born. Given \textbf{$L$}, a stochastic matrix describing a web graph, \textbf{$b$}, a distribution vector corresponding to the problem data, and $0 < \alpha < 1$, a damping parameter; solve the linear system \cite{Page:1999}:\\
 \begin{center}
 $(I-\alpha L)x = (1-\alpha)b$ \\
 \end{center}

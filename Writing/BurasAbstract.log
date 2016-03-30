@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 MAR 2016 12:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 MAR 2016 20:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -352,7 +352,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 33.
 Here is how much of TeX's memory you used:
  6911 strings out of 493089
  101428 string characters out of 6134842
- 188777 words of memory out of 5000000
+ 188794 words of memory out of 5000000
  10339 multiletter control sequences out of 15000+600000
  8754 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -363,7 +363,7 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on BurasAbstract.pdf (1 page, 69999 bytes).
+Output written on BurasAbstract.pdf (1 page, 69992 bytes).
 PDF statistics:
  42 PDF objects out of 1000 (max. 8388607)
  32 compressed objects within 1 object stream

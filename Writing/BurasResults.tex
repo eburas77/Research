@@ -34,7 +34,7 @@ The largest graph I work with contains the 88,234 Facebook friend connections be
 
 
 \subsubsection{Western US Power Grid}
-The final dataset illustrates how my method fails. The Western US power grid has 4941 nodes and 6594 connections \cite{Watts:1998}; this is a much lower edge/node ratio than the previous datasets and explains why this graph is not very locally-connected. Whereas the previous 4 examples resulted in low-rank teleportation laplacian matrix, $T_L$ for the power grid is almost full-rank. As seen further, the resulting linear system solve requires way too many floating point operations. Solving this system can describe the flow of electricity through the grid \cite{Pagani:2013}, however my method clearly is not appropriate. Despite this particular power-grid graph failing, those who supplied the data may have removed much of the locally-connected graph prior to publication. The edgelist may only contain major power lines, whereas a full dataset would have many many more minor nodes and edges.
+The final dataset illustrates how my method fails. The Western US power grid has 4941 nodes and 6594 connections \cite{Watts:1998}; this is a much lower edge/node ratio than the previous datasets and explains why this graph is not very locally-connected. Whereas the previous 4 examples resulted in low-rank teleportation Laplacian matrix, $T_L$ for the power grid is almost full-rank. As seen further, the resulting linear system solve requires way too many floating point operations. Solving this system can describe the flow of electricity through the grid \cite{Pagani:2013}, however my method clearly is not appropriate. Despite this particular power-grid graph failing, those who supplied the data may have removed much of the locally-connected graph prior to publication. The edgelist may only contain major power lines, whereas a full dataset would have many many more minor nodes and edges.
 
 \subsubsection{Graph Overview}
 The key part of my algorithm is partitioning a graph into a large locally-connected subgraph and a small teleportation subgraph. Four of these examples fully fit into this class of graphs, whereas the power grid most certainly does not as evidenced below. The important attribute to look for is low rank of the teleportation Laplacian matrix relative to the number of the nodes (which is the size of the entire square Laplacian matrix). Here is a table summarizing the datasets:
@@ -56,7 +56,7 @@ The key part of my algorithm is partitioning a graph into a large locally-connec
 \end{spacing}
 
 \subsection{Graph Partitioning}
-Partitioning the complete graph into the maximum locally-connected subgraph and the teleportation graph is the unique part of this algorithm. This requires an initial computational step as an overhead cost. Any graph must only be partitioned once, as the unique edgelists can be written into files for future use. In the methodology section I mentioned that that each graph follows a power-law degree distribution with $2 < \gamma < 3$ which affects its expected degree. However, for finite node graphs, $\gamma$ can be less than 2 and the degree sequence decay is stretched. Let's take a look at the degree histrogram for the \textit{C. Elegans} neural network compared to a typical power-law degree distribution and a stretched power-law distribution:
+Partitioning the complete graph into the maximum locally-connected subgraph and the teleportation graph is the unique part of this algorithm. This requires an initial computational step as an overhead cost. Any graph must only be partitioned once, as the unique edgelists can be written into files for future use. In the methodology section I mentioned that each graph follows a power-law degree distribution with $2 < \gamma < 3$ which affects its expected degree. However, for finite node graphs, $\gamma$ can be less than 2 and the degree sequence decay is stretched. Let's take a look at the degree histrogram for the \textit{C. Elegans} neural network compared to a typical power-law degree distribution and a stretched power-law distribution:
 
 \begin{figure}[H]
 \centering
@@ -70,7 +70,7 @@ Partitioning the complete graph into the maximum locally-connected subgraph and 
 \caption{Degree sequences of Neural Network and stretched power law distribution ($\gamma = .6$ in numerator)}
 \end{figure}
 
-Clearly the stretched power-law distribution fits the data better. The finite node power-law distribution has $E[d] \approx 1$, the stretched power-law distribution has $E[d] = 14.39$ and the average degree of the neural network is 14.46. This matters because it affects the complexity of the partitioning algorithm which has $O(iter.\times m\times (E[d]^3))$. I want to more accurately predict the computational cost of the partitioning algorithm.
+Clearly the stretched power-law distribution fits the data better. The finite node power-law distribution has $E[d] \approx 1$, the stretched power-law distribution has $E[d] = 14.39$ and the average degree of the neural network is 14.46. This matters because it affects the complexity of the partitioning algorithm which has $O(N_I\times m\times (E[d]^3))$. I want to more accurately predict the computational cost of the partitioning algorithm.
 
 \subsubsection{Table of Partitioning results} 
 \begin{spacing}{1}
