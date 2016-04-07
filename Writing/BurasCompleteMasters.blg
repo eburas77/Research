@@ -13,43 +13,43 @@ Database file #1: mastersbib.bib
 Warning--empty journal in Page:1999
 You've used 38 entries,
             2030 wiz_defined-function locations,
-            782 strings with 11049 characters,
-and the built_in function-call counts, 14935 in all, are:
-= -- 1413
+            783 strings with 11046 characters,
+and the built_in function-call counts, 15117 in all, are:
+= -- 1438
 > -- 783
 < -- 1
 + -- 316
 - -- 270
-* -- 1194
-:= -- 2319
+* -- 1205
+:= -- 2336
 add.period$ -- 39
 call.type$ -- 38
 change.case$ -- 240
 chr.to.int$ -- 0
 cite$ -- 39
-duplicate$ -- 646
-empty$ -- 1018
+duplicate$ -- 654
+empty$ -- 1032
 format.name$ -- 270
-if$ -- 3156
+if$ -- 3204
 int.to.chr$ -- 0
 int.to.str$ -- 38
 missing$ -- 41
 newline$ -- 118
 num.names$ -- 76
-pop$ -- 237
+pop$ -- 236
 preamble$ -- 1
 purify$ -- 208
 quote$ -- 0
-skip$ -- 570
+skip$ -- 583
 stack$ -- 0
-substring$ -- 954
-swap$ -- 285
+substring$ -- 989
+swap$ -- 293
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 140
 warning$ -- 1
-while$ -- 145
+while$ -- 148
 width$ -- 40
-write$ -- 338
+write$ -- 339
 (There was 1 warning)

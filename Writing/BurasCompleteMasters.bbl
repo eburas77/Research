@@ -144,9 +144,9 @@
   laplacian matrices}, in Proceedings of the International Congress of
   Mathematicians, vol.~4, 2010, pp.~2698--2722.
 
-\bibitem{Spielman:2008}
-{\sc D.~A. Spielman and S.~Teng}, {\em Spectral sparsification of graphs},
-  CoRR, abs/0808.4134 (2008).
+\bibitem{Spielman:2011}
+{\sc D.~A. Spielman and S.-H. Teng}, {\em Spectral sparsification of graphs},
+  SIAM Journal on Computing, 40 (2011), pp.~981--1025.
 
 \bibitem{Toga:2012}
 {\sc A.~W. Toga, K.~A. Clark, P.~M. Thompson, D.~W. Shattuck, and J.~D.

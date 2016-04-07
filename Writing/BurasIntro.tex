@@ -1,17 +1,17 @@
-\documentclass{article}
+%\documentclass{article}
 
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{listings}
-\usepackage{color}
-\usepackage{verbatim}
-\usepackage{amsmath}
+%\usepackage{graphicx}
+%\usepackage{hyperref}
+%\usepackage{listings}
+%\usepackage{color}
+%\usepackage{verbatim}
+%\usepackage{amsmath}
 
 
 \linespread{1.5}
-\begin{document}
+%\begin{document}
 
-\section{Introduction}
+\chapter{Introduction}
 In 1999, Stanford graduate students Larry Page and Sergey Brin proposed a novel algorithm for ordering the information on the world-wide-web. How do you know what links an internet user is likely to follow from any given web-page? Given a network (graph) of connections between web pages, Page and Brin proposed solving a simple linear system resulting in a vector of importances of the web pages for the network. With the shift of a minor parameter, the PageRank linear system was born. Given \textbf{$L$}, a stochastic matrix describing a web graph, \textbf{$b$}, a distribution vector corresponding to the problem data, and $0 < \alpha < 1$, a damping parameter; solve the linear system \cite{Page:1999}:\\
 \begin{center}
 $(I-\alpha L)x = (1-\alpha)b$ \\
@@ -20,10 +20,10 @@ for \textbf{$x$}, the PageRank vector. This solution contains information about 
 \\
 While Page and Brin went on to make billions of dollars revolutionizing web-search, their algorithm can be thought of in more generic terms for any network of information. David Gleich highlights other applications of the PageRank linear system in his paper reviewing it's simple mathematics and vast reach into other, completely different topics \cite{Gleich:2015}. These include chemical bonding networks, macro and micro biological system networks, roads and infrastructural networks, computer hardware and software networks, author and literature networks, and finally social organization networks \cite{Gleich:2015}. Scientists care deeply about the information inherent in the connections of these networks, and finding a way to order that information in a suitable format. Thus PageRank linear systems become GeneRank \cite{Jiang:2009}, AuthorRank \cite{Liu:2005}, or MonitorRank \cite{Kim:2013} linear systems for information stored in genes, co-authorships, and distributed system logs, respectively \cite{Gleich:2015}. The simplicity of the problem formulation combined with the vast amounts of data in practically any subject area shows how influential PageRank has become.\\
 \\
-The purpose of this paper is to propose a new method for solving a simple linear system similar to that of PageRank. By utilizing the structure of a graph of a certain class, I split the graph into a large, highly locally-connected subgraph and a much smaller subgraph of the remaining edges, which we will call \textit{teleportation} edges. While the locally-connected subgraph has large diameter, the \textit{teleportation} subgraph edges can jump randomly from one end of the graph to the other. I solve the overall linear system by optimally solving the local subgraph using the algebraic multigrid (AMG) method, combined with a direct solve for the much smaller system of the teleportation subgraph. The traditional graph coarsening algorithms used in AMG are applicable for the locally-connected subgraph because this looks like a geometric grid. The small size of the teleportation subgraph is important as the method complexity depends on less optimal dense matrix operations.
+The purpose of this paper is to propose a new method for solving a simple linear system similar to that of PageRank. By utilizing the structure of a graph of a certain class, I split the graph into a large, highly locally-connected subgraph and a much smaller subgraph of the remaining edges, which we will call \textit{teleportation} edges. While the locally-connected subgraph has large diameter, the \textit{teleportation} subgraph edges can jump randomly from one end of the graph to the other. I solve the overall linear system by optimally solving the local subgraph using the algebraic multigrid (AMG) method, combined with a direct solve for the much smaller system of the teleportation subgraph. The traditional graph coarsening algorithms used in AMG are applicable for the locally-connected subgraph because this looks like a geometric grid. The small size of the teleportation subgraph is important as the method complexity depends on more costly dense matrix operations.
 
 
 
 %\bibliographystyle{siam}
 %\bibliography{mastersbib}
-\end{document}
+%\end{document}

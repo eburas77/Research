@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 MAR 2016 21:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  31 MAR 2016 14:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -381,20 +381,21 @@ LaTeX Warning: Citation `Chung:2004' on page 1 undefined on input line 21.
 
 LaTeX Warning: Citation `Chung:2004' on page 1 undefined on input line 21.
 
-<entiregraph.png, id=48, 433.62pt x 289.08pt>
+[1
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<entiregraph.png, id=58, 433.62pt x 289.08pt>
 File: entiregraph.png Graphic file (type png)
  <use entiregraph.png>
 Package pdftex.def Info: entiregraph.png used on input line 44.
 (pdftex.def)             Requested size: 172.5pt x 114.99918pt.
 
-<planargraph.png, id=50, 433.62pt x 289.08pt>
+<planargraph.png, id=60, 433.62pt x 289.08pt>
 File: planargraph.png Graphic file (type png)
  <use planargraph.png>
 Package pdftex.def Info: planargraph.png used on input line 50.
 (pdftex.def)             Requested size: 172.5pt x 114.99918pt.
- [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 LaTeX Warning: Citation `Hagberg:2008' on page 2 undefined on input line 59.
 
@@ -474,16 +475,13 @@ Package rerunfilecheck Info: File `BurasMethodology.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 8055 strings out of 493089
- 122116 string characters out of 6134842
- 214720 words of memory out of 5000000
- 11456 multiletter control sequences out of 15000+600000
+ 8054 strings out of 493089
+ 122097 string characters out of 6134842
+ 215366 words of memory out of 5000000
+ 11455 multiletter control sequences out of 15000+600000
  5911 words of font info for 22 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,9n,38p,1645b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -497,7 +495,7 @@ local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on BurasMethodology.pdf (8 pages, 158238 bytes).
+Output written on BurasMethodology.pdf (8 pages, 158813 bytes).
 PDF statistics:
  142 PDF objects out of 1000 (max. 8388607)
  114 compressed objects within 2 object streams

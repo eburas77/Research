@@ -15,12 +15,12 @@
 \linespread{1.5}
 
 \begin{document}
-\section{Methodology}
-\subsection{Graph Partitioning}
-Chung and Lu study 'small world' networks from Watts and Strogatz \cite{Watts:1998} and propose an algorithm that separates a graph into a locally-connected component and a teleportation component. This breaks a graph into a group of edges between highly connected nodes with many paths between them, and a remainder graph which is much more sparsely
+\chapter{Methodology}
+\section{Graph Partitioning}
+Chung and Lu study ?small world? networks from Watts and Strogatz, specifically graphs which exhibit power law decay in the degree sequence \cite{Watts:1998}, and propose an algorithm that separates a graph into a locally-connected component and a teleportation component. This breaks a graph into a group of edges between highly connected nodes with many paths between them, and a remainder graph which is much more sparsely
 connected and yet of small diameter. Given integers $k \geq 2$ and $l \geq 2$, a $(k,l)$ locally-connected graph will have at least $l$ paths connecting any given pair of nodes where the edges are distinct in each path. The length of each path can be at most $k$ edges for this pair. A grid network can be described locally with $k=3$ and $l=3$, and is a good example of how a planar graph is connected. I set these values for $k$ and $l$ for the remainder of my work. Given graph, $G$, its maximum $k,l$-locally connected subgraph is the union of all $k,l$-locally connected subgraphs within the entire graph. It is important that this maximum is unique, and can be found through an iterative edge deletion algorithm \cite{Chung:2004}. Search through all edges in the graph, and remove an edge if it does not have at least $l$ edge-disjoint paths of length less than or equal to $k$. Repeat this cycle until no edges can be removed. Chung and Lu prove that this algorithm succeeds regardless of the order of edges removed \cite{Chung:2004}.
 
-\subsubsection{Partitioning Algorithm}
+\subsection{Partitioning Algorithm}
 \begin{spacing}{1}
 Graph G\\
 P = copy(G)\\
@@ -55,13 +55,13 @@ $P$ is the maximum $k,l$-locally connected subgraph of G.
 \label{fig:test}
 \end{figure}
 
-\subsubsection{NetworkX Library and My Additions}
+\subsection{NetworkX Library and My Additions}
 There is an open source Python library for graph theory and computation called NetworkX written by Hagberg, Schult, and Swart from Los Alamos National Lab. I use many of their functions for reading through edgelists, computing node degrees, converting graphs to Laplacian matrices, etc. which are incredibly useful for simple graph work \cite{Hagberg:2008}. Included in this package is a function for finding the locally connected subgraph of a graph based upon the work of Chung and Lu above \cite{Chung:2004}. Throughout much of the course of my work I used this function to partition my graphs. However for graphs with many edges, this function is inefficient because it utilizes a shortest path algorithm \cite{Dijkstra:1959} to test each edge's connectivity. This algorithm has similar complexity for any given $k$, $l$ connected subgraphs, however I only care about $k,l = 3$. Thus I wrote an optimized code that simply searches through all potential paths of length 2 and 3 in the graph. This requires orders of magnitude less work than running a shortest path algorithm for each edge. In the process, and after much debugging and testing, I think that the established NetworkX function has some errors. I now only use my simplified code which speeds up the overall algorithm greatly. Results for partitioning timing are included in the Results section. I hope to refine and harden my code, and ultimately contribute it to the NetworkX package. The existing function is still important for computations with arbitrary $k$ and $l$, however, and I hope to repair the errors discovered in the function.
 
-\subsection{Laplacian Solver}
-I have partitioned a graph into its locally-connected subgraph, $P$, and the graph of the teleportation edges, $T$. These subgraphs can be converted to Laplacian form with $P_L$ matrix of connections and degree information for the locally connected part, and $T_L$, similar for the teleportation part. I add the diagonal of $T_L$ to $P_L$, and thus have $L = P_L + T_L$ where $L$ is the Laplacian for the entire graph. To solve a Laplacian linear system $Lx=b$, I now solve the two subgraph Laplacians and use linear algebra.
+\section{Laplacian Solver}
+I have partitioned a graph into its locally-connected subgraph, $P$, and the graph of the teleportation edges, $T$. These subgraphs can be converted to Laplacian form with $P_L$ matrix of connections and degree information for the locally connected part, and $T_L$, similar for the teleportation part. Because $P_L$ is singular, I add the diagonal of $T_L$ to $P_L$, and thus have $L = P_L + T_L$ where $L$ is the Laplacian for the entire graph and $P_L$ and $T_L$ are slightly altered versions of the Laplacians. To solve a Laplacian linear system $Lx=b$, I now solve the two subgraph Laplacians and use linear algebra.
 
-\subsubsection{Linear Algebra: Woodbury Matrix Identity}
+\subsection{Linear Algebra: Woodbury Matrix Identity}
 I use the Woodbury matrix Identity \cite{Woodbury:1950}:\\
 \begin{spacing}{1}
 
@@ -84,15 +84,15 @@ x & = P_L^{-1}b-P_L^{-1}U(S^{-1}+VP_L^{-1}U)^{-1}VP_L^{-1}b\\
 \end{spacing}
 
 
-\subsubsection{Algebraic Multigrid of Locally Connected Subgraph}
+\subsection{Algebraic Multigrid of Locally Connected Subgraph}
 The locally connected subgraph has a large diameter and resembles the grid graph in some dimension if drawn a certain way in space. In 2 dimensions, the maximum locally-connected subgraph for $k,l=3$ looks planar. This would mean that it can be drawn on a piece of paper without any edges crossing. Using work beginning with Gary Miller \cite{Miller:1995}, we know that an algebraic multigrid (AMG) solver is optimal for a planar graph Laplacian matrix as the solution space is split into multiple cycles of coarsened solving \cite{Brandt:1984}. Thus AMG would be a natural choice for $P_L$. Previous approaches to using multigrid (LAMG, CMG, Cascadic) to solve Laplacian linear systems do not have a systematic method of graph coarsening. They are based on heuristics for identifying which edges to keep in the multiple levels. Whereas these algorithms are prone to losing edge information in the multiple coarsening cycles, my algorithm runs multigrid only on the locally-connected portion, preserving edge information in the coarse levels. There are many multigrid solves in this algorithm, and it is important to optimize performance. Thus I use the Portable, Extensible Toolkit for Scientific Computation (PETSc) and its python library petsc4py to run multigrid solves \cite{petsc-user-ref, Dalcin:2011}
 
-\subsubsection{Low Rank SVD of Teleportation Subgraph}
+\subsection{Low Rank SVD of Teleportation Subgraph}
 The Woodbury matrix identity requires use of the singular value decomposition (SVD) for the teleportation Laplacian $T_L$. For graphs I am interested in, the number of edges in the Teleportation subgraph is very small relative to the size of the original graph. This causes the Laplacian matrix of teleportation subgraph, $T_L$, to have very low rank structure. Currently I am taking the full-rank SVD of $T_L$ and removing the columns of U and rows of V that correspond to negligible singular values. Given $n\times n$ matrix $T_L$ with rank $r$, we compute $USV = T_L$ where $T_L$ has $r$ non-negligible singular values. Thus U is tall-skinny $n\times r$, S is an $r\times r$ diagonal matrix of the non-negligible singular values, and V is short-fat $r\times n$. The full rank SVD has $O(n^3)$ complexity and dominates the complexity of the entire method. However, in future work I can optimize the SVD to account for the low-rank structure of $T_L$. This change will be very valuable in solving many-node networks.
 
-\subsection{Model Complexity}
-\subsubsection{Graph Splitting}
-The small-world networks that Watts-Strogatz and Chung-Lu worked with roughly follow a power law degree distribution where the proportion of nodes with $d$ degree scales with $d^{-\gamma}$ with $2 < \gamma < 3$ \cite{Chung:2004,Watts:1998}. In lay terms, there are a few nodes with high degree and many nodes with low degree ($\leq3$ e.g.). This is similar to an exponential distribution, however a power law distribution has a much longer and fatter tail. Given probability density function of the degree distribution: $P(d)$, we can compute the expected degree in a sequence $E[d]$ with $\zeta(x)$, the Riemann-zeta function:\\
+\section{Model Complexity}
+\subsection{Graph Splitting}
+The small-world networks that Watts-Strogatz and Chung-Lu worked with roughly follow a power law degree distribution where the proportion of nodes with $d$ degree scales with $d^{-\gamma}$ with $2 < \gamma < 3$ \cite{Chung:2004,Watts:1998}. In lay terms, there are a few nodes with high degree and many nodes with low degree ($\leq3$ e.g.). This is similar to an exponential distribution, however a power law distribution has a much longer and fatter tail. Given probability density function of the degree distribution: $P(d)$, we can compute the expected degree in a sequence $E[d]$ with $\zeta(x)$, the Riemann zeta function:\\
 \begin{spacing}{1}
 \begin{align*}
 P(d) & = \frac{d^{-\gamma}}{\zeta(\gamma)},               \zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s}\\
@@ -110,8 +110,8 @@ As $\gamma$ increases from two to three, the expected value of the distribution 
 
 For now, let's assume our degree sequence follows the original power law distribution. To partition the graph using Chung-Lu for $k = 3$ and $l = 3$, for each node we must search through all paths of lengths 1, 2, and 3 away from the node. We only continue if path of length 1 exists. If so, we take the expected value of the degree sequence and raise it to the second power to give number of paths of length 2. We do it similarly for the third power. Thus, the expected work is $O(E[d]^3)$. Then it is simple to count the number of edge-disjoint paths. If there are two or fewer edge-disjoint paths, the edge (path length 1) is removed. For a graph with $m$ edges, this requires $m*((E[d])^{3})$ searches for one iteration of the cycle. For computational complexity of real-world graphs, simply replace the $E[d]$ value with the calculated average degree. We continue iterating this cycle until no edges can be removed. I do not have a bound on the number of iterations required to remove all teleportation edges, however in experiments with real-world graphs, it seems they require three iterations at most (including the final iteration where no edges are deleted).
 
-\subsubsection{Linear Algebra and Solves}
-After splitting the entire n-node graph into locally-connected subgraph and teleportation subgraph, we must count the number of floating point operations (FLOPs) for each operation in the method. Listed are the operations with flop count for $n\times n$ matrices $P_L$ and rank-r $T_L$, $n\times r$ matrix U, $r\times r$ matrix S, $r\times n$ matrix V, and $n\times 1$ vector, b:\\
+\subsection{Linear Algebra and Solves}
+After splitting the entire $n$-vertex graph into locally-connected subgraph and teleportation subgraph, we must count the number of floating point operations (FLOPs) for each operation in the method. Listed are the operations with flop count for $n\times n$ matrices $P_L$ and rank-r $T_L$, $n\times r$ matrix U, $r\times r$ matrix S, $r\times n$ matrix V, and $n\times 1$ vector, b:\\
 \begin{spacing}{1}
 \begin{center}
 \renewcommand{\arraystretch}{1.5}

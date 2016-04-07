@@ -1,33 +1,10 @@
-\documentclass{article}
 
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{listings}
-\usepackage{color}
-\usepackage{verbatim}
-\usepackage{amsmath}
-\usepackage{setspace}
+\begin{abstract}
+
+The Laplacian matrix, $L$, of a graph, $G$, contains degree and edge information of a given network. Solving a Laplacian linear system $Lx = b$ provides information about flow through the network, and in specific cases, how that information orders the nodes in the network. I propose a novel way to solve this linear system by first partitioning $G$ into its maximum locally-connected subgraph and a small subgraph of the remaining so-called "teleportation" edges. I then apply optimal multigrid solves to the locally-connected subgraph, and linear algebra and a solve on the teleportation subgraph to solve the original linear system. I show results for this method on real-world graphs from the biological systems of the \textit{C. Elegans} worm, Facebook friend networks, and the power grid of the Western United States.
 
 
 
-\begin{document}
-\title{A Multigrid Solver for Graph Laplacian Linear Systems on Power-Law Graphs}
-\author{Eric D. Buras}
 
 
-\maketitle
-\begin{center}
-Adviser: Dr. Matthew Knepley\\
-In Partial Fulfillment of the Master's Degree in the Computational and Applied Mathematics Department Rice University\\
-\end{center}
-\vspace{15 mm}
-\section{Abstract}
-\begin{spacing}{1}
-The Laplacian matrix, $L$, of a graph, $G$, contains degree and edge information of a given network. Solving a Laplacian linear system $Lx = b$ provides information about flow through the network, and in specific cases, how that information orders the nodes in the network. I propose a novel way to solve this linear system by first partitioning $G$ into its maximum locally-connected subgraph and a small subgraph of the remaining teleportation edges. I then apply optimal multigrid solves to the locally-connected subgraph, and linear algebra and a solve on the so-called "teleportation" subgraph to solve the original linear system. I show results for this method on real-world graphs from the biological systems of the \textit{C. Elegans} worm, Facebook friend networks, and the power grid of the Western United States.
-\end{spacing}
-
-%\bibliographystyle{siam}
-%\bibliography{mastersbib}
-
-
-\end{document}
+\end{abstract}

@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[12pt]{ruthesis}
 
 \usepackage{standalone}
 \usepackage{graphicx}
@@ -12,11 +12,43 @@
 \usepackage{subcaption}
 \usepackage{setspace}
 \usepackage{float}
-\linespread{1.5}
+\usepackage{theorem}
+\linespread{1.7}
 
+\newtheorem{proposition}{Proposition}
 
+\theoremheaderfont{\itshape} {\theoremstyle{break}
+\newtheorem{Fact}{Fact}[chapter]} \theoremstyle{break}
+\newtheorem{Lem}{Lemma}[chapter] \theoremstyle{break}
+\newtheorem{Thm}{Theorem}[chapter] {\theoremstyle{plain}
+  \theorembodyfont{\rmfamily}  \newtheorem{Prf}{Proof}[chapter]}
+{\theoremstyle{plain}
+  \theorembodyfont{\rmfamily}  \newtheorem{Def}{Definition}[chapter]}
+
+\title{A Multigrid Solver for Graph Laplacian Linear Systems on Power Law Graphs}
+\ctitle{A Multigrid Solver for Graph Laplacian Linear Systems on Power Law Graphs}
+\author{Eric Buras}
+\department{Computational and Applied Mathematics}
+\school{Rice University}
+\degree{Master of Arts}
+
+\committee {
+        Matthew Knepley, Chair \\
+        Assistant Professor of Computational and Applied Mathematics \and
+        Andrew Schaefer \\
+        Noah Harding Chair and Professor of Computational and Applied Mathematics \and
+        Anshumali Shrivastava \\
+        Assistant Professor of Computer Science       
+}
+
+\address{Houston, Texas}
+\donemonth{April} \doneyear{2016} \makeindex
 
 \begin{document}
+\begin{frontmatter}
+   \pagenumbering{arabic}
+   %\makecover
+   \maketitle
 \include{BurasAbstract}
 \include{BurasIntro}
 \include{BurasBackground}
@@ -25,8 +57,9 @@
 \include{BurasAppendix}
 \include{BurasConclusions}
 
-
+\end{frontmatter}
 \begin{spacing}{1}
+\pagenumbering{roman}
 \bibliographystyle{siam}
 \bibliography{mastersbib}
 \end{spacing}

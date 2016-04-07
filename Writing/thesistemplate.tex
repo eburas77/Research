@@ -1,0 +1,79 @@
+\documentclass[12pt]{ruthesis}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{graphics}
+\usepackage{epsfig,epsf,rotating}
+\usepackage{subfigure}
+%\usepackage{pictex}
+\usepackage{epsf}
+%\usepackage{cite}
+\usepackage{theorem}
+\usepackage{float}
+\usepackage{graphicx}
+
+\newtheorem{proposition}{Proposition}
+
+\theoremheaderfont{\itshape} {\theoremstyle{break}
+\newtheorem{Fact}{Fact}[chapter]} \theoremstyle{break}
+\newtheorem{Lem}{Lemma}[chapter] \theoremstyle{break}
+\newtheorem{Thm}{Theorem}[chapter] {\theoremstyle{plain}
+  \theorembodyfont{\rmfamily}  \newtheorem{Prf}{Proof}[chapter]}
+{\theoremstyle{plain}
+  \theorembodyfont{\rmfamily}  \newtheorem{Def}{Definition}[chapter]}
+
+\title{A Multigrid Solver for Graph Laplacian Linear Systems on Power Law Graphs}
+\ctitle{A Multigrid Solver for Graph Laplacian Linear Systems on Power Law Graphs}
+\author{Eric Buras}
+\department{Computational and Applied Mathematics}
+\school{Rice University}
+\degree{Master of Arts}
+
+\committee {
+        Matthew Knepley, Chair \\
+        Assistant Professor of Computational and Applied Mathematics \and
+        Andrew Schaefer \\
+        Noah Harding Chair and Professor of Computational and Applied Mathematics \and
+        Anshumali Shrivastava \\
+        Assistant Professor of Computer Science       
+}
+
+\address{Houston, Texas}
+\donemonth{April} \doneyear{2016} \makeindex
+\begin{document}
+
+  \begin{frontmatter}
+   \pagenumbering{roman}
+   %\makecover
+   \maketitle
+   \include{BurasAbstract}
+   \include{BurasIntro}
+   \include{BurasBackground}
+   %\include{BurasMethodology}
+   %\include{BurasResults}
+   %\include{BurasConclusions}
+   %\include{ack}
+   \tableofcontents
+   \listoffigures
+   \listoftables
+%   \include{ded}
+  \end{frontmatter}
+\pagenumbering{arabic}
+
+\linespacing{1.7}
+
+%\include{chapter1}
+
+%\appendix
+
+%\include{append-a}
+%\appendix
+%\addcontentsline{toc} {chapter}{\numberline {}Appendix A}
+%\include{append-a}
+%\include{append-b}
+%\addcontentsline{toc} {chapter}{\numberline {}Bibliography}{}
+%\include{biblio}
+
+\bibliographystyle{ieeetr}
+\bibliography{mastersbib}
+\end{document}

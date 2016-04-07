@@ -1,44 +1,45 @@
-\BOOKMARK [1][-]{section.1}{Abstract}{}% 1
-\BOOKMARK [1][-]{section.2}{Introduction}{}% 2
-\BOOKMARK [1][-]{section.3}{Background}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{Graph Laplacian Problem}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{Current Solution Approaches}{section.3}% 5
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Spielman-Teng, Koutis et. al.}{subsection.3.2}% 6
-\BOOKMARK [2][-]{subsection.3.3}{Multigrid Approaches}{section.3}% 7
-\BOOKMARK [3][-]{subsubsection.3.3.1}{Combinatorial Multigrid \(CMG\)}{subsection.3.3}% 8
-\BOOKMARK [3][-]{subsubsection.3.3.2}{Lean Algebraic Multigrid \(LAMG\)}{subsection.3.3}% 9
-\BOOKMARK [3][-]{subsubsection.3.3.3}{Cascadic Multigrid}{subsection.3.3}% 10
-\BOOKMARK [2][-]{subsection.3.4}{Graph Partitioning and Multigrid}{section.3}% 11
-\BOOKMARK [1][-]{section.4}{Methodology}{}% 12
-\BOOKMARK [2][-]{subsection.4.1}{Graph Partitioning}{section.4}% 13
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Partitioning Algorithm}{subsection.4.1}% 14
-\BOOKMARK [3][-]{subsubsection.4.1.2}{NetworkX Library and My Additions}{subsection.4.1}% 15
-\BOOKMARK [2][-]{subsection.4.2}{Laplacian Solver}{section.4}% 16
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Linear Algebra: Woodbury Matrix Identity}{subsection.4.2}% 17
-\BOOKMARK [3][-]{subsubsection.4.2.2}{Algebraic Multigrid of Locally Connected Subgraph}{subsection.4.2}% 18
-\BOOKMARK [3][-]{subsubsection.4.2.3}{Low Rank SVD of Teleportation Subgraph}{subsection.4.2}% 19
-\BOOKMARK [2][-]{subsection.4.3}{Model Complexity}{section.4}% 20
-\BOOKMARK [3][-]{subsubsection.4.3.1}{Graph Splitting}{subsection.4.3}% 21
-\BOOKMARK [3][-]{subsubsection.4.3.2}{Linear Algebra and Solves}{subsection.4.3}% 22
-\BOOKMARK [1][-]{section.5}{Results}{}% 23
-\BOOKMARK [2][-]{subsection.5.1}{Graphs}{section.5}% 24
-\BOOKMARK [3][-]{subsubsection.5.1.1}{C. Elegans Worm Data}{subsection.5.1}% 25
-\BOOKMARK [3][-]{subsubsection.5.1.2}{Facebook Friend Circles}{subsection.5.1}% 26
-\BOOKMARK [3][-]{subsubsection.5.1.3}{Western US Power Grid}{subsection.5.1}% 27
-\BOOKMARK [3][-]{subsubsection.5.1.4}{Graph Overview}{subsection.5.1}% 28
-\BOOKMARK [2][-]{subsection.5.2}{Graph Partitioning}{section.5}% 29
-\BOOKMARK [3][-]{subsubsection.5.2.1}{Table of Partitioning results}{subsection.5.2}% 30
-\BOOKMARK [2][-]{subsection.5.3}{Linear System Solve}{section.5}% 31
-\BOOKMARK [3][-]{subsubsection.5.3.1}{SVD and Multiple Multigrid Solves}{subsection.5.3}% 32
-\BOOKMARK [3][-]{subsubsection.5.3.2}{Power Grid}{subsection.5.3}% 33
-\BOOKMARK [1][-]{section.6}{Dataset Figures}{}% 34
-\BOOKMARK [2][-]{subsection.6.1}{C. Elegans Neural Network}{section.6}% 35
-\BOOKMARK [2][-]{subsection.6.2}{C. Elegans Metabolic Network}{section.6}% 36
-\BOOKMARK [2][-]{subsection.6.3}{C. Elegans Protein Network}{section.6}% 37
-\BOOKMARK [2][-]{subsection.6.4}{Facebook Friend Network}{section.6}% 38
-\BOOKMARK [2][-]{subsection.6.5}{Power Grid}{section.6}% 39
-\BOOKMARK [1][-]{section.7}{Conclusions and Future Work}{}% 40
-\BOOKMARK [2][-]{subsection.7.1}{Graph Partitioning}{section.7}% 41
-\BOOKMARK [3][-]{subsubsection.7.1.1}{Theoretical Bounds}{subsection.7.1}% 42
-\BOOKMARK [2][-]{subsection.7.2}{Linear System Solve}{section.7}% 43
-\BOOKMARK [2][-]{subsection.7.3}{Larger Graphs and Finding Meaningful Solutions}{section.7}% 44
+\BOOKMARK [0][-]{Doc-Start}{Abstract}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 2
+\BOOKMARK [0][-]{chapter.2}{Background}{}% 3
+\BOOKMARK [1][-]{section.2.1}{Graph Laplacian Problem}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.2}{Current Solution Approaches}{chapter.2}% 5
+\BOOKMARK [2][-]{subsection.2.2.1}{Spielman-Teng, Koutis et. al.}{section.2.2}% 6
+\BOOKMARK [1][-]{section.2.3}{Multigrid Approaches}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.3.1}{Combinatorial Multigrid \(CMG\)}{section.2.3}% 8
+\BOOKMARK [2][-]{subsection.2.3.2}{Lean Algebraic Multigrid \(LAMG\)}{section.2.3}% 9
+\BOOKMARK [2][-]{subsection.2.3.3}{Cascadic Multigrid}{section.2.3}% 10
+\BOOKMARK [1][-]{section.2.4}{Graph Partitioning and Multigrid}{chapter.2}% 11
+\BOOKMARK [0][-]{chapter.3}{Methodology}{}% 12
+\BOOKMARK [1][-]{section.3.1}{Graph Partitioning}{chapter.3}% 13
+\BOOKMARK [2][-]{subsection.3.1.1}{Partitioning Algorithm}{section.3.1}% 14
+\BOOKMARK [2][-]{subsection.3.1.2}{NetworkX Library and My Additions}{section.3.1}% 15
+\BOOKMARK [1][-]{section.3.2}{Laplacian Solver}{chapter.3}% 16
+\BOOKMARK [2][-]{subsection.3.2.1}{Linear Algebra: Woodbury Matrix Identity}{section.3.2}% 17
+\BOOKMARK [2][-]{subsection.3.2.2}{Algebraic Multigrid of Locally Connected Subgraph}{section.3.2}% 18
+\BOOKMARK [2][-]{subsection.3.2.3}{Low Rank SVD of Teleportation Subgraph}{section.3.2}% 19
+\BOOKMARK [1][-]{section.3.3}{Model Complexity}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.3.1}{Graph Splitting}{section.3.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.2}{Linear Algebra and Solves}{section.3.3}% 22
+\BOOKMARK [0][-]{chapter.4}{Results}{}% 23
+\BOOKMARK [1][-]{section.4.1}{Graphs}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.2}{C. Elegans Worm Data}{chapter.4}% 25
+\BOOKMARK [2][-]{subsection.4.2.1}{Facebook Friend Circles}{section.4.2}% 26
+\BOOKMARK [2][-]{subsection.4.2.2}{Western US Power Grid}{section.4.2}% 27
+\BOOKMARK [2][-]{subsection.4.2.3}{Graph Overview}{section.4.2}% 28
+\BOOKMARK [1][-]{section.4.3}{Graph Partitioning}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.3.1}{Table of Partitioning results}{section.4.3}% 30
+\BOOKMARK [1][-]{section.4.4}{Linear System Solve}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.4.1}{SVD and Multiple Multigrid Solves}{section.4.4}% 32
+\BOOKMARK [2][-]{subsection.4.4.2}{Power Grid}{section.4.4}% 33
+\BOOKMARK [1][-]{section.4.5}{Dataset Figures}{chapter.4}% 34
+\BOOKMARK [2][-]{subsection.4.5.1}{C. Elegans Neural Network}{section.4.5}% 35
+\BOOKMARK [2][-]{subsection.4.5.2}{C. Elegans Metabolic Network}{section.4.5}% 36
+\BOOKMARK [2][-]{subsection.4.5.3}{C. Elegans Protein Network}{section.4.5}% 37
+\BOOKMARK [2][-]{subsection.4.5.4}{Facebook Friend Network}{section.4.5}% 38
+\BOOKMARK [2][-]{subsection.4.5.5}{Power Grid}{section.4.5}% 39
+\BOOKMARK [0][-]{chapter.5}{Conclusions and Future Work}{}% 40
+\BOOKMARK [1][-]{section.5.1}{Graph Partitioning}{chapter.5}% 41
+\BOOKMARK [2][-]{subsection.5.1.1}{Theoretical Bounds}{section.5.1}% 42
+\BOOKMARK [1][-]{section.5.2}{Linear System Solve}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.3}{Larger Graphs and Finding Meaningful Solutions}{chapter.5}% 44
+\BOOKMARK [0][-]{chapter*.25}{Bibliography}{}% 45

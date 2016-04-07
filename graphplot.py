@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 #using Barabasi Albert Model or to create simple graph
 G=Graph()
 G.add_nodes_from(range(1,25))
+T = G.copy()
 G.add_edges_from([(1,2),(2,3),(3,4),(1,5),(2,6),(3,7),(4,8),(5,6),(6,7),(7,8),
                     (5,9),(6,10),(7,11),(8,12),(9,10),(10,11),(11,12),
                     (9,13),(10,14),(11,15),(12,16),(13,14),(14,15),(15,16), 					
@@ -17,6 +18,7 @@ G.add_edges_from([(1,2),(2,3),(3,4),(1,5),(2,6),(3,7),(4,8),(5,6),(6,7),(7,8),
 k = 3
 l = 3				
 P = G.copy()
+
                
 deleted_some = True
 while deleted_some == True:
@@ -81,6 +83,7 @@ while deleted_some == True:
         
         if cnt <=2:     #cnt must be 3 or greater to remain in the graph
             P.remove_edge(u,v)
+            T.add_edge(u,v)
             deleted_some = True
 
 #pos is a dictionary of node point locations in the x,y plane
@@ -122,3 +125,7 @@ plt.clf()
 nx.draw_networkx(P, pos,with_labels=False)
 plt.axis('off')
 plt.savefig('planargraph.png')
+
+nx.draw_networkx(T, pos,with_labels=False)
+plt.axis('off')
+plt.savefig('tgraph.png')
