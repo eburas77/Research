@@ -5,7 +5,7 @@ import networkx as nx
 import numpy as np
 import scipy
 import timeit
-import matplotlib.pylab as plt
+#import matplotlib.pylab as plt
 import kl_connected_subgraph as kl
 time = timeit.default_timer()
 F = nx.read_gml('celegansneural.gml')
@@ -26,7 +26,7 @@ A = A.todense()
 print "read in graph"
 L = nx.laplacian_matrix(G)
 L = L.todense()
-#L = L +np.eye(len(L))
+L = L +np.eye(len(L))
 
 time = timeit.default_timer()
 P = G.copy()
