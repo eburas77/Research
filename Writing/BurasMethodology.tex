@@ -134,7 +134,7 @@ After splitting the entire $n$-vertex graph into locally-connected subgraph and 
 \end{center}
 \end{spacing}
 \vspace{.2in}
-In summary: given $n\times n$ graph Laplacian matrix and rank-r teleportation Laplacian matrix, the method is $O(n^3)$, however with work to implement the low-rank SVD, it can be decreased to depend on $r$. Usually, the complexity of the method would depend on the order of the linear system solves. However, I can obtain optimal work complexity with multigrid solves on the locally-connected subgraph Laplacian, $P_L$, because I know how to get sufficient coarsening ratios for the coarse solves.\\
+In summary: given $n\times n$ graph Laplacian matrix and rank-r teleportation Laplacian matrix, the method is $O(n^3)$, however with work to implement a rank-revealing SVD, it can be decreased to depend on $r$. Usually, the complexity of the method would depend on the order of the linear system solves. However, I can obtain optimal work complexity with multigrid solves on the locally-connected subgraph Laplacian, $P_L$, because I know how to get sufficient coarsening ratios for the coarse solves.\\
 It is clear that outside the SVD, the complexity of the solve depends on $r$, the rank of the teleportation matrix $T_L$. We will show in the results section how the theoretical complexity of the algorithm compares to the calculated timings for the graph partitioning and each operation in the linear system solve.
 
 

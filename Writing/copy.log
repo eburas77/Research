@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  11 APR 2016 13:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  20 APR 2016 13:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**BurasCompleteMasters.tex
-(./BurasCompleteMasters.tex
+**copy.tex
+(./copy.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (./ruthesis.cls
@@ -419,14 +419,12 @@ File: thb.sty 2014/10/28 v2.2c Theorem extension package (FMi)
 \c@Prf=\count131
 \c@Def=\count132
 \@indexfile=\write3
-\openout3 = `BurasCompleteMasters.idx'.
+\openout3 = `copy.idx'.
 
 
-Writing index file BurasCompleteMasters.idx
-(./BurasCompleteMasters.aux (./BurasAbstract.aux) (./BurasIntro.aux)
-(./BurasBackground.aux) (./BurasMethodology.aux) (./BurasResults.aux)
-(./BurasAppendix.aux) (./BurasConclusions.aux))
-\openout1 = `BurasCompleteMasters.aux'.
+Writing index file copy.idx
+No file copy.aux.
+\openout1 = `copy.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
@@ -442,7 +440,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
-
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -474,10 +471,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 47.
 LaTeX Info: Redefining \pageref on input line 47.
 LaTeX Info: Redefining \nameref on input line 47.
-
-(./BurasCompleteMasters.out) (./BurasCompleteMasters.out)
 \@outlinefile=\write4
-\openout4 = `BurasCompleteMasters.out'.
+\openout4 = `copy.out'.
 
 \c@lstlisting=\count134
 
@@ -498,33 +493,54 @@ LaTeX Info: Redefining \nameref on input line 47.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
- [1
-
-
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 \openout2 = `BurasAbstract.aux'.
 
-
-(./BurasAbstract.tex
+ (./BurasAbstract.tex
 
 Package hyperref Warning: bookmark level for unknown frontmatter defaults to 0.
 
 
-) [2
+) [1
 
 
 
-]
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 \openout2 = `BurasIntro.aux'.
 
- (./BurasIntro.tex
+
+(./BurasIntro.tex
 Chapter 1.
+
+LaTeX Warning: Citation `Page:1999' on page 2 undefined on input line 15.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
 
+LaTeX Warning: Citation `Page:1999' on page 2 undefined on input line 19.
+
+
+LaTeX Warning: Citation `Gleich:2015' on page 2 undefined on input line 21.
+
+
+LaTeX Warning: Citation `Gleich:2015' on page 2 undefined on input line 21.
+
+
+LaTeX Warning: Citation `Jiang:2009' on page 2 undefined on input line 21.
+
+
+LaTeX Warning: Citation `Liu:2005' on page 2 undefined on input line 21.
+
+
+LaTeX Warning: Citation `Kim:2013' on page 2 undefined on input line 21.
+
+
+LaTeX Warning: Citation `Gleich:2015' on page 2 undefined on input line 21.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 19--24
 
  []
@@ -534,11 +550,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--24
 
  []
 
-[3
+[2
 
 
 
-]) [4]
+]) [3]
 \openout2 = `BurasBackground.aux'.
 
  (./BurasBackground.tex
@@ -553,7 +569,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-<laplace.png, id=220, 513.92pt x 301.125pt>
+<laplace.png, id=23, 513.92pt x 301.125pt>
 File: laplace.png Graphic file (type png)
  <use laplace.png>
 Package pdftex.def Info: laplace.png used on input line 28.
@@ -563,46 +579,156 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--31
 
  []
 
-[5
+[4
 
 
 
 ]
+
+LaTeX Warning: Citation `Neumann:1877' on page 5 undefined on input line 34.
+
+
+LaTeX Warning: Citation `Kantorovich:1982' on page 5 undefined on input line 34
+.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
-[6 <./laplace.png>] [7] [8] [9]) [10]
+
+LaTeX Warning: Citation `Spielman:2010' on page 5 undefined on input line 38.
+
+
+LaTeX Warning: Citation `Spielman:2010' on page 5 undefined on input line 41.
+
+
+LaTeX Warning: Citation `Khaira:1992' on page 5 undefined on input line 41.
+
+
+LaTeX Warning: Citation `Hestenes:1952' on page 5 undefined on input line 41.
+
+
+LaTeX Warning: Citation `Saad:2003' on page 5 undefined on input line 41.
+
+[5 <./laplace.png>]
+
+LaTeX Warning: Citation `Spielman:2011' on page 6 undefined on input line 44.
+
+
+LaTeX Warning: Citation `Vaidya:1991' on page 6 undefined on input line 44.
+
+
+LaTeX Warning: Citation `Koutis:2007' on page 6 undefined on input line 44.
+
+
+LaTeX Warning: Citation `Koutis:2010' on page 6 undefined on input line 44.
+
+[6]
+
+LaTeX Warning: Citation `Livne:2012' on page 7 undefined on input line 47.
+
+
+LaTeX Warning: Citation `Koutis:2011' on page 7 undefined on input line 47.
+
+
+LaTeX Warning: Citation `Urschel:2014' on page 7 undefined on input line 47.
+
+
+LaTeX Warning: Citation `Livne:2012' on page 7 undefined on input line 47.
+
+
+LaTeX Warning: Citation `Koutis:2011' on page 7 undefined on input line 51.
+
+[7]
+
+LaTeX Warning: Citation `Livne:2012' on page 8 undefined on input line 55.
+
+
+LaTeX Warning: Citation `Urschel:2014' on page 8 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Chung:2004' on page 8 undefined on input line 63.
+
+[8]) [9]
 \openout2 = `BurasMethodology.aux'.
 
  (./BurasMethodology.tex
 Chapter 3.
-[11
+
+LaTeX Warning: Citation `Watts:1998' on page 10 undefined on input line 20.
+
+
+LaTeX Warning: Citation `Chung:2004' on page 10 undefined on input line 21.
+
+
+LaTeX Warning: Citation `Chung:2004' on page 10 undefined on input line 21.
+
+[10
 
 
 
-] <entiregraph.png, id=295, 433.62pt x 289.08pt>
+] <entiregraph.png, id=72, 433.62pt x 289.08pt>
 File: entiregraph.png Graphic file (type png)
  <use entiregraph.png>
 Package pdftex.def Info: entiregraph.png used on input line 44.
 (pdftex.def)             Requested size: 216.81pt x 144.53964pt.
 
-<planargraph.png, id=296, 433.62pt x 289.08pt>
+<planargraph.png, id=73, 433.62pt x 289.08pt>
 File: planargraph.png Graphic file (type png)
  <use planargraph.png>
 Package pdftex.def Info: planargraph.png used on input line 50.
 (pdftex.def)             Requested size: 216.81pt x 144.53964pt.
- [12 <./entiregraph.png> <./planargraph.png>]
+
+
+LaTeX Warning: Citation `Hagberg:2008' on page 11 undefined on input line 59.
+
+
+LaTeX Warning: Citation `Chung:2004' on page 11 undefined on input line 59.
+
+
+LaTeX Warning: Citation `Dijkstra:1959' on page 11 undefined on input line 59.
+
+[11 <./entiregraph.png> <./planargraph.png>]
+
+LaTeX Warning: Citation `Woodbury:1950' on page 12 undefined on input line 65.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-[13] [14]
+[12]
+
+LaTeX Warning: Citation `Miller:1995' on page 13 undefined on input line 88.
+
+
+LaTeX Warning: Citation `Brandt:1984' on page 13 undefined on input line 88.
+
+
+LaTeX Warning: Citation `petsc-user-ref' on page 13 undefined on input line 88.
+
+
+
+LaTeX Warning: Citation `Dalcin:2011' on page 13 undefined on input line 88.
+
+[13]
+
+LaTeX Warning: Citation `Chung:2004' on page 14 undefined on input line 95.
+
+
+LaTeX Warning: Citation `Watts:1998' on page 14 undefined on input line 95.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
-[15] <powerlawdeg.png, id=336, 433.62pt x 289.08pt>
+[14]
+
+LaTeX Warning: Citation `Watts:1998' on page 15 undefined on input line 103.
+
+<powerlawdeg.png, id=101, 433.62pt x 289.08pt>
 File: powerlawdeg.png Graphic file (type png)
  <use powerlawdeg.png>
 Package pdftex.def Info: powerlawdeg.png used on input line 106.
@@ -612,224 +738,298 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--109
 
  []
 
-[16] [17 <./powerlawdeg.png>]
+[15] [16 <./powerlawdeg.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
-[18]) [19]
+[17]) [18]
 \openout2 = `BurasResults.aux'.
 
  (./BurasResults.tex
 Chapter 4.
 
+LaTeX Warning: Citation `Watts:1998' on page 19 undefined on input line 22.
+
+
+LaTeX Warning: Citation `Chung:2004' on page 19 undefined on input line 22.
+
+
+LaTeX Warning: Citation `White:1986' on page 19 undefined on input line 24.
+
+
+LaTeX Warning: Citation `Watts:1998' on page 19 undefined on input line 24.
+
+
+LaTeX Warning: Citation `Gleich:2015' on page 19 undefined on input line 24.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-[20
+[19
 
 
 
 ]
+
+LaTeX Warning: Citation `Duch:2005' on page 20 undefined on input line 26.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
+
+
+LaTeX Warning: Citation `Simonis:2009' on page 20 undefined on input line 28.
+
+
+LaTeX Warning: Citation `Gleich:2015' on page 20 undefined on input line 28.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
-[21] [22] <neuralsequenceplot2.png, id=393, 433.62pt x 289.08pt>
+
+LaTeX Warning: Citation `Rual:2005' on page 20 undefined on input line 30.
+
+
+LaTeX Warning: Citation `Rolland:2014' on page 20 undefined on input line 30.
+
+
+LaTeX Warning: Citation `Toga:2012' on page 20 undefined on input line 30.
+
+
+LaTeX Warning: Citation `Mcauley:2012' on page 20 undefined on input line 33.
+
+
+LaTeX Warning: Citation `Gleich:2015' on page 20 undefined on input line 33.
+
+[20]
+
+LaTeX Warning: Citation `Watts:1998' on page 21 undefined on input line 37.
+
+
+LaTeX Warning: Citation `Pagani:2013' on page 21 undefined on input line 37.
+
+[21] <neuralsequenceplot2.png, id=142, 433.62pt x 289.08pt>
 File: neuralsequenceplot2.png Graphic file (type png)
 
 <use neuralsequenceplot2.png>
 Package pdftex.def Info: neuralsequenceplot2.png used on input line 63.
 (pdftex.def)             Requested size: 433.62pt x 289.09251pt.
- [23]
-<neuralsequenceplot.png, id=398, 433.62pt x 289.08pt>
+ [22]
+<neuralsequenceplot.png, id=149, 433.62pt x 289.08pt>
 File: neuralsequenceplot.png Graphic file (type png)
 
 <use neuralsequenceplot.png>
 Package pdftex.def Info: neuralsequenceplot.png used on input line 69.
 (pdftex.def)             Requested size: 433.62pt x 289.09251pt.
- [24 <./neuralsequenceplot2.png>] [25 <./neuralsequenceplot.png>] <ptimes.png, 
-id=412, 433.62pt x 289.08pt>
+ [23 <./neuralsequenceplot2.png>] [24 <./neuralsequenceplot.png>] <ptimes.png, 
+id=163, 433.62pt x 289.08pt>
 File: ptimes.png Graphic file (type png)
  <use ptimes.png>
 Package pdftex.def Info: ptimes.png used on input line 94.
 (pdftex.def)             Requested size: 433.62pt x 289.09251pt.
 
-[26 <./ptimes.png>]
+[25 <./ptimes.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
-<operationtimes.png, id=419, 433.62pt x 289.08pt>
+<operationtimes.png, id=172, 433.62pt x 289.08pt>
 File: operationtimes.png Graphic file (type png)
  <use operationtimes.png>
 Package pdftex.def Info: operationtimes.png used on input line 126.
 (pdftex.def)             Requested size: 433.62pt x 289.09251pt.
 
-[27] <stimes.png, id=424, 433.62pt x 289.08pt>
+[26] <stimes.png, id=178, 433.62pt x 289.08pt>
 File: stimes.png Graphic file (type png)
  <use stimes.png>
 Package pdftex.def Info: stimes.png used on input line 132.
 (pdftex.def)             Requested size: 433.62pt x 289.09251pt.
- [28 <./operationtimes.png>] [29 <./stimes.png>] <total.png, id=441, 433.62pt x
- 289.08pt>
-File: total.png Graphic file (type png)
+ [27 <./operationtimes.png>]
 
-<use total.png>
+LaTeX Warning: Citation `Berry:2006' on page 28 undefined on input line 138.
+
+
+LaTeX Warning: Citation `Halko:2011' on page 28 undefined on input line 138.
+
+[28 <./stimes.png>] <total.png, id=192, 433.62pt x 289.08pt>
+File: total.png Graphic file (type png)
+ <use total.png>
 Package pdftex.def Info: total.png used on input line 144.
 (pdftex.def)             Requested size: 433.62pt x 289.09251pt.
-) [30 <./total.png>]
+)
+[29 <./total.png>]
 \openout2 = `BurasAppendix.aux'.
 
  (./BurasAppendix.tex
-<neural_degree_histogram.png, id=448, 433.62pt x 289.08pt>
+<neural_degree_histogram.png, id=200, 433.62pt x 289.08pt>
 File: neural_degree_histogram.png Graphic file (type png)
 
 <use neural_degree_histogram.png>
 Package pdftex.def Info: neural_degree_histogram.png used on input line 25.
 (pdftex.def)             Requested size: 346.89731pt x 231.27754pt.
- <neuralspy.png, id=449, 433.62pt x 289.08pt>
+ <neuralspy.png, id=201, 433.62pt x 289.08pt>
 File: neuralspy.png Graphic file (type png)
 
 <use neuralspy.png>
 Package pdftex.def Info: neuralspy.png used on input line 32.
 (pdftex.def)             Requested size: 433.62pt x 289.09251pt.
- <neuralsing.png, id=450, 433.62pt x 289.08pt>
+ <neuralsing.png, id=202, 433.62pt x 289.08pt>
 File: neuralsing.png Graphic file (type png)
 
 <use neuralsing.png>
 Package pdftex.def Info: neuralsing.png used on input line 37.
 (pdftex.def)             Requested size: 390.25534pt x 260.18282pt.
- [31
+ [30
 
 
  <./neural_degree_histogram.png>]
-<meta_degree_histogram.png, id=458, 433.62pt x 289.08pt>
+<meta_degree_histogram.png, id=211, 433.62pt x 289.08pt>
 File: meta_degree_histogram.png Graphic file (type png)
 
 <use meta_degree_histogram.png>
 Package pdftex.def Info: meta_degree_histogram.png used on input line 45.
 (pdftex.def)             Requested size: 346.89731pt x 231.27754pt.
- <metaspy.png, id=459, 433.62pt x 289.08pt>
+ <metaspy.png, id=212, 433.62pt x 289.08pt>
 File: metaspy.png Graphic file (type png)
 
 <use metaspy.png>
 Package pdftex.def Info: metaspy.png used on input line 51.
 (pdftex.def)             Requested size: 433.62pt x 289.09251pt.
- [32 <./neuralspy.png> <./neuralsing.png>]
-<metasing.png, id=468, 433.62pt x 289.08pt>
+ [31 <./neuralspy.png> <./neuralsing.png>]
+<metasing.png, id=222, 433.62pt x 289.08pt>
 File: metasing.png Graphic file (type png)
  <use metasing.png>
 Package pdftex.def Info: metasing.png used on input line 56.
 (pdftex.def)             Requested size: 390.25534pt x 260.18282pt.
- [33 <./meta_degree_histogram.png>] <gene_degree_histogram.png, id=475, 433.62p
+ [32 <./meta_degree_histogram.png>] <gene_degree_histogram.png, id=230, 433.62p
 t x 289.08pt>
 File: gene_degree_histogram.png Graphic file (type png)
 
 <use gene_degree_histogram.png>
 Package pdftex.def Info: gene_degree_histogram.png used on input line 64.
 (pdftex.def)             Requested size: 346.89731pt x 231.27754pt.
- [34 <./metaspy.png> <./metasing.png>]
-<genespy.png, id=485, 433.62pt x 289.08pt>
+ [33 <./metaspy.png> <./metasing.png>]
+<genespy.png, id=239, 433.62pt x 289.08pt>
 File: genespy.png Graphic file (type png)
  <use genespy.png>
 Package pdftex.def Info: genespy.png used on input line 71.
 (pdftex.def)             Requested size: 433.62pt x 289.09251pt.
 
-<proteinsing.png, id=486, 433.62pt x 289.08pt>
+<proteinsing.png, id=240, 433.62pt x 289.08pt>
 File: proteinsing.png Graphic file (type png)
  <use proteinsing.png>
 Package pdftex.def Info: proteinsing.png used on input line 76.
 (pdftex.def)             Requested size: 390.25534pt x 260.18282pt.
- [35 <./gene_degree_histogram.png>]
-<fb_degree_histogram.png, id=493, 433.62pt x 289.08pt>
+ [34 <./gene_degree_histogram.png>]
+<fb_degree_histogram.png, id=248, 433.62pt x 289.08pt>
 File: fb_degree_histogram.png Graphic file (type png)
 
 <use fb_degree_histogram.png>
 Package pdftex.def Info: fb_degree_histogram.png used on input line 84.
 (pdftex.def)             Requested size: 346.89731pt x 231.27754pt.
- [36 <./genespy.png> <./proteinsing.png>]
-<fbspy.png, id=502, 433.62pt x 289.08pt>
+ [35 <./genespy.png> <./proteinsing.png>]
+<fbspy.png, id=257, 433.62pt x 289.08pt>
 File: fbspy.png Graphic file (type png)
  <use fbspy.png>
 Package pdftex.def Info: fbspy.png used on input line 91.
 (pdftex.def)             Requested size: 433.62pt x 289.09251pt.
 
-<fbsing.png, id=503, 433.62pt x 289.08pt>
+<fbsing.png, id=258, 433.62pt x 289.08pt>
 File: fbsing.png Graphic file (type png)
  <use fbsing.png>
 Package pdftex.def Info: fbsing.png used on input line 96.
 (pdftex.def)             Requested size: 390.25534pt x 260.18282pt.
- [37 <./fb_degree_histogram.png>] <power_degree_histogram.png, id=511, 433.62pt
+ [36 <./fb_degree_histogram.png>] <power_degree_histogram.png, id=266, 433.62pt
  x 289.08pt>
 File: power_degree_histogram.png Graphic file (type png)
 
 <use power_degree_histogram.png>
 Package pdftex.def Info: power_degree_histogram.png used on input line 105.
 (pdftex.def)             Requested size: 346.89731pt x 231.27754pt.
- [38 <./fbspy.png> <./fbsing.png>]
-<powerspy.png, id=520, 433.62pt x 289.08pt>
+ [37 <./fbspy.png> <./fbsing.png>]
+<powerspy.png, id=276, 433.62pt x 289.08pt>
 File: powerspy.png Graphic file (type png)
  <use powerspy.png>
 Package pdftex.def Info: powerspy.png used on input line 112.
 (pdftex.def)             Requested size: 433.62pt x 289.09251pt.
- [39 <./power_degree_histogram.png>] <powersing.png, id=527, 433.62pt x 289.08p
+ [38 <./power_degree_histogram.png>] <powersing.png, id=284, 433.62pt x 289.08p
 t>
 File: powersing.png Graphic file (type png)
 
 <use powersing.png>
 Package pdftex.def Info: powersing.png used on input line 118.
 (pdftex.def)             Requested size: 390.25534pt x 260.18282pt.
-) [40 <./powerspy.png> <./powersing.png>]
+) [39 <./powerspy.png> <./powersing.png>]
 \openout2 = `BurasConclusions.aux'.
 
 
 (./BurasConclusions.tex
 Chapter 5.
-[41
+
+LaTeX Warning: Citation `Woodbury:1950' on page 40 undefined on input line 16.
+
+
+LaTeX Warning: Citation `Hagberg:2008' on page 40 undefined on input line 19.
+
+[40
 
 
 
-])
+]
+
+LaTeX Warning: Citation `petsc-user-ref' on page 41 undefined on input line 24.
+
+
+
+LaTeX Warning: Citation `numpy' on page 41 undefined on input line 24.
+
+)
 Underfull \hbox (badness 10000) in paragraph at lines 27--58
 
  []
 
-[42] [43] (./BurasCompleteMasters.bbl [1
-
-
-
-] [2] [3])
+[41] [42]
+No file copy.bbl.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
- [4]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
-
-(./BurasCompleteMasters.aux (./BurasAbstract.aux) (./BurasIntro.aux)
-(./BurasBackground.aux) (./BurasMethodology.aux) (./BurasResults.aux)
-(./BurasAppendix.aux) (./BurasConclusions.aux))
+(./copy.aux (./BurasAbstract.aux) (./BurasIntro.aux) (./BurasBackground.aux)
+(./BurasMethodology.aux) (./BurasResults.aux) (./BurasAppendix.aux)
+(./BurasConclusions.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 66.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 66.
-Package rerunfilecheck Info: File `BurasCompleteMasters.out' has not changed.
-(rerunfilecheck)             Checksum: D1BEF889586236012008F46E9C5A737E;3185.
+
+
+Package rerunfilecheck Warning: File `copy.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `copy.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  C0E05D55F6C7140183067CA7E98F322A;3135.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
  ) 
 Here is how much of TeX's memory you used:
- 9821 strings out of 493089
- 151410 string characters out of 6134842
- 248617 words of memory out of 5000000
- 12918 multiletter control sequences out of 15000+600000
- 10887 words of font info for 38 fonts, out of 8000000 for 9000
+ 9698 strings out of 493089
+ 149340 string characters out of 6134842
+ 243044 words of memory out of 5000000
+ 12863 multiletter control sequences out of 15000+600000
+ 10285 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,9n,96p,1679b,679s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,9n,96p,1660b,673s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pf
 b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
@@ -840,10 +1040,10 @@ al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on BurasCompleteMasters.pdf (47 pages, 541529 bytes).
+Output written on copy.pdf (42 pages, 497092 bytes).
 PDF statistics:
- 650 PDF objects out of 1000 (max. 8388607)
- 532 compressed objects within 6 object streams
- 154 named destinations out of 1000 (max. 500000)
- 486 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 377 PDF objects out of 1000 (max. 8388607)
+ 268 compressed objects within 3 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
