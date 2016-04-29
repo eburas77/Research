@@ -175,6 +175,8 @@ m,n = P_L_petsc.getSize()
 
 b = Pet.Vec().createSeq(m)
 b.setRandom()     #set b
+bmat = b.getArray()
+scipy.io.savemat('proteinb.mat', mdict={'proteinb': bmat})
 #b.view()
 y = b.duplicate()
 y_1 = Pet.Vec().createSeq(size)
