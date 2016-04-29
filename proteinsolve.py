@@ -23,6 +23,7 @@ L = nx.laplacian_matrix(G,)
 rows,cols =L.shape
 L = L.todense()
 L = L+np.eye(rows)
+scipy.io.savemat('proteinlap.mat', mdict={'proteinlap': L})
 
 time = timeit.default_timer()
 P = G.copy()

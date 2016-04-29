@@ -19,6 +19,7 @@ A = A.todense()
 L = nx.laplacian_matrix(G)
 L = L.todense()
 L = L+np.eye(len(L))
+scipy.io.savemat('fblap.mat', mdict={'fblap': L})
 
 time = timeit.default_timer()
 P = G.copy()

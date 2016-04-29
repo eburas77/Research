@@ -19,6 +19,7 @@ print "read in graph"
 L = nx.laplacian_matrix(G)
 L = L.todense()
 L = L +np.eye(len(L))
+scipy.io.savemat('powerlap.mat', mdict={'powerlap': L})
 
 time = timeit.default_timer()
 P = G.copy()
